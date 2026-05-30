@@ -29,7 +29,7 @@ Stage One - MVP
 3. Geometry Algorithms - MH ER
 4. Bake BREP and send to Speckle 
 5. 2D -> 
-6. Rendering - 
+6. Rendering - BT 
 
 Stage Two
 - ShapeDiver — BT
