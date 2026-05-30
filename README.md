@@ -37,6 +37,9 @@ Stage Two
 - Website Mobile First — BT
 - Presentation
 
+Stage Three
+- Optimisation - If possible remove shapediver and GH dependency
+
 Optional
 - Connectors - MT
 - Gaussian Splats for awesome renders - BT
