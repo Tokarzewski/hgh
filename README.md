@@ -39,8 +39,8 @@ Stage Two
 
 Optional
 - Connectors - MT
-- Gaussian Splats for awesome renders BT
-- 3D Printable Files (.3MF > .stl)
+- Gaussian Splats for awesome renders - BT
+- 3D Printable Files .3MF
 
 ---
 
