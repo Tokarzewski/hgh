@@ -17,8 +17,7 @@ Design parameters to drive the system:
 - Size 
 - Colours
 - Shape
-- Raster
-- Materials
+- Raster  
 
 ---
 
@@ -28,9 +27,9 @@ Stage One - MVP
 1. Raster
 2. Image Processing - MT SH
 3. Geometry Algorithms - MH ER
-4. Bake BREP 
-5. Convert to Mesh 
-6. Rendering Peace
+4. Bake BREP and send to Speckle 
+5. 2D -> 
+6. Rendering - BT 
 
 Stage Two
 - ShapeDiver — BT
@@ -44,6 +43,7 @@ Optional
 - Connectors - MT
 - Gaussian Splats for awesome renders - BT
 - 3D Printable Files .3MF
+- can main outer frame not be a rectangle? 
 
 ---
 
