@@ -1,0 +1,12 @@
+{
+  "name": "hgh",
+  "compatibility_date": "2026-05-29",
+  "assets": {
+    "directory": "./website",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  },
+  "routes": [
+    { "pattern": "hgh.modeltok.com", "custom_domain": true }
+  ]
+}

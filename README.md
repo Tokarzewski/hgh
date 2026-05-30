@@ -2,7 +2,7 @@
 
 # TEAM
 
-SH - Somaya Ahmed  
+SH - Somaya Hassan  
 ER - Ewa Romanczuk  
 BT - Bartlomiej Tokarzewski  
 MH - Martyna Hypta  
