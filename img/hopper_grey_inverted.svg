@@ -1,0 +1,1552 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Warstwa_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 166.1 98">
+  <!-- Generator: Adobe Illustrator 30.4.0, SVG Export Plug-In . SVG Version: 2.1.4 Build 226)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #939393;
+      }
+
+      .st1 {
+        fill: #aaa;
+      }
+
+      .st2 {
+        fill: #c9c9c9;
+      }
+
+      .st3 {
+        fill: #d8d8d8;
+      }
+
+      .st4 {
+        fill: #3b3b3b;
+      }
+
+      .st5 {
+        fill: #474747;
+      }
+
+      .st6 {
+        fill: #252525;
+      }
+
+      .st7 {
+        fill: #bdbdbd;
+      }
+
+      .st8 {
+        fill: #5d5d5d;
+      }
+
+      .st9 {
+        fill: #b6b6b6;
+      }
+
+      .st10 {
+        fill: #c3c3c3;
+      }
+
+      .st11 {
+        fill: #b4b4b4;
+      }
+
+      .st12 {
+        fill: #454545;
+      }
+
+      .st13 {
+        fill: #dadada;
+      }
+
+      .st14 {
+        fill: #0f0f0f;
+      }
+
+      .st15 {
+        fill: #a1a1a1;
+      }
+
+      .st16 {
+        fill: #333;
+      }
+
+      .st17 {
+        fill: #7b7b7b;
+      }
+
+      .st18 {
+        fill: #989898;
+      }
+
+      .st19 {
+        fill: #575757;
+      }
+
+      .st20 {
+        fill: #a2a2a2;
+      }
+
+      .st21 {
+        fill: #d9d9d9;
+      }
+
+      .st22 {
+        fill: #2b2b2b;
+      }
+
+      .st23 {
+        fill: #9c9c9c;
+      }
+
+      .st24 {
+        fill: #a7a7a7;
+      }
+
+      .st25 {
+        fill: #545454;
+      }
+
+      .st26 {
+        fill: #838383;
+      }
+
+      .st27 {
+        fill: #8b8b8b;
+      }
+
+      .st28 {
+        fill: #a3a3a3;
+      }
+
+      .st29 {
+        fill: #c5c5c5;
+      }
+
+      .st30 {
+        fill: #141414;
+      }
+
+      .st31 {
+        fill: #434343;
+      }
+
+      .st32 {
+        fill: #676767;
+      }
+
+      .st33 {
+        fill: #414141;
+      }
+
+      .st34 {
+        fill: #848484;
+      }
+
+      .st35 {
+        fill: #a9a9a9;
+      }
+
+      .st36 {
+        fill: #121212;
+      }
+
+      .st37 {
+        fill: #cbcbcb;
+      }
+
+      .st38 {
+        fill: #747474;
+      }
+
+      .st39 {
+        fill: #b1b1b1;
+      }
+
+      .st40 {
+        fill: #515151;
+      }
+
+      .st41 {
+        fill: #232323;
+      }
+
+      .st42 {
+        fill: #b9b9b9;
+      }
+
+      .st43 {
+        fill: #444;
+      }
+
+      .st44 {
+        fill: #e2e2e2;
+      }
+
+      .st45 {
+        fill: #3d3d3d;
+      }
+
+      .st46 {
+        fill: #9d9d9d;
+      }
+
+      .st47 {
+        fill: #818181;
+      }
+
+      .st48 {
+        fill: #262626;
+      }
+
+      .st49 {
+        fill: #303030;
+      }
+
+      .st50 {
+        fill: #ccc;
+      }
+
+      .st51 {
+        fill: #dedede;
+      }
+
+      .st52 {
+        fill: #4b4b4b;
+      }
+
+      .st53 {
+        fill: #bcbcbc;
+      }
+
+      .st54 {
+        fill: #dfdfdf;
+      }
+
+      .st55 {
+        fill: #e0e0e0;
+      }
+
+      .st56 {
+        fill: #505050;
+      }
+
+      .st57 {
+        fill: #d5d5d5;
+      }
+
+      .st58 {
+        fill: #c4c4c4;
+      }
+
+      .st59 {
+        fill: #ddd;
+      }
+
+      .st60 {
+        fill: #363636;
+      }
+
+      .st61 {
+        fill: #3c3c3c;
+      }
+
+      .st62 {
+        fill: #b5b5b5;
+      }
+
+      .st63 {
+        fill: #cdcdcd;
+      }
+
+      .st64 {
+        fill: #656565;
+      }
+
+      .st65 {
+        fill: #707070;
+      }
+
+      .st66 {
+        fill: #bababa;
+      }
+
+      .st67 {
+        fill: #a0a0a0;
+      }
+
+      .st68 {
+        fill: #afafaf;
+      }
+
+      .st69 {
+        fill: silver;
+      }
+
+      .st70 {
+        fill: #ababab;
+      }
+
+      .st71 {
+        fill: #cecece;
+      }
+
+      .st72 {
+        fill: #282828;
+      }
+
+      .st73 {
+        fill: #222;
+      }
+
+      .st74 {
+        fill: #737373;
+      }
+
+      .st75 {
+        fill: #555;
+      }
+
+      .st76 {
+        fill: #4d4d4d;
+      }
+
+      .st77 {
+        fill: #919191;
+      }
+
+      .st78 {
+        fill: #d3d3d3;
+      }
+
+      .st79 {
+        fill: #adadad;
+      }
+
+      .st80 {
+        fill: #888;
+      }
+
+      .st81 {
+        fill: #424242;
+      }
+
+      .st82 {
+        fill: #131313;
+      }
+
+      .st83 {
+        fill: #8f8f8f;
+      }
+
+      .st84 {
+        fill: #aeaeae;
+      }
+
+      .st85 {
+        fill: #828282;
+      }
+
+      .st86 {
+        fill: #b8b8b8;
+      }
+
+      .st87 {
+        fill: #323232;
+      }
+
+      .st88 {
+        fill: #c2c2c2;
+      }
+
+      .st89 {
+        fill: #5e5e5e;
+      }
+
+      .st90 {
+        fill: #5b5b5b;
+      }
+
+      .st91 {
+        fill: #1a1a1a;
+      }
+
+      .st92 {
+        fill: #202020;
+      }
+
+      .st93 {
+        fill: #757575;
+      }
+
+      .st94 {
+        fill: #565656;
+      }
+
+      .st95 {
+        fill: #242424;
+      }
+
+      .st96 {
+        fill: #e5e5e5;
+      }
+
+      .st97 {
+        fill: #767676;
+      }
+
+      .st98 {
+        fill: #4e4e4e;
+      }
+
+      .st99 {
+        fill: #929292;
+      }
+
+      .st100 {
+        fill: #a5a5a5;
+      }
+
+      .st101 {
+        fill: #666;
+      }
+
+      .st102 {
+        fill: #b3b3b3;
+      }
+
+      .st103 {
+        fill: #969696;
+      }
+
+      .st104 {
+        fill: #909090;
+      }
+
+      .st105 {
+        fill: #8a8a8a;
+      }
+
+      .st106 {
+        fill: #9b9b9b;
+      }
+
+      .st107 {
+        fill: #383838;
+      }
+
+      .st108 {
+        fill: #464646;
+      }
+
+      .st109 {
+        fill: #151515;
+      }
+
+      .st110 {
+        fill: #7e7e7e;
+      }
+
+      .st111 {
+        fill: #a4a4a4;
+      }
+
+      .st112 {
+        fill: #a8a8a8;
+      }
+
+      .st113 {
+        fill: #858585;
+      }
+
+      .st114 {
+        fill: #959595;
+      }
+
+      .st115 {
+        fill: #979797;
+      }
+
+      .st116 {
+        fill: #8c8c8c;
+      }
+
+      .st117 {
+        fill: #525252;
+      }
+
+      .st118 {
+        fill: #8e8e8e;
+      }
+
+      .st119 {
+        fill: #7d7d7d;
+      }
+
+      .st120 {
+        fill: #3e3e3e;
+      }
+
+      .st121 {
+        fill: #dbdbdb;
+      }
+
+      .st122 {
+        fill: #9a9a9a;
+      }
+
+      .st123 {
+        fill: #dcdcdc;
+      }
+
+      .st124 {
+        fill: #a6a6a6;
+      }
+
+      .st125 {
+        fill: #353535;
+      }
+
+      .st126 {
+        fill: #c8c8c8;
+      }
+
+      .st127 {
+        fill: #d6d6d6;
+      }
+
+      .st128 {
+        fill: #585858;
+      }
+
+      .st129 {
+        fill: #595959;
+      }
+
+      .st130 {
+        fill: #4f4f4f;
+      }
+
+      .st131 {
+        fill: #d2d2d2;
+      }
+
+      .st132 {
+        fill: #5a5a5a;
+      }
+
+      .st133 {
+        fill: #d1d1d1;
+      }
+
+      .st134 {
+        fill: #949494;
+      }
+
+      .st135 {
+        fill: #5f5f5f;
+      }
+
+      .st136 {
+        fill: #b0b0b0;
+      }
+
+      .st137 {
+        fill: #d6d6d6;
+      }
+
+      .st138 {
+        fill: #f5f5f5;
+      }
+
+      .st139 {
+        fill: #272727;
+      }
+
+      .st140 {
+        fill: #7a7a7a;
+      }
+
+      .st141 {
+        fill: #2a2a2a;
+      }
+
+      .st142 {
+        fill: #797979;
+      }
+
+      .st143 {
+        fill: #6e6e6e;
+      }
+
+      .st144 {
+        fill: #b2b2b2;
+      }
+
+      .st145 {
+        fill: #cacaca;
+      }
+
+      .st146 {
+        fill: #acacac;
+      }
+
+      .st147 {
+        fill: #696969;
+      }
+
+      .st148 {
+        fill: #bbb;
+      }
+
+      .st149 {
+        fill: #c6c6c6;
+      }
+
+      .st150 {
+        fill: #9f9f9f;
+      }
+
+      .st151 {
+        fill: #393939;
+      }
+
+      .st152 {
+        fill: #2c2c2c;
+      }
+
+      .st153 {
+        fill: #111;
+      }
+
+      .st154 {
+        fill: #c1c1c1;
+      }
+
+      .st155 {
+        fill: #d7d7d7;
+      }
+
+      .st156 {
+        fill: #cfcfcf;
+      }
+
+      .st157 {
+        fill: #d0d0d0;
+      }
+
+      .st158 {
+        fill: #e8e8e8;
+      }
+
+      .st159 {
+        fill: #2d2d2d;
+      }
+
+      .st160 {
+        fill: #616161;
+      }
+
+      .st161 {
+        fill: #bfbfbf;
+      }
+
+      .st162 {
+        fill: #b7b7b7;
+      }
+
+      .st163 {
+        fill: #898989;
+      }
+
+      .st164 {
+        fill: #171717;
+      }
+
+      .st165 {
+        fill: #535353;
+      }
+
+      .st166 {
+        fill: #6a6a6a;
+      }
+
+      .st167 {
+        fill: #d4d4d4;
+      }
+
+      .st168 {
+        fill: #878787;
+      }
+
+      .st169 {
+        fill: #e1e1e1;
+      }
+
+      .st170 {
+        fill: #8d8d8d;
+      }
+    </style>
+  </defs>
+  <polygon class="st99" points="3.7 94.4 6.5 94.4 6.5 91.5 3.7 91.5 3.7 94.4" vector-effect="non-scaling-stroke"/>
+  <polygon class="st34" points="3.7 91.5 6.5 91.5 6.5 88.7 3.7 88.7 3.7 91.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st3" points="6.5 94.4 9.3 94.4 9.3 91.5 6.5 91.5 6.5 94.4" vector-effect="non-scaling-stroke"/>
+  <polygon class="st21" points="6.5 91.5 9.3 91.5 9.3 88.7 6.5 88.7 6.5 91.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st121" points="6.5 71.7 9.3 71.7 9.3 68.9 6.5 68.9 6.5 71.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st167" points="6.5 68.9 9.3 68.9 9.3 66 6.5 66 6.5 68.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st3" points="6.5 66 9.3 66 9.3 63.2 6.5 63.2 6.5 66" vector-effect="non-scaling-stroke"/>
+  <polygon class="st2" points="9.3 94.4 12.2 94.4 12.2 91.5 9.3 91.5 9.3 94.4" vector-effect="non-scaling-stroke"/>
+  <polygon class="st19" points="9.3 91.5 12.2 91.5 12.2 88.7 9.3 88.7 9.3 91.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st157" points="9.3 88.7 12.2 88.7 12.2 85.9 9.3 85.9 9.3 88.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st78" points="9.3 74.5 12.2 74.5 12.2 71.7 9.3 71.7 9.3 74.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st89" points="9.3 71.7 12.2 71.7 12.2 68.9 9.3 68.9 9.3 71.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st147" points="9.3 68.9 12.2 68.9 12.2 66 9.3 66 9.3 68.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st73" points="9.3 66 12.2 66 12.2 63.2 9.3 63.2 9.3 66" vector-effect="non-scaling-stroke"/>
+  <polygon class="st133" points="9.3 63.2 12.2 63.2 12.2 60.3 9.3 60.3 9.3 63.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st69" points="12.2 94.4 15 94.4 15 91.5 12.2 91.5 12.2 94.4" vector-effect="non-scaling-stroke"/>
+  <polygon class="st63" points="12.2 91.5 15 91.5 15 88.7 12.2 88.7 12.2 91.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st47" points="12.2 88.7 15 88.7 15 85.9 12.2 85.9 12.2 88.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st63" points="12.2 85.9 15 85.9 15 83 12.2 83 12.2 85.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st157" points="12.2 74.5 15 74.5 15 71.7 12.2 71.7 12.2 74.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st104" points="12.2 71.7 15 71.7 15 68.9 12.2 68.9 12.2 71.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st103" points="12.2 68.9 15 68.9 15 66 12.2 66 12.2 68.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st128" points="12.2 66 15 66 15 63.2 12.2 63.2 12.2 66" vector-effect="non-scaling-stroke"/>
+  <polygon class="st121" points="12.2 63.2 15 63.2 15 60.3 12.2 60.3 12.2 63.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st11" points="15 88.7 17.8 88.7 17.8 85.9 15 85.9 15 88.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st40" points="15 85.9 17.8 85.9 17.8 83 15 83 15 85.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st57" points="15 83 17.8 83 17.8 80.2 15 80.2 15 83" vector-effect="non-scaling-stroke"/>
+  <polygon class="st50" points="15 80.2 17.8 80.2 17.8 77.4 15 77.4 15 80.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st121" points="15 77.4 17.8 77.4 17.8 74.5 15 74.5 15 77.4" vector-effect="non-scaling-stroke"/>
+  <polygon class="st68" points="15 74.5 17.8 74.5 17.8 71.7 15 71.7 15 74.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st79" points="15 71.7 17.8 71.7 17.8 68.9 15 68.9 15 71.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st100" points="15 68.9 17.8 68.9 17.8 66 15 66 15 68.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st74" points="15 66 17.8 66 17.8 63.2 15 63.2 15 66" vector-effect="non-scaling-stroke"/>
+  <polygon class="st107" points="15 63.2 17.8 63.2 17.8 60.3 15 60.3 15 63.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st71" points="15 60.3 17.8 60.3 17.8 57.5 15 57.5 15 60.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st160" points="17.8 83 20.7 83 20.7 80.2 17.8 80.2 17.8 83" vector-effect="non-scaling-stroke"/>
+  <polygon class="st94" points="17.8 80.2 20.7 80.2 20.7 77.4 17.8 77.4 17.8 80.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st165" points="17.8 77.4 20.7 77.4 20.7 74.5 17.8 74.5 17.8 77.4" vector-effect="non-scaling-stroke"/>
+  <polygon class="st75" points="17.8 74.5 20.7 74.5 20.7 71.7 17.8 71.7 17.8 74.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st25" points="17.8 71.7 20.7 71.7 20.7 68.9 17.8 68.9 17.8 71.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st56" points="17.8 68.9 20.7 68.9 20.7 66 17.8 66 17.8 68.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st64" points="17.8 66 20.7 66 20.7 63.2 17.8 63.2 17.8 66" vector-effect="non-scaling-stroke"/>
+  <polygon class="st75" points="17.8 63.2 20.7 63.2 20.7 60.3 17.8 60.3 17.8 63.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st24" points="17.8 60.3 20.7 60.3 20.7 57.5 17.8 57.5 17.8 60.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st131" points="17.8 57.5 20.7 57.5 20.7 54.7 17.8 54.7 17.8 57.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st137" points="17.8 54.7 20.7 54.7 20.7 51.8 17.8 51.8 17.8 54.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st78" points="17.8 51.8 20.7 51.8 20.7 49 17.8 49 17.8 51.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st13" points="17.8 49 20.7 49 20.7 46.2 17.8 46.2 17.8 49" vector-effect="non-scaling-stroke"/>
+  <polygon class="st158" points="20.7 80.2 23.5 80.2 23.5 77.4 20.7 77.4 20.7 80.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st21" points="20.7 77.4 23.5 77.4 23.5 74.5 20.7 74.5 20.7 77.4" vector-effect="non-scaling-stroke"/>
+  <polygon class="st39" points="20.7 74.5 23.5 74.5 23.5 71.7 20.7 71.7 20.7 74.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st101" points="20.7 71.7 23.5 71.7 23.5 68.9 20.7 68.9 20.7 71.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st19" points="20.7 68.9 23.5 68.9 23.5 66 20.7 66 20.7 68.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st128" points="20.7 66 23.5 66 23.5 63.2 20.7 63.2 20.7 66" vector-effect="non-scaling-stroke"/>
+  <polygon class="st94" points="20.7 63.2 23.5 63.2 23.5 60.3 20.7 60.3 20.7 63.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st94" points="20.7 60.3 23.5 60.3 23.5 57.5 20.7 57.5 20.7 60.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st75" points="20.7 57.5 23.5 57.5 23.5 54.7 20.7 54.7 20.7 57.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st75" points="20.7 54.7 23.5 54.7 23.5 51.8 20.7 51.8 20.7 54.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st25" points="20.7 51.8 23.5 51.8 23.5 49 20.7 49 20.7 51.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st90" points="20.7 49 23.5 49 23.5 46.2 20.7 46.2 20.7 49" vector-effect="non-scaling-stroke"/>
+  <polygon class="st2" points="23.5 80.2 26.3 80.2 26.3 77.4 23.5 77.4 23.5 80.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st144" points="23.5 77.4 26.3 77.4 26.3 74.5 23.5 74.5 23.5 77.4" vector-effect="non-scaling-stroke"/>
+  <polygon class="st57" points="23.5 74.5 26.3 74.5 26.3 71.7 23.5 71.7 23.5 74.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st55" points="23.5 71.7 26.3 71.7 26.3 68.9 23.5 68.9 23.5 71.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st13" points="23.5 68.9 26.3 68.9 26.3 66 23.5 66 23.5 68.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st127" points="23.5 66 26.3 66 26.3 63.2 23.5 63.2 23.5 66" vector-effect="non-scaling-stroke"/>
+  <polygon class="st0" points="23.5 63.2 26.3 63.2 26.3 60.3 23.5 60.3 23.5 63.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st160" points="23.5 60.3 26.3 60.3 26.3 57.5 23.5 57.5 23.5 60.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st64" points="23.5 57.5 26.3 57.5 26.3 54.7 23.5 54.7 23.5 57.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st8" points="23.5 54.7 26.3 54.7 26.3 51.8 23.5 51.8 23.5 54.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st90" points="23.5 51.8 26.3 51.8 26.3 49 23.5 49 23.5 51.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st90" points="23.5 49 26.3 49 26.3 46.2 23.5 46.2 23.5 49" vector-effect="non-scaling-stroke"/>
+  <polygon class="st71" points="23.5 34.8 26.3 34.8 26.3 32 23.5 32 23.5 34.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st155" points="26.3 80.2 29.2 80.2 29.2 77.4 26.3 77.4 26.3 80.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st80" points="26.3 77.4 29.2 77.4 29.2 74.5 26.3 74.5 26.3 77.4" vector-effect="non-scaling-stroke"/>
+  <polygon class="st84" points="26.3 74.5 29.2 74.5 29.2 71.7 26.3 71.7 26.3 74.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st80" points="26.3 71.7 29.2 71.7 29.2 68.9 26.3 68.9 26.3 71.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st104" points="26.3 68.9 29.2 68.9 29.2 66 26.3 66 26.3 68.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st103" points="26.3 66 29.2 66 29.2 63.2 26.3 63.2 26.3 66" vector-effect="non-scaling-stroke"/>
+  <polygon class="st66" points="26.3 63.2 29.2 63.2 29.2 60.3 26.3 60.3 26.3 63.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st7" points="26.3 60.3 29.2 60.3 29.2 57.5 26.3 57.5 26.3 60.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st155" points="26.3 57.5 29.2 57.5 29.2 54.7 26.3 54.7 26.3 57.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st59" points="26.3 54.7 29.2 54.7 29.2 51.8 26.3 51.8 26.3 54.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st50" points="26.3 51.8 29.2 51.8 29.2 49 26.3 49 26.3 51.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st35" points="26.3 49 29.2 49 29.2 46.2 26.3 46.2 26.3 49" vector-effect="non-scaling-stroke"/>
+  <polygon class="st34" points="26.3 46.2 29.2 46.2 29.2 43.3 26.3 43.3 26.3 46.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st140" points="26.3 43.3 29.2 43.3 29.2 40.5 26.3 40.5 26.3 43.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st94" points="26.3 40.5 29.2 40.5 29.2 37.7 26.3 37.7 26.3 40.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st19" points="26.3 37.7 29.2 37.7 29.2 34.8 26.3 34.8 26.3 37.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st19" points="26.3 34.8 29.2 34.8 29.2 32 26.3 32 26.3 34.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st131" points="26.3 32 29.2 32 29.2 29.2 26.3 29.2 26.3 32" vector-effect="non-scaling-stroke"/>
+  <polygon class="st133" points="26.3 29.2 29.2 29.2 29.2 26.3 26.3 26.3 26.3 29.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st78" points="26.3 26.3 29.2 26.3 29.2 23.5 26.3 23.5 26.3 26.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st63" points="26.3 23.5 29.2 23.5 29.2 20.7 26.3 20.7 26.3 23.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st121" points="29.2 83 32 83 32 80.2 29.2 80.2 29.2 83" vector-effect="non-scaling-stroke"/>
+  <polygon class="st10" points="29.2 80.2 32 80.2 32 77.4 29.2 77.4 29.2 80.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st163" points="29.2 77.4 32 77.4 32 74.5 29.2 74.5 29.2 77.4" vector-effect="non-scaling-stroke"/>
+  <polygon class="st162" points="29.2 74.5 32 74.5 32 71.7 29.2 71.7 29.2 74.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st56" points="29.2 71.7 32 71.7 32 68.9 29.2 68.9 29.2 71.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st19" points="29.2 68.9 32 68.9 32 66 29.2 66 29.2 68.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st128" points="29.2 66 32 66 32 63.2 29.2 63.2 29.2 66" vector-effect="non-scaling-stroke"/>
+  <polygon class="st118" points="29.2 63.2 32 63.2 32 60.3 29.2 60.3 29.2 63.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st134" points="29.2 60.3 32 60.3 32 57.5 29.2 57.5 29.2 60.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st141" points="29.2 57.5 32 57.5 32 54.7 29.2 54.7 29.2 57.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st133" points="29.2 54.7 32 54.7 32 51.8 29.2 51.8 29.2 54.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st3" points="29.2 46.2 32 46.2 32 43.3 29.2 43.3 29.2 46.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st121" points="29.2 43.3 32 43.3 32 40.5 29.2 40.5 29.2 43.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st21" points="29.2 40.5 32 40.5 32 37.7 29.2 37.7 29.2 40.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st55" points="29.2 37.7 32 37.7 32 34.8 29.2 34.8 29.2 37.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st155" points="29.2 34.8 32 34.8 32 32 29.2 32 29.2 34.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st157" points="29.2 32 32 32 32 29.2 29.2 29.2 29.2 32" vector-effect="non-scaling-stroke"/>
+  <polygon class="st94" points="29.2 29.2 32 29.2 32 26.3 29.2 26.3 29.2 29.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st128" points="29.2 26.3 32 26.3 32 23.5 29.2 23.5 29.2 26.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st121" points="29.2 23.5 32 23.5 32 20.7 29.2 20.7 29.2 23.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st58" points="32 94.4 34.8 94.4 34.8 91.5 32 91.5 32 94.4" vector-effect="non-scaling-stroke"/>
+  <polygon class="st88" points="32 91.5 34.8 91.5 34.8 88.7 32 88.7 32 91.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st59" points="32 83 34.8 83 34.8 80.2 32 80.2 32 83" vector-effect="non-scaling-stroke"/>
+  <polygon class="st29" points="32 80.2 34.8 80.2 34.8 77.4 32 77.4 32 80.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st168" points="32 77.4 34.8 77.4 34.8 74.5 32 74.5 32 77.4" vector-effect="non-scaling-stroke"/>
+  <polygon class="st102" points="32 74.5 34.8 74.5 34.8 71.7 32 71.7 32 74.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st90" points="32 71.7 34.8 71.7 34.8 68.9 32 68.9 32 71.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st19" points="32 68.9 34.8 68.9 34.8 66 32 66 32 68.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st128" points="32 66 34.8 66 34.8 63.2 32 63.2 32 66" vector-effect="non-scaling-stroke"/>
+  <polygon class="st19" points="32 63.2 34.8 63.2 34.8 60.3 32 60.3 32 63.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st94" points="32 60.3 34.8 60.3 34.8 57.5 32 57.5 32 60.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st22" points="32 57.5 34.8 57.5 34.8 54.7 32 54.7 32 57.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st123" points="32 54.7 34.8 54.7 34.8 51.8 32 51.8 32 54.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st123" points="32 40.5 34.8 40.5 34.8 37.7 32 37.7 32 40.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st56" points="32 37.7 34.8 37.7 34.8 34.8 32 34.8 32 37.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st25" points="32 34.8 34.8 34.8 34.8 32 32 32 32 34.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st19" points="32 32 34.8 32 34.8 29.2 32 29.2 32 32" vector-effect="non-scaling-stroke"/>
+  <polygon class="st75" points="32 29.2 34.8 29.2 34.8 26.3 32 26.3 32 29.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st94" points="32 26.3 34.8 26.3 34.8 23.5 32 23.5 32 26.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st133" points="32 23.5 34.8 23.5 34.8 20.7 32 20.7 32 23.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st69" points="34.8 94.4 37.7 94.4 37.7 91.5 34.8 91.5 34.8 94.4" vector-effect="non-scaling-stroke"/>
+  <polygon class="st136" points="34.8 91.5 37.7 91.5 37.7 88.7 34.8 88.7 34.8 91.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st29" points="34.8 88.7 37.7 88.7 37.7 85.9 34.8 85.9 34.8 88.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st21" points="34.8 83 37.7 83 37.7 80.2 34.8 80.2 34.8 83" vector-effect="non-scaling-stroke"/>
+  <polygon class="st149" points="34.8 80.2 37.7 80.2 37.7 77.4 34.8 77.4 34.8 80.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st163" points="34.8 77.4 37.7 77.4 37.7 74.5 34.8 74.5 34.8 77.4" vector-effect="non-scaling-stroke"/>
+  <polygon class="st168" points="34.8 74.5 37.7 74.5 37.7 71.7 34.8 71.7 34.8 74.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st39" points="34.8 71.7 37.7 71.7 37.7 68.9 34.8 68.9 34.8 71.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st42" points="34.8 68.9 37.7 68.9 37.7 66 34.8 66 34.8 68.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st94" points="34.8 66 37.7 66 37.7 63.2 34.8 63.2 34.8 66" vector-effect="non-scaling-stroke"/>
+  <polygon class="st19" points="34.8 63.2 37.7 63.2 37.7 60.3 34.8 60.3 34.8 63.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st75" points="34.8 60.3 37.7 60.3 37.7 57.5 34.8 57.5 34.8 60.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st19" points="34.8 57.5 37.7 57.5 37.7 54.7 34.8 54.7 34.8 57.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st46" points="34.8 54.7 37.7 54.7 37.7 51.8 34.8 51.8 34.8 54.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st13" points="34.8 43.3 37.7 43.3 37.7 40.5 34.8 40.5 34.8 43.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st40" points="34.8 40.5 37.7 40.5 37.7 37.7 34.8 37.7 34.8 40.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st94" points="34.8 37.7 37.7 37.7 37.7 34.8 34.8 34.8 34.8 37.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st75" points="34.8 34.8 37.7 34.8 37.7 32 34.8 32 34.8 34.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st19" points="34.8 32 37.7 32 37.7 29.2 34.8 29.2 34.8 32" vector-effect="non-scaling-stroke"/>
+  <polygon class="st152" points="34.8 29.2 37.7 29.2 37.7 26.3 34.8 26.3 34.8 29.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st155" points="34.8 26.3 37.7 26.3 37.7 23.5 34.8 23.5 34.8 26.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st10" points="37.7 91.5 40.5 91.5 40.5 88.7 37.7 88.7 37.7 91.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st79" points="37.7 88.7 40.5 88.7 40.5 85.9 37.7 85.9 37.7 88.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st59" points="37.7 85.9 40.5 85.9 40.5 83 37.7 83 37.7 85.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st157" points="37.7 83 40.5 83 40.5 80.2 37.7 80.2 37.7 83" vector-effect="non-scaling-stroke"/>
+  <polygon class="st2" points="37.7 80.2 40.5 80.2 40.5 77.4 37.7 77.4 37.7 80.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st80" points="37.7 77.4 40.5 77.4 40.5 74.5 37.7 74.5 37.7 77.4" vector-effect="non-scaling-stroke"/>
+  <polygon class="st80" points="37.7 74.5 40.5 74.5 40.5 71.7 37.7 71.7 37.7 74.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st68" points="37.7 71.7 40.5 71.7 40.5 68.9 37.7 68.9 37.7 71.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st162" points="37.7 68.9 40.5 68.9 40.5 66 37.7 66 37.7 68.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st94" points="37.7 66 40.5 66 40.5 63.2 37.7 63.2 37.7 66" vector-effect="non-scaling-stroke"/>
+  <polygon class="st19" points="37.7 63.2 40.5 63.2 40.5 60.3 37.7 60.3 37.7 63.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st19" points="37.7 60.3 40.5 60.3 40.5 57.5 37.7 57.5 37.7 60.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st103" points="37.7 57.5 40.5 57.5 40.5 54.7 37.7 54.7 37.7 57.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st122" points="37.7 54.7 40.5 54.7 40.5 51.8 37.7 51.8 37.7 54.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st13" points="37.7 51.8 40.5 51.8 40.5 49 37.7 49 37.7 51.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st51" points="37.7 49 40.5 49 40.5 46.2 37.7 46.2 37.7 49" vector-effect="non-scaling-stroke"/>
+  <polygon class="st67" points="37.7 46.2 40.5 46.2 40.5 43.3 37.7 43.3 37.7 46.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st56" points="37.7 43.3 40.5 43.3 40.5 40.5 37.7 40.5 37.7 43.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st75" points="37.7 40.5 40.5 40.5 40.5 37.7 37.7 37.7 37.7 40.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st117" points="37.7 37.7 40.5 37.7 40.5 34.8 37.7 34.8 37.7 37.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st94" points="37.7 34.8 40.5 34.8 40.5 32 37.7 32 37.7 34.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st41" points="37.7 32 40.5 32 40.5 29.2 37.7 29.2 37.7 32" vector-effect="non-scaling-stroke"/>
+  <polygon class="st57" points="37.7 29.2 40.5 29.2 40.5 26.3 37.7 26.3 37.7 29.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st38" points="40.5 88.7 43.3 88.7 43.3 85.9 40.5 85.9 40.5 88.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st146" points="40.5 85.9 43.3 85.9 43.3 83 40.5 83 40.5 85.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st167" points="40.5 83 43.3 83 43.3 80.2 40.5 80.2 40.5 83" vector-effect="non-scaling-stroke"/>
+  <polygon class="st37" points="40.5 80.2 43.3 80.2 43.3 77.4 40.5 77.4 40.5 80.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st27" points="40.5 77.4 43.3 77.4 43.3 74.5 40.5 74.5 40.5 77.4" vector-effect="non-scaling-stroke"/>
+  <polygon class="st163" points="40.5 74.5 43.3 74.5 43.3 71.7 40.5 71.7 40.5 74.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st79" points="40.5 71.7 43.3 71.7 43.3 68.9 40.5 68.9 40.5 71.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st144" points="40.5 68.9 43.3 68.9 43.3 66 40.5 66 40.5 68.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st132" points="40.5 66 43.3 66 43.3 63.2 40.5 63.2 40.5 66" vector-effect="non-scaling-stroke"/>
+  <polygon class="st47" points="40.5 63.2 43.3 63.2 43.3 60.3 40.5 60.3 40.5 63.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st47" points="40.5 60.3 43.3 60.3 43.3 57.5 40.5 57.5 40.5 60.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st115" points="40.5 57.5 43.3 57.5 43.3 54.7 40.5 54.7 40.5 57.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st156" points="40.5 54.7 43.3 54.7 43.3 51.8 40.5 51.8 40.5 54.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st110" points="40.5 51.8 43.3 51.8 43.3 49 40.5 49 40.5 51.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st47" points="40.5 49 43.3 49 43.3 46.2 40.5 46.2 40.5 49" vector-effect="non-scaling-stroke"/>
+  <polygon class="st143" points="40.5 46.2 43.3 46.2 43.3 43.3 40.5 43.3 40.5 46.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st25" points="40.5 43.3 43.3 43.3 43.3 40.5 40.5 40.5 40.5 43.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st117" points="40.5 40.5 43.3 40.5 43.3 37.7 40.5 37.7 40.5 40.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st33" points="40.5 37.7 43.3 37.7 43.3 34.8 40.5 34.8 40.5 37.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st125" points="40.5 34.8 43.3 34.8 43.3 32 40.5 32 40.5 34.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st79" points="40.5 32 43.3 32 43.3 29.2 40.5 29.2 40.5 32" vector-effect="non-scaling-stroke"/>
+  <polygon class="st131" points="43.3 85.9 46.2 85.9 46.2 83 43.3 83 43.3 85.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st121" points="43.3 83 46.2 83 46.2 80.2 43.3 80.2 43.3 83" vector-effect="non-scaling-stroke"/>
+  <polygon class="st10" points="43.3 80.2 46.2 80.2 46.2 77.4 43.3 77.4 43.3 80.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st168" points="43.3 77.4 46.2 77.4 46.2 74.5 43.3 74.5 43.3 77.4" vector-effect="non-scaling-stroke"/>
+  <polygon class="st105" points="43.3 74.5 46.2 74.5 46.2 71.7 43.3 71.7 43.3 74.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st144" points="43.3 71.7 46.2 71.7 46.2 68.9 43.3 68.9 43.3 71.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st136" points="43.3 68.9 46.2 68.9 46.2 66 43.3 66 43.3 68.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st90" points="43.3 66 46.2 66 46.2 63.2 43.3 63.2 43.3 66" vector-effect="non-scaling-stroke"/>
+  <polygon class="st18" points="43.3 63.2 46.2 63.2 46.2 60.3 43.3 60.3 43.3 63.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st77" points="43.3 60.3 46.2 60.3 46.2 57.5 43.3 57.5 43.3 60.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st122" points="43.3 57.5 46.2 57.5 46.2 54.7 43.3 54.7 43.3 57.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st59" points="43.3 54.7 46.2 54.7 46.2 51.8 43.3 51.8 43.3 54.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st165" points="43.3 51.8 46.2 51.8 46.2 49 43.3 49 43.3 51.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st40" points="43.3 49 46.2 49 46.2 46.2 43.3 46.2 43.3 49" vector-effect="non-scaling-stroke"/>
+  <polygon class="st165" points="43.3 46.2 46.2 46.2 46.2 43.3 43.3 43.3 43.3 46.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st94" points="43.3 43.3 46.2 43.3 46.2 40.5 43.3 40.5 43.3 43.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st165" points="43.3 40.5 46.2 40.5 46.2 37.7 43.3 37.7 43.3 40.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st159" points="43.3 37.7 46.2 37.7 46.2 34.8 43.3 34.8 43.3 37.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st72" points="43.3 34.8 46.2 34.8 46.2 32 43.3 32 43.3 34.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st133" points="43.3 32 46.2 32 46.2 29.2 43.3 29.2 43.3 32" vector-effect="non-scaling-stroke"/>
+  <polygon class="st155" points="46.2 83 49 83 49 80.2 46.2 80.2 46.2 83" vector-effect="non-scaling-stroke"/>
+  <polygon class="st161" points="46.2 80.2 49 80.2 49 77.4 46.2 77.4 46.2 80.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st80" points="46.2 77.4 49 77.4 49 74.5 46.2 74.5 46.2 77.4" vector-effect="non-scaling-stroke"/>
+  <polygon class="st168" points="46.2 74.5 49 74.5 49 71.7 46.2 71.7 46.2 74.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st11" points="46.2 71.7 49 71.7 49 68.9 46.2 68.9 46.2 71.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st162" points="46.2 68.9 49 68.9 49 66 46.2 66 46.2 68.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st163" points="46.2 66 49 66 49 63.2 46.2 63.2 46.2 66" vector-effect="non-scaling-stroke"/>
+  <polygon class="st115" points="46.2 63.2 49 63.2 49 60.3 46.2 60.3 46.2 63.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st35" points="46.2 60.3 49 60.3 49 57.5 46.2 57.5 46.2 60.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st57" points="46.2 57.5 49 57.5 49 54.7 46.2 54.7 46.2 57.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st165" points="46.2 54.7 49 54.7 49 51.8 46.2 51.8 46.2 54.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st40" points="46.2 51.8 49 51.8 49 49 46.2 49 46.2 51.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st25" points="46.2 49 49 49 49 46.2 46.2 46.2 46.2 49" vector-effect="non-scaling-stroke"/>
+  <polygon class="st19" points="46.2 46.2 49 46.2 49 43.3 46.2 43.3 46.2 46.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st117" points="46.2 43.3 49 43.3 49 40.5 46.2 40.5 46.2 43.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st72" points="46.2 40.5 49 40.5 49 37.7 46.2 37.7 46.2 40.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st37" points="46.2 37.7 49 37.7 49 34.8 46.2 34.8 46.2 37.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st50" points="46.2 34.8 49 34.8 49 32 46.2 32 46.2 34.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st9" points="46.2 32 49 32 49 29.2 46.2 29.2 46.2 32" vector-effect="non-scaling-stroke"/>
+  <polygon class="st18" points="46.2 29.2 49 29.2 49 26.3 46.2 26.3 46.2 29.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st3" points="49 83 51.8 83 51.8 80.2 49 80.2 49 83" vector-effect="non-scaling-stroke"/>
+  <polygon class="st69" points="49 80.2 51.8 80.2 51.8 77.4 49 77.4 49 80.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st116" points="49 77.4 51.8 77.4 51.8 74.5 49 74.5 49 77.4" vector-effect="non-scaling-stroke"/>
+  <polygon class="st170" points="49 74.5 51.8 74.5 51.8 71.7 49 71.7 49 74.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st68" points="49 71.7 51.8 71.7 51.8 68.9 49 68.9 49 71.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st68" points="49 68.9 51.8 68.9 51.8 66 49 66 49 68.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st111" points="49 66 51.8 66 51.8 63.2 49 63.2 49 66" vector-effect="non-scaling-stroke"/>
+  <polygon class="st167" points="49 63.2 51.8 63.2 51.8 60.3 49 60.3 49 63.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st131" points="49 60.3 51.8 60.3 51.8 57.5 49 57.5 49 60.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st165" points="49 57.5 51.8 57.5 51.8 54.7 49 54.7 49 57.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st40" points="49 54.7 51.8 54.7 51.8 51.8 49 51.8 49 54.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st117" points="49 51.8 51.8 51.8 51.8 49 49 49 49 51.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st165" points="49 49 51.8 49 51.8 46.2 49 46.2 49 49" vector-effect="non-scaling-stroke"/>
+  <polygon class="st75" points="49 46.2 51.8 46.2 51.8 43.3 49 43.3 49 46.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st41" points="49 43.3 51.8 43.3 51.8 40.5 49 40.5 49 43.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st3" points="49 40.5 51.8 40.5 51.8 37.7 49 37.7 49 40.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st13" points="49 37.7 51.8 37.7 51.8 34.8 49 34.8 49 37.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st167" points="49 34.8 51.8 34.8 51.8 32 49 32 49 34.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st167" points="49 32 51.8 32 51.8 29.2 49 29.2 49 32" vector-effect="non-scaling-stroke"/>
+  <polygon class="st28" points="49 29.2 51.8 29.2 51.8 26.3 49 26.3 49 29.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st42" points="49 23.5 51.8 23.5 51.8 20.7 49 20.7 49 23.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st23" points="49 20.7 51.8 20.7 51.8 17.8 49 17.8 49 20.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st3" points="51.8 83 54.7 83 54.7 80.2 51.8 80.2 51.8 83" vector-effect="non-scaling-stroke"/>
+  <polygon class="st53" points="51.8 80.2 54.7 80.2 54.7 77.4 51.8 77.4 51.8 80.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st27" points="51.8 77.4 54.7 77.4 54.7 74.5 51.8 74.5 51.8 77.4" vector-effect="non-scaling-stroke"/>
+  <polygon class="st39" points="51.8 74.5 54.7 74.5 54.7 71.7 51.8 71.7 51.8 74.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st39" points="51.8 71.7 54.7 71.7 54.7 68.9 51.8 68.9 51.8 71.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st79" points="51.8 68.9 54.7 68.9 54.7 66 51.8 66 51.8 68.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st137" points="51.8 66 54.7 66 54.7 63.2 51.8 63.2 51.8 66" vector-effect="non-scaling-stroke"/>
+  <polygon class="st115" points="51.8 63.2 54.7 63.2 54.7 60.3 51.8 60.3 51.8 63.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st25" points="51.8 60.3 54.7 60.3 54.7 57.5 51.8 57.5 51.8 60.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st165" points="51.8 57.5 54.7 57.5 54.7 54.7 51.8 54.7 51.8 57.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st25" points="51.8 54.7 54.7 54.7 54.7 51.8 51.8 51.8 51.8 54.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st165" points="51.8 51.8 54.7 51.8 54.7 49 51.8 49 51.8 51.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st87" points="51.8 49 54.7 49 54.7 46.2 51.8 46.2 51.8 49" vector-effect="non-scaling-stroke"/>
+  <polygon class="st6" points="51.8 46.2 54.7 46.2 54.7 43.3 51.8 43.3 51.8 46.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st21" points="51.8 43.3 54.7 43.3 54.7 40.5 51.8 40.5 51.8 43.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st123" points="51.8 40.5 54.7 40.5 54.7 37.7 51.8 37.7 51.8 40.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st156" points="51.8 37.7 54.7 37.7 54.7 34.8 51.8 34.8 51.8 37.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st28" points="51.8 34.8 54.7 34.8 54.7 32 51.8 32 51.8 34.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st150" points="51.8 32 54.7 32 54.7 29.2 51.8 29.2 51.8 32" vector-effect="non-scaling-stroke"/>
+  <polygon class="st124" points="51.8 29.2 54.7 29.2 54.7 26.3 51.8 26.3 51.8 29.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st24" points="51.8 26.3 54.7 26.3 54.7 23.5 51.8 23.5 51.8 26.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st161" points="51.8 23.5 54.7 23.5 54.7 20.7 51.8 20.7 51.8 23.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st124" points="51.8 20.7 54.7 20.7 54.7 17.8 51.8 17.8 51.8 20.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st155" points="54.7 83 57.5 83 57.5 80.2 54.7 80.2 54.7 83" vector-effect="non-scaling-stroke"/>
+  <polygon class="st156" points="54.7 80.2 57.5 80.2 57.5 77.4 54.7 77.4 54.7 80.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st146" points="54.7 77.4 57.5 77.4 57.5 74.5 54.7 74.5 54.7 77.4" vector-effect="non-scaling-stroke"/>
+  <polygon class="st84" points="54.7 74.5 57.5 74.5 57.5 71.7 54.7 71.7 54.7 74.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st51" points="54.7 71.7 57.5 71.7 57.5 68.9 54.7 68.9 54.7 71.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st96" points="54.7 68.9 57.5 68.9 57.5 66 54.7 66 54.7 68.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st27" points="54.7 66 57.5 66 57.5 63.2 54.7 63.2 54.7 66" vector-effect="non-scaling-stroke"/>
+  <polygon class="st75" points="54.7 63.2 57.5 63.2 57.5 60.3 54.7 60.3 54.7 63.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st25" points="54.7 60.3 57.5 60.3 57.5 57.5 54.7 57.5 54.7 60.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st94" points="54.7 57.5 57.5 57.5 57.5 54.7 54.7 54.7 54.7 57.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st25" points="54.7 54.7 57.5 54.7 57.5 51.8 54.7 51.8 54.7 54.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st41" points="54.7 51.8 57.5 51.8 57.5 49 54.7 49 54.7 51.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st150" points="54.7 49 57.5 49 57.5 46.2 54.7 46.2 54.7 49" vector-effect="non-scaling-stroke"/>
+  <polygon class="st54" points="54.7 46.2 57.5 46.2 57.5 43.3 54.7 43.3 54.7 46.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st21" points="54.7 43.3 57.5 43.3 57.5 40.5 54.7 40.5 54.7 43.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st46" points="54.7 40.5 57.5 40.5 57.5 37.7 54.7 37.7 54.7 40.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st28" points="54.7 37.7 57.5 37.7 57.5 34.8 54.7 34.8 54.7 37.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st20" points="54.7 34.8 57.5 34.8 57.5 32 54.7 32 54.7 34.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st28" points="54.7 32 57.5 32 57.5 29.2 54.7 29.2 54.7 32" vector-effect="non-scaling-stroke"/>
+  <polygon class="st88" points="54.7 29.2 57.5 29.2 57.5 26.3 54.7 26.3 54.7 29.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st21" points="57.5 83 60.3 83 60.3 80.2 57.5 80.2 57.5 83" vector-effect="non-scaling-stroke"/>
+  <polygon class="st149" points="57.5 80.2 60.3 80.2 60.3 77.4 57.5 77.4 57.5 80.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st79" points="57.5 77.4 60.3 77.4 60.3 74.5 57.5 74.5 57.5 77.4" vector-effect="non-scaling-stroke"/>
+  <polygon class="st59" points="57.5 74.5 60.3 74.5 60.3 71.7 57.5 71.7 57.5 74.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st115" points="57.5 71.7 60.3 71.7 60.3 68.9 57.5 68.9 57.5 71.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st67" points="57.5 68.9 60.3 68.9 60.3 66 57.5 66 57.5 68.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st25" points="57.5 66 60.3 66 60.3 63.2 57.5 63.2 57.5 66" vector-effect="non-scaling-stroke"/>
+  <polygon class="st75" points="57.5 63.2 60.3 63.2 60.3 60.3 57.5 60.3 57.5 63.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st25" points="57.5 60.3 60.3 60.3 60.3 57.5 57.5 57.5 57.5 60.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st165" points="57.5 57.5 60.3 57.5 60.3 54.7 57.5 54.7 57.5 57.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st22" points="57.5 54.7 60.3 54.7 60.3 51.8 57.5 51.8 57.5 54.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st71" points="57.5 51.8 60.3 51.8 60.3 49 57.5 49 57.5 51.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st9" points="57.5 49 60.3 49 60.3 46.2 57.5 46.2 57.5 49" vector-effect="non-scaling-stroke"/>
+  <polygon class="st168" points="57.5 46.2 60.3 46.2 60.3 43.3 57.5 43.3 57.5 46.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st59" points="57.5 43.3 60.3 43.3 60.3 40.5 57.5 40.5 57.5 43.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st20" points="57.5 40.5 60.3 40.5 60.3 37.7 57.5 37.7 57.5 40.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st15" points="57.5 37.7 60.3 37.7 60.3 34.8 57.5 34.8 57.5 37.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st67" points="57.5 34.8 60.3 34.8 60.3 32 57.5 32 57.5 34.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st145" points="57.5 32 60.3 32 60.3 29.2 57.5 29.2 57.5 32" vector-effect="non-scaling-stroke"/>
+  <polygon class="st21" points="60.3 83 63.2 83 63.2 80.2 60.3 80.2 60.3 83" vector-effect="non-scaling-stroke"/>
+  <polygon class="st37" points="60.3 80.2 63.2 80.2 63.2 77.4 60.3 77.4 60.3 80.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st44" points="60.3 77.4 63.2 77.4 63.2 74.5 60.3 74.5 60.3 77.4" vector-effect="non-scaling-stroke"/>
+  <polygon class="st122" points="60.3 74.5 63.2 74.5 63.2 71.7 60.3 71.7 60.3 74.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st98" points="60.3 71.7 63.2 71.7 63.2 68.9 60.3 68.9 60.3 71.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st117" points="60.3 68.9 63.2 68.9 63.2 66 60.3 66 60.3 68.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st75" points="60.3 66 63.2 66 63.2 63.2 60.3 63.2 60.3 66" vector-effect="non-scaling-stroke"/>
+  <polygon class="st75" points="60.3 63.2 63.2 63.2 63.2 60.3 60.3 60.3 60.3 63.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st90" points="60.3 60.3 63.2 60.3 63.2 57.5 60.3 57.5 60.3 60.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st72" points="60.3 57.5 63.2 57.5 63.2 54.7 60.3 54.7 60.3 57.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st27" points="60.3 54.7 63.2 54.7 63.2 51.8 60.3 51.8 60.3 54.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st134" points="60.3 51.8 63.2 51.8 63.2 49 60.3 49 60.3 51.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st142" points="60.3 49 63.2 49 63.2 46.2 60.3 46.2 60.3 49" vector-effect="non-scaling-stroke"/>
+  <polygon class="st16" points="60.3 46.2 63.2 46.2 63.2 43.3 60.3 43.3 60.3 46.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st21" points="60.3 43.3 63.2 43.3 63.2 40.5 60.3 40.5 60.3 43.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st28" points="60.3 40.5 63.2 40.5 63.2 37.7 60.3 37.7 60.3 40.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st112" points="60.3 37.7 63.2 37.7 63.2 34.8 60.3 34.8 60.3 37.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st24" points="60.3 34.8 63.2 34.8 63.2 32 60.3 32 60.3 34.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st126" points="60.3 32 63.2 32 63.2 29.2 60.3 29.2 60.3 32" vector-effect="non-scaling-stroke"/>
+  <polygon class="st55" points="63.2 83 66 83 66 80.2 63.2 80.2 63.2 83" vector-effect="non-scaling-stroke"/>
+  <polygon class="st137" points="63.2 80.2 66 80.2 66 77.4 63.2 77.4 63.2 80.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st116" points="63.2 77.4 66 77.4 66 74.5 63.2 74.5 63.2 77.4" vector-effect="non-scaling-stroke"/>
+  <polygon class="st18" points="63.2 74.5 66 74.5 66 71.7 63.2 71.7 63.2 74.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st117" points="63.2 71.7 66 71.7 66 68.9 63.2 68.9 63.2 71.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st25" points="63.2 68.9 66 68.9 66 66 63.2 66 63.2 68.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st165" points="63.2 66 66 66 66 63.2 63.2 63.2 63.2 66" vector-effect="non-scaling-stroke"/>
+  <polygon class="st19" points="63.2 63.2 66 63.2 66 60.3 63.2 60.3 63.2 63.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st41" points="63.2 60.3 66 60.3 66 57.5 63.2 57.5 63.2 60.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st60" points="63.2 57.5 66 57.5 66 54.7 63.2 54.7 63.2 57.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st23" points="63.2 54.7 66 54.7 66 51.8 63.2 51.8 63.2 54.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st52" points="63.2 51.8 66 51.8 66 49 63.2 49 63.2 51.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st60" points="63.2 49 66 49 66 46.2 63.2 46.2 63.2 49" vector-effect="non-scaling-stroke"/>
+  <polygon class="st151" points="63.2 46.2 66 46.2 66 43.3 63.2 43.3 63.2 46.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st3" points="63.2 43.3 66 43.3 66 40.5 63.2 40.5 63.2 43.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st20" points="63.2 40.5 66 40.5 66 37.7 63.2 37.7 63.2 40.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st11" points="63.2 37.7 66 37.7 66 34.8 63.2 34.8 63.2 37.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st167" points="63.2 34.8 66 34.8 66 32 63.2 32 63.2 34.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st21" points="66 94.4 68.9 94.4 68.9 91.5 66 91.5 66 94.4" vector-effect="non-scaling-stroke"/>
+  <polygon class="st137" points="66 91.5 68.9 91.5 68.9 88.7 66 88.7 66 91.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st44" points="66 83 68.9 83 68.9 80.2 66 80.2 66 83" vector-effect="non-scaling-stroke"/>
+  <polygon class="st155" points="66 80.2 68.9 80.2 68.9 77.4 66 77.4 66 80.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st115" points="66 77.4 68.9 77.4 68.9 74.5 66 74.5 66 77.4" vector-effect="non-scaling-stroke"/>
+  <polygon class="st129" points="66 74.5 68.9 74.5 68.9 71.7 66 71.7 66 74.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st128" points="66 71.7 68.9 71.7 68.9 68.9 66 68.9 66 71.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st25" points="66 68.9 68.9 68.9 68.9 66 66 66 66 68.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st165" points="66 66 68.9 66 68.9 63.2 66 63.2 66 66" vector-effect="non-scaling-stroke"/>
+  <polygon class="st152" points="66 63.2 68.9 63.2 68.9 60.3 66 60.3 66 63.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st52" points="66 60.3 68.9 60.3 68.9 57.5 66 57.5 66 60.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st99" points="66 57.5 68.9 57.5 68.9 54.7 66 54.7 66 57.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st94" points="66 54.7 68.9 54.7 68.9 51.8 66 51.8 66 54.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st165" points="66 51.8 68.9 51.8 68.9 49 66 49 66 51.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st60" points="66 49 68.9 49 68.9 46.2 66 46.2 66 49" vector-effect="non-scaling-stroke"/>
+  <polygon class="st98" points="66 46.2 68.9 46.2 68.9 43.3 66 43.3 66 46.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st123" points="66 43.3 68.9 43.3 68.9 40.5 66 40.5 66 43.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st137" points="66 40.5 68.9 40.5 68.9 37.7 66 37.7 66 40.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st66" points="66 37.7 68.9 37.7 68.9 34.8 66 34.8 66 37.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st145" points="68.9 94.4 71.7 94.4 71.7 91.5 68.9 91.5 68.9 94.4" vector-effect="non-scaling-stroke"/>
+  <polygon class="st75" points="68.9 91.5 71.7 91.5 71.7 88.7 68.9 88.7 68.9 91.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st54" points="68.9 88.7 71.7 88.7 71.7 85.9 68.9 85.9 68.9 88.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st21" points="68.9 85.9 71.7 85.9 71.7 83 68.9 83 68.9 85.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st57" points="68.9 83 71.7 83 71.7 80.2 68.9 80.2 68.9 83" vector-effect="non-scaling-stroke"/>
+  <polygon class="st21" points="68.9 80.2 71.7 80.2 71.7 77.4 68.9 77.4 68.9 80.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st39" points="68.9 77.4 71.7 77.4 71.7 74.5 68.9 74.5 68.9 77.4" vector-effect="non-scaling-stroke"/>
+  <polygon class="st129" points="68.9 74.5 71.7 74.5 71.7 71.7 68.9 71.7 68.9 74.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st75" points="68.9 71.7 71.7 71.7 71.7 68.9 68.9 68.9 68.9 71.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st132" points="68.9 68.9 71.7 68.9 71.7 66 68.9 66 68.9 68.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st72" points="68.9 66 71.7 66 71.7 63.2 68.9 63.2 68.9 66" vector-effect="non-scaling-stroke"/>
+  <polygon class="st62" points="68.9 63.2 71.7 63.2 71.7 60.3 68.9 60.3 68.9 63.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st66" points="68.9 60.3 71.7 60.3 71.7 57.5 68.9 57.5 68.9 60.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st0" points="68.9 57.5 71.7 57.5 71.7 54.7 68.9 54.7 68.9 57.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st165" points="68.9 54.7 71.7 54.7 71.7 51.8 68.9 51.8 68.9 54.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st25" points="68.9 51.8 71.7 51.8 71.7 49 68.9 49 68.9 51.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st25" points="68.9 49 71.7 49 71.7 46.2 68.9 46.2 68.9 49" vector-effect="non-scaling-stroke"/>
+  <polygon class="st33" points="68.9 46.2 71.7 46.2 71.7 43.3 68.9 43.3 68.9 46.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st92" points="68.9 43.3 71.7 43.3 71.7 40.5 68.9 40.5 68.9 43.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st121" points="68.9 40.5 71.7 40.5 71.7 37.7 68.9 37.7 68.9 40.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st68" points="71.7 94.4 74.5 94.4 74.5 91.5 71.7 91.5 71.7 94.4" vector-effect="non-scaling-stroke"/>
+  <polygon class="st167" points="71.7 91.5 74.5 91.5 74.5 88.7 71.7 88.7 71.7 91.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st25" points="71.7 88.7 74.5 88.7 74.5 85.9 71.7 85.9 71.7 88.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st117" points="71.7 85.9 74.5 85.9 74.5 83 71.7 83 71.7 85.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st78" points="71.7 83 74.5 83 74.5 80.2 71.7 80.2 71.7 83" vector-effect="non-scaling-stroke"/>
+  <polygon class="st21" points="71.7 80.2 74.5 80.2 74.5 77.4 71.7 77.4 71.7 80.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st21" points="71.7 77.4 74.5 77.4 74.5 74.5 71.7 74.5 71.7 77.4" vector-effect="non-scaling-stroke"/>
+  <polygon class="st122" points="71.7 74.5 74.5 74.5 74.5 71.7 71.7 71.7 71.7 74.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st49" points="71.7 71.7 74.5 71.7 74.5 68.9 71.7 68.9 71.7 71.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st48" points="71.7 68.9 74.5 68.9 74.5 66 71.7 66 71.7 68.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st86" points="71.7 66 74.5 66 74.5 63.2 71.7 63.2 71.7 66" vector-effect="non-scaling-stroke"/>
+  <polygon class="st116" points="71.7 63.2 74.5 63.2 74.5 60.3 71.7 60.3 71.7 63.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st27" points="71.7 60.3 74.5 60.3 74.5 57.5 71.7 57.5 71.7 60.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st144" points="71.7 57.5 74.5 57.5 74.5 54.7 71.7 54.7 71.7 57.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st165" points="71.7 54.7 74.5 54.7 74.5 51.8 71.7 51.8 71.7 54.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st75" points="71.7 51.8 74.5 51.8 74.5 49 71.7 49 71.7 51.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st94" points="71.7 49 74.5 49 74.5 46.2 71.7 46.2 71.7 49" vector-effect="non-scaling-stroke"/>
+  <polygon class="st31" points="71.7 46.2 74.5 46.2 74.5 43.3 71.7 43.3 71.7 46.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st48" points="71.7 43.3 74.5 43.3 74.5 40.5 71.7 40.5 71.7 43.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st157" points="71.7 40.5 74.5 40.5 74.5 37.7 71.7 37.7 71.7 40.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st123" points="74.5 88.7 77.4 88.7 77.4 85.9 74.5 85.9 74.5 88.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st57" points="74.5 85.9 77.4 85.9 77.4 83 74.5 83 74.5 85.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st114" points="74.5 83 77.4 83 77.4 80.2 74.5 80.2 74.5 83" vector-effect="non-scaling-stroke"/>
+  <polygon class="st19" points="74.5 80.2 77.4 80.2 77.4 77.4 74.5 77.4 74.5 80.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st56" points="74.5 77.4 77.4 77.4 77.4 74.5 74.5 74.5 74.5 77.4" vector-effect="non-scaling-stroke"/>
+  <polygon class="st37" points="74.5 74.5 77.4 74.5 77.4 71.7 74.5 71.7 74.5 74.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st11" points="74.5 71.7 77.4 71.7 77.4 68.9 74.5 68.9 74.5 71.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st53" points="74.5 68.9 77.4 68.9 77.4 66 74.5 66 74.5 68.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st62" points="74.5 66 77.4 66 77.4 63.2 74.5 63.2 74.5 66" vector-effect="non-scaling-stroke"/>
+  <polygon class="st105" points="74.5 63.2 77.4 63.2 77.4 60.3 74.5 60.3 74.5 63.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st168" points="74.5 60.3 77.4 60.3 77.4 57.5 74.5 57.5 74.5 60.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st84" points="74.5 57.5 77.4 57.5 77.4 54.7 74.5 54.7 74.5 57.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st19" points="74.5 54.7 77.4 54.7 77.4 51.8 74.5 51.8 74.5 54.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st75" points="74.5 51.8 77.4 51.8 77.4 49 74.5 49 74.5 51.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st25" points="74.5 49 77.4 49 77.4 46.2 74.5 46.2 74.5 49" vector-effect="non-scaling-stroke"/>
+  <polygon class="st43" points="74.5 46.2 77.4 46.2 77.4 43.3 74.5 43.3 74.5 46.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st6" points="74.5 43.3 77.4 43.3 77.4 40.5 74.5 40.5 74.5 43.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st131" points="74.5 40.5 77.4 40.5 77.4 37.7 74.5 37.7 74.5 40.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st77" points="77.4 83 80.2 83 80.2 80.2 77.4 80.2 77.4 83" vector-effect="non-scaling-stroke"/>
+  <polygon class="st32" points="77.4 80.2 80.2 80.2 80.2 77.4 77.4 77.4 77.4 80.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st8" points="77.4 77.4 80.2 77.4 80.2 74.5 77.4 74.5 77.4 77.4" vector-effect="non-scaling-stroke"/>
+  <polygon class="st10" points="77.4 74.5 80.2 74.5 80.2 71.7 77.4 71.7 77.4 74.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st162" points="77.4 71.7 80.2 71.7 80.2 68.9 77.4 68.9 77.4 71.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st9" points="77.4 68.9 80.2 68.9 80.2 66 77.4 66 77.4 68.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st62" points="77.4 66 80.2 66 80.2 63.2 77.4 63.2 77.4 66" vector-effect="non-scaling-stroke"/>
+  <polygon class="st163" points="77.4 63.2 80.2 63.2 80.2 60.3 77.4 60.3 77.4 63.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st34" points="77.4 60.3 80.2 60.3 80.2 57.5 77.4 57.5 77.4 60.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st84" points="77.4 57.5 80.2 57.5 80.2 54.7 77.4 54.7 77.4 57.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st94" points="77.4 54.7 80.2 54.7 80.2 51.8 77.4 51.8 77.4 54.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st94" points="77.4 51.8 80.2 51.8 80.2 49 77.4 49 77.4 51.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st25" points="77.4 49 80.2 49 80.2 46.2 77.4 46.2 77.4 49" vector-effect="non-scaling-stroke"/>
+  <polygon class="st81" points="77.4 46.2 80.2 46.2 80.2 43.3 77.4 43.3 77.4 46.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st48" points="77.4 43.3 80.2 43.3 80.2 40.5 77.4 40.5 77.4 43.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st133" points="77.4 40.5 80.2 40.5 80.2 37.7 77.4 37.7 77.4 40.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st54" points="80.2 83 83 83 83 80.2 80.2 80.2 80.2 83" vector-effect="non-scaling-stroke"/>
+  <polygon class="st137" points="80.2 80.2 83 80.2 83 77.4 80.2 77.4 80.2 80.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st103" points="80.2 77.4 83 77.4 83 74.5 80.2 74.5 80.2 77.4" vector-effect="non-scaling-stroke"/>
+  <polygon class="st45" points="80.2 74.5 83 74.5 83 71.7 80.2 71.7 80.2 74.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st141" points="80.2 71.7 83 71.7 83 68.9 80.2 68.9 80.2 71.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st9" points="80.2 68.9 83 68.9 83 66 80.2 66 80.2 68.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st83" points="80.2 66 83 66 83 63.2 80.2 63.2 80.2 66" vector-effect="non-scaling-stroke"/>
+  <polygon class="st163" points="80.2 63.2 83 63.2 83 60.3 80.2 60.3 80.2 63.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st116" points="80.2 60.3 83 60.3 83 57.5 80.2 57.5 80.2 60.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st68" points="80.2 57.5 83 57.5 83 54.7 80.2 54.7 80.2 57.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st19" points="80.2 54.7 83 54.7 83 51.8 80.2 51.8 80.2 54.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st75" points="80.2 51.8 83 51.8 83 49 80.2 49 80.2 51.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st94" points="80.2 49 83 49 83 46.2 80.2 46.2 80.2 49" vector-effect="non-scaling-stroke"/>
+  <polygon class="st108" points="80.2 46.2 83 46.2 83 43.3 80.2 43.3 80.2 46.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st41" points="80.2 43.3 83 43.3 83 40.5 80.2 40.5 80.2 43.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st131" points="80.2 40.5 83 40.5 83 37.7 80.2 37.7 80.2 40.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st169" points="83 88.7 85.9 88.7 85.9 85.9 83 85.9 83 88.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st123" points="83 80.2 85.9 80.2 85.9 77.4 83 77.4 83 80.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st0" points="83 77.4 85.9 77.4 85.9 74.5 83 74.5 83 77.4" vector-effect="non-scaling-stroke"/>
+  <polygon class="st4" points="83 74.5 85.9 74.5 85.9 71.7 83 71.7 83 74.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st6" points="83 71.7 85.9 71.7 85.9 68.9 83 68.9 83 71.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st66" points="83 68.9 85.9 68.9 85.9 66 83 66 83 68.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st39" points="83 66 85.9 66 85.9 63.2 83 63.2 83 66" vector-effect="non-scaling-stroke"/>
+  <polygon class="st27" points="83 63.2 85.9 63.2 85.9 60.3 83 60.3 83 63.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st163" points="83 60.3 85.9 60.3 85.9 57.5 83 57.5 83 60.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st162" points="83 57.5 85.9 57.5 85.9 54.7 83 54.7 83 57.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st19" points="83 54.7 85.9 54.7 85.9 51.8 83 51.8 83 54.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st19" points="83 51.8 85.9 51.8 85.9 49 83 49 83 51.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st94" points="83 49 85.9 49 85.9 46.2 83 46.2 83 49" vector-effect="non-scaling-stroke"/>
+  <polygon class="st5" points="83 46.2 85.9 46.2 85.9 43.3 83 43.3 83 46.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st139" points="83 43.3 85.9 43.3 85.9 40.5 83 40.5 83 43.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st50" points="83 40.5 85.9 40.5 85.9 37.7 83 37.7 83 40.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st77" points="85.9 91.5 88.7 91.5 88.7 88.7 85.9 88.7 85.9 91.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st167" points="85.9 88.7 88.7 88.7 88.7 85.9 85.9 85.9 85.9 88.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st137" points="85.9 85.9 88.7 85.9 88.7 83 85.9 83 85.9 85.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st137" points="85.9 83 88.7 83 88.7 80.2 85.9 80.2 85.9 83" vector-effect="non-scaling-stroke"/>
+  <polygon class="st155" points="85.9 80.2 88.7 80.2 88.7 77.4 85.9 77.4 85.9 80.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st113" points="85.9 77.4 88.7 77.4 88.7 74.5 85.9 74.5 85.9 77.4" vector-effect="non-scaling-stroke"/>
+  <polygon class="st8" points="85.9 74.5 88.7 74.5 88.7 71.7 85.9 71.7 85.9 74.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st22" points="85.9 71.7 88.7 71.7 88.7 68.9 85.9 68.9 85.9 71.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st141" points="85.9 68.9 88.7 68.9 88.7 66 85.9 66 85.9 68.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st62" points="85.9 66 88.7 66 88.7 63.2 85.9 63.2 85.9 66" vector-effect="non-scaling-stroke"/>
+  <polygon class="st116" points="85.9 63.2 88.7 63.2 88.7 60.3 85.9 60.3 85.9 63.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st170" points="85.9 60.3 88.7 60.3 88.7 57.5 85.9 57.5 85.9 60.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st77" points="85.9 57.5 88.7 57.5 88.7 54.7 85.9 54.7 85.9 57.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st84" points="85.9 54.7 88.7 54.7 88.7 51.8 85.9 51.8 85.9 54.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st128" points="85.9 51.8 88.7 51.8 88.7 49 85.9 49 85.9 51.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st129" points="85.9 49 88.7 49 88.7 46.2 85.9 46.2 85.9 49" vector-effect="non-scaling-stroke"/>
+  <polygon class="st108" points="85.9 46.2 88.7 46.2 88.7 43.3 85.9 43.3 85.9 46.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st22" points="85.9 43.3 88.7 43.3 88.7 40.5 85.9 40.5 85.9 43.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st78" points="85.9 40.5 88.7 40.5 88.7 37.7 85.9 37.7 85.9 40.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st137" points="88.7 94.4 91.5 94.4 91.5 91.5 88.7 91.5 88.7 94.4" vector-effect="non-scaling-stroke"/>
+  <polygon class="st137" points="88.7 91.5 91.5 91.5 91.5 88.7 88.7 88.7 88.7 91.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st99" points="88.7 88.7 91.5 88.7 91.5 85.9 88.7 85.9 88.7 88.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st104" points="88.7 85.9 91.5 85.9 91.5 83 88.7 83 88.7 85.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st71" points="88.7 83 91.5 83 91.5 80.2 88.7 80.2 88.7 83" vector-effect="non-scaling-stroke"/>
+  <polygon class="st167" points="88.7 80.2 91.5 80.2 91.5 77.4 88.7 77.4 88.7 80.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st37" points="88.7 77.4 91.5 77.4 91.5 74.5 88.7 74.5 88.7 77.4" vector-effect="non-scaling-stroke"/>
+  <polygon class="st89" points="88.7 74.5 91.5 74.5 91.5 71.7 88.7 71.7 88.7 74.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st19" points="88.7 71.7 91.5 71.7 91.5 68.9 88.7 68.9 88.7 71.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st19" points="88.7 68.9 91.5 68.9 91.5 66 88.7 66 88.7 68.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st11" points="88.7 66 91.5 66 91.5 63.2 88.7 63.2 88.7 66" vector-effect="non-scaling-stroke"/>
+  <polygon class="st102" points="88.7 63.2 91.5 63.2 91.5 60.3 88.7 60.3 88.7 63.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st144" points="88.7 60.3 91.5 60.3 91.5 57.5 88.7 57.5 88.7 60.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st144" points="88.7 57.5 91.5 57.5 91.5 54.7 88.7 54.7 88.7 57.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st39" points="88.7 54.7 91.5 54.7 91.5 51.8 88.7 51.8 88.7 54.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st9" points="88.7 51.8 91.5 51.8 91.5 49 88.7 49 88.7 51.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st62" points="88.7 49 91.5 49 91.5 46.2 88.7 46.2 88.7 49" vector-effect="non-scaling-stroke"/>
+  <polygon class="st84" points="88.7 46.2 91.5 46.2 91.5 43.3 88.7 43.3 88.7 46.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st0" points="88.7 43.3 91.5 43.3 91.5 40.5 88.7 40.5 88.7 43.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st57" points="88.7 40.5 91.5 40.5 91.5 37.7 88.7 37.7 88.7 40.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st42" points="88.7 37.7 91.5 37.7 91.5 34.8 88.7 34.8 88.7 37.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st137" points="91.5 91.5 94.4 91.5 94.4 88.7 91.5 88.7 91.5 91.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st137" points="91.5 88.7 94.4 88.7 94.4 85.9 91.5 85.9 91.5 88.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st137" points="91.5 85.9 94.4 85.9 94.4 83 91.5 83 91.5 85.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st7" points="91.5 83 94.4 83 94.4 80.2 91.5 80.2 91.5 83" vector-effect="non-scaling-stroke"/>
+  <polygon class="st99" points="91.5 80.2 94.4 80.2 94.4 77.4 91.5 77.4 91.5 80.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st99" points="91.5 77.4 94.4 77.4 94.4 74.5 91.5 74.5 91.5 77.4" vector-effect="non-scaling-stroke"/>
+  <polygon class="st145" points="91.5 74.5 94.4 74.5 94.4 71.7 91.5 71.7 91.5 74.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st165" points="91.5 71.7 94.4 71.7 94.4 68.9 91.5 68.9 91.5 71.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st132" points="91.5 68.9 94.4 68.9 94.4 66 91.5 66 91.5 68.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st83" points="91.5 66 94.4 66 94.4 63.2 91.5 63.2 91.5 66" vector-effect="non-scaling-stroke"/>
+  <polygon class="st144" points="91.5 63.2 94.4 63.2 94.4 60.3 91.5 60.3 91.5 63.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st102" points="91.5 60.3 94.4 60.3 94.4 57.5 91.5 57.5 91.5 60.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st25" points="91.5 57.5 94.4 57.5 94.4 54.7 91.5 54.7 91.5 57.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st25" points="91.5 54.7 94.4 54.7 94.4 51.8 91.5 51.8 91.5 54.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st165" points="91.5 51.8 94.4 51.8 94.4 49 91.5 49 91.5 51.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st75" points="91.5 49 94.4 49 94.4 46.2 91.5 46.2 91.5 49" vector-effect="non-scaling-stroke"/>
+  <polygon class="st94" points="91.5 46.2 94.4 46.2 94.4 43.3 91.5 43.3 91.5 46.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st94" points="91.5 43.3 94.4 43.3 94.4 40.5 91.5 40.5 91.5 43.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st95" points="91.5 40.5 94.4 40.5 94.4 37.7 91.5 37.7 91.5 40.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st57" points="91.5 37.7 94.4 37.7 94.4 34.8 91.5 34.8 91.5 37.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st157" points="94.4 83 97.2 83 97.2 80.2 94.4 80.2 94.4 83" vector-effect="non-scaling-stroke"/>
+  <polygon class="st78" points="94.4 80.2 97.2 80.2 97.2 77.4 94.4 77.4 94.4 80.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st62" points="94.4 77.4 97.2 77.4 97.2 74.5 94.4 74.5 94.4 77.4" vector-effect="non-scaling-stroke"/>
+  <polygon class="st17" points="94.4 74.5 97.2 74.5 97.2 71.7 94.4 71.7 94.4 74.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st55" points="94.4 71.7 97.2 71.7 97.2 68.9 94.4 68.9 94.4 71.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st79" points="94.4 68.9 97.2 68.9 97.2 66 94.4 66 94.4 68.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st102" points="94.4 66 97.2 66 97.2 63.2 94.4 63.2 94.4 66" vector-effect="non-scaling-stroke"/>
+  <polygon class="st75" points="94.4 63.2 97.2 63.2 97.2 60.3 94.4 60.3 94.4 63.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st25" points="94.4 60.3 97.2 60.3 97.2 57.5 94.4 57.5 94.4 60.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st75" points="94.4 57.5 97.2 57.5 97.2 54.7 94.4 54.7 94.4 57.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st25" points="94.4 54.7 97.2 54.7 97.2 51.8 94.4 51.8 94.4 54.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st75" points="94.4 51.8 97.2 51.8 97.2 49 94.4 49 94.4 51.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st25" points="94.4 49 97.2 49 97.2 46.2 94.4 46.2 94.4 49" vector-effect="non-scaling-stroke"/>
+  <polygon class="st94" points="94.4 46.2 97.2 46.2 97.2 43.3 94.4 43.3 94.4 46.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st19" points="94.4 43.3 97.2 43.3 97.2 40.5 94.4 40.5 94.4 43.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st41" points="94.4 40.5 97.2 40.5 97.2 37.7 94.4 37.7 94.4 40.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st156" points="94.4 37.7 97.2 37.7 97.2 34.8 94.4 34.8 94.4 37.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st39" points="97.2 77.4 100 77.4 100 74.5 97.2 74.5 97.2 77.4" vector-effect="non-scaling-stroke"/>
+  <polygon class="st134" points="97.2 74.5 100 74.5 100 71.7 97.2 71.7 97.2 74.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st119" points="97.2 71.7 100 71.7 100 68.9 97.2 68.9 97.2 71.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st105" points="97.2 68.9 100 68.9 100 66 97.2 66 97.2 68.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st68" points="97.2 66 100 66 100 63.2 97.2 63.2 97.2 66" vector-effect="non-scaling-stroke"/>
+  <polygon class="st19" points="97.2 63.2 100 63.2 100 60.3 97.2 60.3 97.2 63.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st75" points="97.2 60.3 100 60.3 100 57.5 97.2 57.5 97.2 60.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st75" points="97.2 57.5 100 57.5 100 54.7 97.2 54.7 97.2 57.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st75" points="97.2 54.7 100 54.7 100 51.8 97.2 51.8 97.2 54.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st25" points="97.2 51.8 100 51.8 100 49 97.2 49 97.2 51.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st25" points="97.2 49 100 49 100 46.2 97.2 46.2 97.2 49" vector-effect="non-scaling-stroke"/>
+  <polygon class="st75" points="97.2 46.2 100 46.2 100 43.3 97.2 43.3 97.2 46.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st19" points="97.2 43.3 100 43.3 100 40.5 97.2 40.5 97.2 43.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st48" points="97.2 40.5 100 40.5 100 37.7 97.2 37.7 97.2 40.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st156" points="97.2 37.7 100 37.7 100 34.8 97.2 34.8 97.2 37.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st146" points="100 77.4 102.9 77.4 102.9 74.5 100 74.5 100 77.4" vector-effect="non-scaling-stroke"/>
+  <polygon class="st100" points="100 74.5 102.9 74.5 102.9 71.7 100 71.7 100 74.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st132" points="100 71.7 102.9 71.7 102.9 68.9 100 68.9 100 71.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st89" points="100 68.9 102.9 68.9 102.9 66 100 66 100 68.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st102" points="100 66 102.9 66 102.9 63.2 100 63.2 100 66" vector-effect="non-scaling-stroke"/>
+  <polygon class="st140" points="100 63.2 102.9 63.2 102.9 60.3 100 60.3 100 63.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st97" points="100 60.3 102.9 60.3 102.9 57.5 100 57.5 100 60.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st75" points="100 57.5 102.9 57.5 102.9 54.7 100 54.7 100 57.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st75" points="100 54.7 102.9 54.7 102.9 51.8 100 51.8 100 54.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st25" points="100 51.8 102.9 51.8 102.9 49 100 49 100 51.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st75" points="100 49 102.9 49 102.9 46.2 100 46.2 100 49" vector-effect="non-scaling-stroke"/>
+  <polygon class="st75" points="100 46.2 102.9 46.2 102.9 43.3 100 43.3 100 46.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st25" points="100 43.3 102.9 43.3 102.9 40.5 100 40.5 100 43.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st72" points="100 40.5 102.9 40.5 102.9 37.7 100 37.7 100 40.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st57" points="100 37.7 102.9 37.7 102.9 34.8 100 34.8 100 37.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st69" points="102.9 80.2 105.7 80.2 105.7 77.4 102.9 77.4 102.9 80.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st121" points="102.9 77.4 105.7 77.4 105.7 74.5 102.9 74.5 102.9 77.4" vector-effect="non-scaling-stroke"/>
+  <polygon class="st65" points="102.9 74.5 105.7 74.5 105.7 71.7 102.9 71.7 102.9 74.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st120" points="102.9 71.7 105.7 71.7 105.7 68.9 102.9 68.9 102.9 71.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st31" points="102.9 68.9 105.7 68.9 105.7 66 102.9 66 102.9 68.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st84" points="102.9 66 105.7 66 105.7 63.2 102.9 63.2 102.9 66" vector-effect="non-scaling-stroke"/>
+  <polygon class="st106" points="102.9 63.2 105.7 63.2 105.7 60.3 102.9 60.3 102.9 63.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st26" points="102.9 60.3 105.7 60.3 105.7 57.5 102.9 57.5 102.9 60.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st128" points="102.9 57.5 105.7 57.5 105.7 54.7 102.9 54.7 102.9 57.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st40" points="102.9 54.7 105.7 54.7 105.7 51.8 102.9 51.8 102.9 54.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st25" points="102.9 51.8 105.7 51.8 105.7 49 102.9 49 102.9 51.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st75" points="102.9 49 105.7 49 105.7 46.2 102.9 46.2 102.9 49" vector-effect="non-scaling-stroke"/>
+  <polygon class="st94" points="102.9 46.2 105.7 46.2 105.7 43.3 102.9 43.3 102.9 46.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st75" points="102.9 43.3 105.7 43.3 105.7 40.5 102.9 40.5 102.9 43.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st6" points="102.9 40.5 105.7 40.5 105.7 37.7 102.9 37.7 102.9 40.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st57" points="102.9 37.7 105.7 37.7 105.7 34.8 102.9 34.8 102.9 37.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st137" points="105.7 85.9 108.5 85.9 108.5 83 105.7 83 105.7 85.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st137" points="105.7 83 108.5 83 108.5 80.2 105.7 80.2 105.7 83" vector-effect="non-scaling-stroke"/>
+  <polygon class="st119" points="105.7 80.2 108.5 80.2 108.5 77.4 105.7 77.4 105.7 80.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st75" points="105.7 77.4 108.5 77.4 108.5 74.5 105.7 74.5 105.7 77.4" vector-effect="non-scaling-stroke"/>
+  <polygon class="st45" points="105.7 74.5 108.5 74.5 108.5 71.7 105.7 71.7 105.7 74.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st169" points="105.7 71.7 108.5 71.7 108.5 68.9 105.7 68.9 105.7 71.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st3" points="105.7 68.9 108.5 68.9 108.5 66 105.7 66 105.7 68.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st102" points="105.7 66 108.5 66 108.5 63.2 105.7 63.2 105.7 66" vector-effect="non-scaling-stroke"/>
+  <polygon class="st68" points="105.7 63.2 108.5 63.2 108.5 60.3 105.7 60.3 105.7 63.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st84" points="105.7 60.3 108.5 60.3 108.5 57.5 105.7 57.5 105.7 60.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st79" points="105.7 57.5 108.5 57.5 108.5 54.7 105.7 54.7 105.7 57.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st84" points="105.7 54.7 108.5 54.7 108.5 51.8 105.7 51.8 105.7 54.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st146" points="105.7 51.8 108.5 51.8 108.5 49 105.7 49 105.7 51.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st124" points="105.7 49 108.5 49 108.5 46.2 105.7 46.2 105.7 49" vector-effect="non-scaling-stroke"/>
+  <polygon class="st112" points="105.7 46.2 108.5 46.2 108.5 43.3 105.7 43.3 105.7 46.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st11" points="105.7 43.3 108.5 43.3 108.5 40.5 105.7 40.5 105.7 43.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st0" points="105.7 40.5 108.5 40.5 108.5 37.7 105.7 37.7 105.7 40.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st157" points="105.7 37.7 108.5 37.7 108.5 34.8 105.7 34.8 105.7 37.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st3" points="105.7 34.8 108.5 34.8 108.5 32 105.7 32 105.7 34.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st59" points="108.5 94.4 111.4 94.4 111.4 91.5 108.5 91.5 108.5 94.4" vector-effect="non-scaling-stroke"/>
+  <polygon class="st131" points="108.5 91.5 111.4 91.5 111.4 88.7 108.5 88.7 108.5 91.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st136" points="108.5 88.7 111.4 88.7 111.4 85.9 108.5 85.9 108.5 88.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st52" points="108.5 85.9 111.4 85.9 111.4 83 108.5 83 108.5 85.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st56" points="108.5 83 111.4 83 111.4 80.2 108.5 80.2 108.5 83" vector-effect="non-scaling-stroke"/>
+  <polygon class="st93" points="108.5 80.2 111.4 80.2 111.4 77.4 108.5 77.4 108.5 80.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st3" points="108.5 77.4 111.4 77.4 111.4 74.5 108.5 74.5 108.5 77.4" vector-effect="non-scaling-stroke"/>
+  <polygon class="st131" points="108.5 74.5 111.4 74.5 111.4 71.7 108.5 71.7 108.5 74.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st123" points="108.5 68.9 111.4 68.9 111.4 66 108.5 66 108.5 68.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st13" points="108.5 66 111.4 66 111.4 63.2 108.5 63.2 108.5 66" vector-effect="non-scaling-stroke"/>
+  <polygon class="st137" points="108.5 63.2 111.4 63.2 111.4 60.3 108.5 60.3 108.5 63.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st39" points="108.5 60.3 111.4 60.3 111.4 57.5 108.5 57.5 108.5 60.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st163" points="108.5 57.5 111.4 57.5 111.4 54.7 108.5 54.7 108.5 57.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st25" points="108.5 54.7 111.4 54.7 111.4 51.8 108.5 51.8 108.5 54.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st117" points="108.5 51.8 111.4 51.8 111.4 49 108.5 49 108.5 51.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st165" points="108.5 49 111.4 49 111.4 46.2 108.5 46.2 108.5 49" vector-effect="non-scaling-stroke"/>
+  <polygon class="st40" points="108.5 46.2 111.4 46.2 111.4 43.3 108.5 43.3 108.5 46.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st117" points="108.5 43.3 111.4 43.3 111.4 40.5 108.5 40.5 108.5 43.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st117" points="108.5 40.5 111.4 40.5 111.4 37.7 108.5 37.7 108.5 40.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st56" points="108.5 37.7 111.4 37.7 111.4 34.8 108.5 34.8 108.5 37.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st33" points="108.5 34.8 111.4 34.8 111.4 32 108.5 32 108.5 34.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st133" points="108.5 32 111.4 32 111.4 29.2 108.5 29.2 108.5 32" vector-effect="non-scaling-stroke"/>
+  <polygon class="st102" points="111.4 94.4 114.2 94.4 114.2 91.5 111.4 91.5 111.4 94.4" vector-effect="non-scaling-stroke"/>
+  <polygon class="st25" points="111.4 91.5 114.2 91.5 114.2 88.7 111.4 88.7 111.4 91.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st21" points="111.4 88.7 114.2 88.7 114.2 85.9 111.4 85.9 111.4 88.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st78" points="111.4 85.9 114.2 85.9 114.2 83 111.4 83 111.4 85.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st13" points="111.4 83 114.2 83 114.2 80.2 111.4 80.2 111.4 83" vector-effect="non-scaling-stroke"/>
+  <polygon class="st46" points="111.4 80.2 114.2 80.2 114.2 77.4 111.4 77.4 111.4 80.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st137" points="111.4 68.9 114.2 68.9 114.2 66 111.4 66 111.4 68.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st155" points="111.4 66 114.2 66 114.2 63.2 111.4 63.2 111.4 66" vector-effect="non-scaling-stroke"/>
+  <polygon class="st115" points="111.4 63.2 114.2 63.2 114.2 60.3 111.4 60.3 111.4 63.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st170" points="111.4 60.3 114.2 60.3 114.2 57.5 111.4 57.5 111.4 60.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st94" points="111.4 57.5 114.2 57.5 114.2 54.7 111.4 54.7 111.4 57.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st117" points="111.4 54.7 114.2 54.7 114.2 51.8 111.4 51.8 111.4 54.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st165" points="111.4 51.8 114.2 51.8 114.2 49 111.4 49 111.4 51.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st165" points="111.4 49 114.2 49 114.2 46.2 111.4 46.2 111.4 49" vector-effect="non-scaling-stroke"/>
+  <polygon class="st165" points="111.4 46.2 114.2 46.2 114.2 43.3 111.4 43.3 111.4 46.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st165" points="111.4 43.3 114.2 43.3 114.2 40.5 111.4 40.5 111.4 43.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st117" points="111.4 40.5 114.2 40.5 114.2 37.7 111.4 37.7 111.4 40.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st76" points="111.4 37.7 114.2 37.7 114.2 34.8 111.4 34.8 111.4 37.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st45" points="111.4 34.8 114.2 34.8 114.2 32 111.4 32 111.4 34.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st137" points="111.4 32 114.2 32 114.2 29.2 111.4 29.2 111.4 32" vector-effect="non-scaling-stroke"/>
+  <polygon class="st20" points="114.2 94.4 117 94.4 117 91.5 114.2 91.5 114.2 94.4" vector-effect="non-scaling-stroke"/>
+  <polygon class="st149" points="114.2 91.5 117 91.5 117 88.7 114.2 88.7 114.2 91.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st137" points="114.2 68.9 117 68.9 117 66 114.2 66 114.2 68.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st46" points="114.2 66 117 66 117 63.2 114.2 63.2 114.2 66" vector-effect="non-scaling-stroke"/>
+  <polygon class="st128" points="114.2 63.2 117 63.2 117 60.3 114.2 60.3 114.2 63.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st94" points="114.2 60.3 117 60.3 117 57.5 114.2 57.5 114.2 60.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st165" points="114.2 57.5 117 57.5 117 54.7 114.2 54.7 114.2 57.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st117" points="114.2 54.7 117 54.7 117 51.8 114.2 51.8 114.2 54.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st25" points="114.2 51.8 117 51.8 117 49 114.2 49 114.2 51.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st98" points="114.2 49 117 49 117 46.2 114.2 46.2 114.2 49" vector-effect="non-scaling-stroke"/>
+  <polygon class="st40" points="114.2 46.2 117 46.2 117 43.3 114.2 43.3 114.2 46.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st75" points="114.2 43.3 117 43.3 117 40.5 114.2 40.5 114.2 43.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st75" points="114.2 40.5 117 40.5 117 37.7 114.2 37.7 114.2 40.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st4" points="114.2 37.7 117 37.7 117 34.8 114.2 34.8 114.2 37.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st6" points="114.2 34.8 117 34.8 117 32 114.2 32 114.2 34.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st131" points="114.2 32 117 32 117 29.2 114.2 29.2 114.2 32" vector-effect="non-scaling-stroke"/>
+  <polygon class="st146" points="117 94.4 119.9 94.4 119.9 91.5 117 91.5 117 94.4" vector-effect="non-scaling-stroke"/>
+  <polygon class="st51" points="117 91.5 119.9 91.5 119.9 88.7 117 88.7 117 91.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st47" points="117 74.5 119.9 74.5 119.9 71.7 117 71.7 117 74.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st85" points="117 71.7 119.9 71.7 119.9 68.9 117 68.9 117 71.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st155" points="117 68.9 119.9 68.9 119.9 66 117 66 117 68.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st15" points="117 66 119.9 66 119.9 63.2 117 63.2 117 66" vector-effect="non-scaling-stroke"/>
+  <polygon class="st75" points="117 63.2 119.9 63.2 119.9 60.3 117 60.3 117 63.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st25" points="117 60.3 119.9 60.3 119.9 57.5 117 57.5 117 60.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st117" points="117 57.5 119.9 57.5 119.9 54.7 117 54.7 117 57.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st165" points="117 54.7 119.9 54.7 119.9 51.8 117 51.8 117 54.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st109" points="117 51.8 119.9 51.8 119.9 49 117 49 117 51.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st153" points="117 49 119.9 49 119.9 46.2 117 46.2 117 49" vector-effect="non-scaling-stroke"/>
+  <polygon class="st125" points="117 46.2 119.9 46.2 119.9 43.3 117 43.3 117 46.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st138" points="117 43.3 119.9 43.3 119.9 40.5 117 40.5 117 43.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st165" points="117 40.5 119.9 40.5 119.9 37.7 117 37.7 117 40.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st61" points="117 37.7 119.9 37.7 119.9 34.8 117 34.8 117 37.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st72" points="117 34.8 119.9 34.8 119.9 32 117 32 117 34.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st137" points="117 32 119.9 32 119.9 29.2 117 29.2 117 32" vector-effect="non-scaling-stroke"/>
+  <polygon class="st161" points="119.9 74.5 122.7 74.5 122.7 71.7 119.9 71.7 119.9 74.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st79" points="119.9 71.7 122.7 71.7 122.7 68.9 119.9 68.9 119.9 71.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st3" points="119.9 68.9 122.7 68.9 122.7 66 119.9 66 119.9 68.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st23" points="119.9 66 122.7 66 122.7 63.2 119.9 63.2 119.9 66" vector-effect="non-scaling-stroke"/>
+  <polygon class="st75" points="119.9 63.2 122.7 63.2 122.7 60.3 119.9 60.3 119.9 63.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st165" points="119.9 60.3 122.7 60.3 122.7 57.5 119.9 57.5 119.9 60.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st117" points="119.9 57.5 122.7 57.5 122.7 54.7 119.9 54.7 119.9 57.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st165" points="119.9 54.7 122.7 54.7 122.7 51.8 119.9 51.8 119.9 54.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st36" points="119.9 51.8 122.7 51.8 122.7 49 119.9 49 119.9 51.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st30" points="119.9 49 122.7 49 122.7 46.2 119.9 46.2 119.9 49" vector-effect="non-scaling-stroke"/>
+  <polygon class="st14" points="119.9 46.2 122.7 46.2 122.7 43.3 119.9 43.3 119.9 46.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st164" points="119.9 43.3 122.7 43.3 122.7 40.5 119.9 40.5 119.9 43.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st117" points="119.9 40.5 122.7 40.5 122.7 37.7 119.9 37.7 119.9 40.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st12" points="119.9 37.7 122.7 37.7 122.7 34.8 119.9 34.8 119.9 37.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st95" points="119.9 34.8 122.7 34.8 122.7 32 119.9 32 119.9 34.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st133" points="119.9 32 122.7 32 122.7 29.2 119.9 29.2 119.9 32" vector-effect="non-scaling-stroke"/>
+  <polygon class="st3" points="122.7 80.2 125.5 80.2 125.5 77.4 122.7 77.4 122.7 80.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st112" points="122.7 77.4 125.5 77.4 125.5 74.5 122.7 74.5 122.7 77.4" vector-effect="non-scaling-stroke"/>
+  <polygon class="st112" points="122.7 74.5 125.5 74.5 125.5 71.7 122.7 71.7 122.7 74.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st167" points="122.7 71.7 125.5 71.7 125.5 68.9 122.7 68.9 122.7 71.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st13" points="122.7 68.9 125.5 68.9 125.5 66 122.7 66 122.7 68.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st23" points="122.7 66 125.5 66 125.5 63.2 122.7 63.2 122.7 66" vector-effect="non-scaling-stroke"/>
+  <polygon class="st25" points="122.7 63.2 125.5 63.2 125.5 60.3 122.7 60.3 122.7 63.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st117" points="122.7 60.3 125.5 60.3 125.5 57.5 122.7 57.5 122.7 60.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st165" points="122.7 57.5 125.5 57.5 125.5 54.7 122.7 54.7 122.7 57.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st40" points="122.7 54.7 125.5 54.7 125.5 51.8 122.7 51.8 122.7 54.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st91" points="122.7 51.8 125.5 51.8 125.5 49 122.7 49 122.7 51.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st153" points="122.7 49 125.5 49 125.5 46.2 122.7 46.2 122.7 49" vector-effect="non-scaling-stroke"/>
+  <polygon class="st30" points="122.7 46.2 125.5 46.2 125.5 43.3 122.7 43.3 122.7 46.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st82" points="122.7 43.3 125.5 43.3 125.5 40.5 122.7 40.5 122.7 43.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st117" points="122.7 40.5 125.5 40.5 125.5 37.7 122.7 37.7 122.7 40.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st25" points="122.7 37.7 125.5 37.7 125.5 34.8 122.7 34.8 122.7 37.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st56" points="122.7 34.8 125.5 34.8 125.5 32 122.7 32 122.7 34.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st121" points="122.7 32 125.5 32 125.5 29.2 122.7 29.2 122.7 32" vector-effect="non-scaling-stroke"/>
+  <polygon class="st21" points="122.7 29.2 125.5 29.2 125.5 26.3 122.7 26.3 122.7 29.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st100" points="125.5 85.9 128.4 85.9 128.4 83 125.5 83 125.5 85.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st70" points="125.5 83 128.4 83 128.4 80.2 125.5 80.2 125.5 83" vector-effect="non-scaling-stroke"/>
+  <polygon class="st10" points="125.5 80.2 128.4 80.2 128.4 77.4 125.5 77.4 125.5 80.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st10" points="125.5 77.4 128.4 77.4 128.4 74.5 125.5 74.5 125.5 77.4" vector-effect="non-scaling-stroke"/>
+  <polygon class="st54" points="125.5 74.5 128.4 74.5 128.4 71.7 125.5 71.7 125.5 74.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st13" points="125.5 68.9 128.4 68.9 128.4 66 125.5 66 125.5 68.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st150" points="125.5 66 128.4 66 128.4 63.2 125.5 63.2 125.5 66" vector-effect="non-scaling-stroke"/>
+  <polygon class="st25" points="125.5 63.2 128.4 63.2 128.4 60.3 125.5 60.3 125.5 63.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st165" points="125.5 60.3 128.4 60.3 128.4 57.5 125.5 57.5 125.5 60.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st117" points="125.5 57.5 128.4 57.5 128.4 54.7 125.5 54.7 125.5 57.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st165" points="125.5 54.7 128.4 54.7 128.4 51.8 125.5 51.8 125.5 54.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st117" points="125.5 51.8 128.4 51.8 128.4 49 125.5 49 125.5 51.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st130" points="125.5 49 128.4 49 128.4 46.2 125.5 46.2 125.5 49" vector-effect="non-scaling-stroke"/>
+  <polygon class="st56" points="125.5 46.2 128.4 46.2 128.4 43.3 125.5 43.3 125.5 46.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st130" points="125.5 43.3 128.4 43.3 128.4 40.5 125.5 40.5 125.5 43.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st25" points="125.5 40.5 128.4 40.5 128.4 37.7 125.5 37.7 125.5 40.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st25" points="125.5 37.7 128.4 37.7 128.4 34.8 125.5 34.8 125.5 37.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st165" points="125.5 34.8 128.4 34.8 128.4 32 125.5 32 125.5 34.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st75" points="125.5 32 128.4 32 128.4 29.2 125.5 29.2 125.5 32" vector-effect="non-scaling-stroke"/>
+  <polygon class="st40" points="125.5 29.2 128.4 29.2 128.4 26.3 125.5 26.3 125.5 29.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st63" points="125.5 26.3 128.4 26.3 128.4 23.5 125.5 23.5 125.5 26.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st50" points="128.4 91.5 131.2 91.5 131.2 88.7 128.4 88.7 128.4 91.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st148" points="128.4 88.7 131.2 88.7 131.2 85.9 128.4 85.9 128.4 88.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st58" points="128.4 85.9 131.2 85.9 131.2 83 128.4 83 128.4 85.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st157" points="128.4 83 131.2 83 131.2 80.2 128.4 80.2 128.4 83" vector-effect="non-scaling-stroke"/>
+  <polygon class="st78" points="128.4 66 131.2 66 131.2 63.2 128.4 63.2 128.4 66" vector-effect="non-scaling-stroke"/>
+  <polygon class="st137" points="128.4 63.2 131.2 63.2 131.2 60.3 128.4 60.3 128.4 63.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st75" points="128.4 60.3 131.2 60.3 131.2 57.5 128.4 57.5 128.4 60.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st117" points="128.4 57.5 131.2 57.5 131.2 54.7 128.4 54.7 128.4 57.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st117" points="128.4 54.7 131.2 54.7 131.2 51.8 128.4 51.8 128.4 54.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st117" points="128.4 51.8 131.2 51.8 131.2 49 128.4 49 128.4 51.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st165" points="128.4 49 131.2 49 131.2 46.2 128.4 46.2 128.4 49" vector-effect="non-scaling-stroke"/>
+  <polygon class="st56" points="128.4 46.2 131.2 46.2 131.2 43.3 128.4 43.3 128.4 46.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st165" points="128.4 43.3 131.2 43.3 131.2 40.5 128.4 40.5 128.4 43.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st165" points="128.4 40.5 131.2 40.5 131.2 37.7 128.4 37.7 128.4 40.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st94" points="128.4 37.7 131.2 37.7 131.2 34.8 128.4 34.8 128.4 37.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st128" points="128.4 34.8 131.2 34.8 131.2 32 128.4 32 128.4 34.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st157" points="128.4 32 131.2 32 131.2 29.2 128.4 29.2 128.4 32" vector-effect="non-scaling-stroke"/>
+  <polygon class="st94" points="128.4 29.2 131.2 29.2 131.2 26.3 128.4 26.3 128.4 29.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st88" points="128.4 26.3 131.2 26.3 131.2 23.5 128.4 23.5 128.4 26.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st157" points="128.4 23.5 131.2 23.5 131.2 20.7 128.4 20.7 128.4 23.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st154" points="131.2 94.4 134.1 94.4 134.1 91.5 131.2 91.5 131.2 94.4" vector-effect="non-scaling-stroke"/>
+  <polygon class="st1" points="131.2 91.5 134.1 91.5 134.1 88.7 131.2 88.7 131.2 91.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st50" points="131.2 88.7 134.1 88.7 134.1 85.9 131.2 85.9 131.2 88.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st13" points="131.2 60.3 134.1 60.3 134.1 57.5 131.2 57.5 131.2 60.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st71" points="131.2 57.5 134.1 57.5 134.1 54.7 131.2 54.7 131.2 57.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st40" points="131.2 54.7 134.1 54.7 134.1 51.8 131.2 51.8 131.2 54.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st117" points="131.2 51.8 134.1 51.8 134.1 49 131.2 49 131.2 51.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st25" points="131.2 49 134.1 49 134.1 46.2 131.2 46.2 131.2 49" vector-effect="non-scaling-stroke"/>
+  <polygon class="st165" points="131.2 46.2 134.1 46.2 134.1 43.3 131.2 43.3 131.2 46.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st40" points="131.2 43.3 134.1 43.3 134.1 40.5 131.2 40.5 131.2 43.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st25" points="131.2 40.5 134.1 40.5 134.1 37.7 131.2 37.7 131.2 40.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st162" points="131.2 37.7 134.1 37.7 134.1 34.8 131.2 34.8 131.2 37.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st2" points="131.2 34.8 134.1 34.8 134.1 32 131.2 32 131.2 34.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st113" points="131.2 32 134.1 32 134.1 29.2 131.2 29.2 131.2 32" vector-effect="non-scaling-stroke"/>
+  <polygon class="st133" points="131.2 29.2 134.1 29.2 134.1 26.3 131.2 26.3 131.2 29.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st135" points="131.2 26.3 134.1 26.3 134.1 23.5 131.2 23.5 131.2 26.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st19" points="131.2 23.5 134.1 23.5 134.1 20.7 131.2 20.7 131.2 23.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st58" points="131.2 20.7 134.1 20.7 134.1 17.8 131.2 17.8 131.2 20.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st7" points="134.1 94.4 136.9 94.4 136.9 91.5 134.1 91.5 134.1 94.4" vector-effect="non-scaling-stroke"/>
+  <polygon class="st24" points="134.1 91.5 136.9 91.5 136.9 88.7 134.1 88.7 134.1 91.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st0" points="134.1 88.7 136.9 88.7 136.9 85.9 134.1 85.9 134.1 88.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st59" points="134.1 54.7 136.9 54.7 136.9 51.8 134.1 51.8 134.1 54.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st167" points="134.1 51.8 136.9 51.8 136.9 49 134.1 49 134.1 51.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st137" points="134.1 49 136.9 49 136.9 46.2 134.1 46.2 134.1 49" vector-effect="non-scaling-stroke"/>
+  <polygon class="st21" points="134.1 46.2 136.9 46.2 136.9 43.3 134.1 43.3 134.1 46.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st3" points="134.1 43.3 136.9 43.3 136.9 40.5 134.1 40.5 134.1 43.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st137" points="134.1 40.5 136.9 40.5 136.9 37.7 134.1 37.7 134.1 40.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st69" points="134.1 37.7 136.9 37.7 136.9 34.8 134.1 34.8 134.1 37.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st78" points="134.1 32 136.9 32 136.9 29.2 134.1 29.2 134.1 32" vector-effect="non-scaling-stroke"/>
+  <polygon class="st168" points="134.1 29.2 136.9 29.2 136.9 26.3 134.1 26.3 134.1 29.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st10" points="134.1 20.7 136.9 20.7 136.9 17.8 134.1 17.8 134.1 20.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st23" points="134.1 17.8 136.9 17.8 136.9 15 134.1 15 134.1 17.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st157" points="136.9 94.4 139.7 94.4 139.7 91.5 136.9 91.5 136.9 94.4" vector-effect="non-scaling-stroke"/>
+  <polygon class="st155" points="136.9 91.5 139.7 91.5 139.7 88.7 136.9 88.7 136.9 91.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st78" points="136.9 32 139.7 32 139.7 29.2 136.9 29.2 136.9 32" vector-effect="non-scaling-stroke"/>
+  <polygon class="st113" points="136.9 29.2 139.7 29.2 139.7 26.3 136.9 26.3 136.9 29.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st122" points="136.9 17.8 139.7 17.8 139.7 15 136.9 15 136.9 17.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st134" points="139.7 29.2 142.6 29.2 142.6 26.3 139.7 26.3 139.7 29.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st78" points="139.7 26.3 142.6 26.3 142.6 23.5 139.7 23.5 139.7 26.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st113" points="139.7 23.5 142.6 23.5 142.6 20.7 139.7 20.7 139.7 23.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st65" points="139.7 17.8 142.6 17.8 142.6 15 139.7 15 139.7 17.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st162" points="139.7 15 142.6 15 142.6 12.2 139.7 12.2 139.7 15" vector-effect="non-scaling-stroke"/>
+  <polygon class="st150" points="139.7 12.2 142.6 12.2 142.6 9.3 139.7 9.3 139.7 12.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st104" points="142.6 26.3 145.4 26.3 145.4 23.5 142.6 23.5 142.6 26.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st20" points="142.6 23.5 145.4 23.5 145.4 20.7 142.6 20.7 142.6 23.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st166" points="142.6 15 145.4 15 145.4 12.2 142.6 12.2 142.6 15" vector-effect="non-scaling-stroke"/>
+  <polygon class="st119" points="142.6 12.2 145.4 12.2 145.4 9.3 142.6 9.3 142.6 12.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st20" points="142.6 9.3 145.4 9.3 145.4 6.5 142.6 6.5 142.6 9.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st149" points="145.4 20.7 148.2 20.7 148.2 17.8 145.4 17.8 145.4 20.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st140" points="145.4 9.3 148.2 9.3 148.2 6.5 145.4 6.5 145.4 9.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st124" points="148.2 20.7 151.1 20.7 151.1 17.8 148.2 17.8 148.2 20.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st98" points="148.2 9.3 151.1 9.3 151.1 6.5 148.2 6.5 148.2 9.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st128" points="148.2 6.5 151.1 6.5 151.1 3.7 148.2 3.7 148.2 6.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st113" points="151.1 17.8 153.9 17.8 153.9 15 151.1 15 151.1 17.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st94" points="151.1 6.5 153.9 6.5 153.9 3.7 151.1 3.7 151.1 6.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st26" points="153.9 17.8 156.7 17.8 156.7 15 153.9 15 153.9 17.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st8" points="156.7 15 159.6 15 159.6 12.2 156.7 12.2 156.7 15" vector-effect="non-scaling-stroke"/>
+  <polygon class="st19" points="156.7 12.2 159.6 12.2 159.6 9.3 156.7 9.3 156.7 12.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st90" points="159.6 12.2 162.4 12.2 162.4 9.3 159.6 9.3 159.6 12.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st112" points="49 26.3 51.8 26.3 51.8 23.5 49 23.5 49 26.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st3" points="83 94.4 85.9 94.4 85.9 91.5 83 91.5 83 94.4" vector-effect="non-scaling-stroke"/>
+  <polygon class="st21" points="85.9 94.4 88.7 94.4 88.7 91.5 85.9 91.5 85.9 94.4" vector-effect="non-scaling-stroke"/>
+  <polygon class="st145" points="83 91.5 85.9 91.5 85.9 88.7 83 88.7 83 91.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st90" points="153.9 15 156.7 15 156.7 12.2 153.9 12.2 153.9 15" vector-effect="non-scaling-stroke"/>
+  <polygon class="st90" points="148.2 17.8 151.1 17.8 151.1 15 148.2 15 148.2 17.8" vector-effect="non-scaling-stroke"/>
+  <polygon class="st124" points="145.4 23.5 148.2 23.5 148.2 20.7 145.4 20.7 145.4 23.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st52" points="136.9 20.7 139.7 20.7 139.7 17.8 136.9 17.8 136.9 20.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st20" points="136.9 26.3 139.7 26.3 139.7 23.5 136.9 23.5 136.9 26.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st90" points="23.5 46.2 26.3 46.2 26.3 43.3 23.5 43.3 23.5 46.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st88" points="20.7 43.3 23.5 43.3 23.5 40.5 20.7 40.5 20.7 43.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st58" points="20.7 40.5 23.5 40.5 23.5 37.7 20.7 37.7 20.7 40.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st50" points="20.7 37.7 23.5 37.7 23.5 34.8 20.7 34.8 20.7 37.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st88" points="17.8 46.2 20.7 46.2 20.7 43.3 17.8 43.3 17.8 46.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st90" points="20.7 46.2 23.5 46.2 23.5 43.3 20.7 43.3 20.7 46.2" vector-effect="non-scaling-stroke"/>
+  <polygon class="st90" points="23.5 43.3 26.3 43.3 26.3 40.5 23.5 40.5 23.5 43.3" vector-effect="non-scaling-stroke"/>
+  <polygon class="st75" points="23.5 40.5 26.3 40.5 26.3 37.7 23.5 37.7 23.5 40.5" vector-effect="non-scaling-stroke"/>
+  <polygon class="st107" points="23.5 37.7 26.3 37.7 26.3 34.8 23.5 34.8 23.5 37.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st59" points="20.7 83 23.5 83 23.5 80.2 20.7 80.2 20.7 83" vector-effect="non-scaling-stroke"/>
+  <polygon class="st11" points="17.8 85.9 20.7 85.9 20.7 83 17.8 83 17.8 85.9" vector-effect="non-scaling-stroke"/>
+  <polygon class="st122" points="136.9 15 139.7 15 139.7 12.2 136.9 12.2 136.9 15" vector-effect="non-scaling-stroke"/>
+  <polygon class="st133" points="26.3 20.7 29.2 20.7 29.2 17.8 26.3 17.8 26.3 20.7" vector-effect="non-scaling-stroke"/>
+  <polygon class="st133" points="29.2 20.7 32 20.7 32 17.8 29.2 17.8 29.2 20.7" vector-effect="non-scaling-stroke"/>
+</svg>
