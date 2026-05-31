@@ -1,0 +1,10 @@
+# Stained-glass hatch pipeline — Python deps (tested on CPython 3.11)
+numpy
+pillow
+shapely
+scikit-learn
+trimesh
+mapbox-earcut      # triangulation engine for trimesh.creation.extrude_polygon
+manifold3d         # robust boolean/triangulation backend
+matplotlib
+# jupyter, ipykernel  # to run the notebook

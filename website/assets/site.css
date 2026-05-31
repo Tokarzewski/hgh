@@ -1,0 +1,221 @@
+/* ============================================================================
+   STAINED GLASS — shared design system
+   Light, grayscale, editorial. The colour comes only from the logo + the glass.
+   Fonts: Abril Fatface (display) · Playfair Display (italic accents) · Lato (UI)
+   ========================================================================== */
+
+:root {
+  --bg: #ffffff;
+  --bg-soft: #f6f6f4;
+  --ink: #161616;
+  --muted: #6f6f6f;
+  --line: #e4e4e0;
+  --panel: #ededea;
+  --panel-2: #e0e0db;
+  --pill: #dcdcd8;
+  --pill-hover: #cfcfca;
+  --dark: #0e0e10;
+
+  --display: "Abril Fatface", Georgia, "Times New Roman", serif;
+  --serif: "Playfair Display", Georgia, serif;
+  --sans: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  --maxw: 1120px;
+  --pad: clamp(1.1rem, 4vw, 2.5rem);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--sans);
+  font-weight: 400;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img, svg { display: block; max-width: 100%; }
+
+a { color: inherit; }
+
+/* ── Display / type helpers ──────────────────────────────────────────────── */
+.display {
+  font-family: var(--display);
+  font-weight: 400;
+  line-height: 1.04;
+  letter-spacing: 0.01em;
+}
+
+.script {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 500;
+}
+
+.eyebrow {
+  font-family: var(--sans);
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.lead { color: var(--muted); font-weight: 300; }
+
+/* ── Layout ──────────────────────────────────────────────────────────────── */
+.wrap { max-width: var(--maxw); margin: 0 auto; padding-inline: var(--pad); }
+
+section { padding-block: clamp(3rem, 8vw, 6rem); }
+
+/* ── Top bar (shared nav) ────────────────────────────────────────────────── */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.7rem var(--pad);
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: var(--ink);
+}
+.brand img { width: 30px; height: 30px; }
+.brand .brand-name {
+  font-family: var(--display);
+  font-size: 1.15rem;
+  letter-spacing: 0.04em;
+}
+
+.topbar nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.9rem, 3vw, 2rem);
+}
+.topbar nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.3rem 0;
+  border-bottom: 1.5px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+.topbar nav a:hover { color: var(--ink); }
+.topbar nav a[aria-current="page"] {
+  color: var(--ink);
+  border-color: var(--ink);
+}
+
+/* ── Buttons (light grey pills) ──────────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--ink);
+  background: var(--pill);
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 0.85rem 1.9rem;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+.btn:hover { background: var(--pill-hover); transform: translateY(-1px); }
+.btn--dark { background: var(--dark); color: #fff; }
+.btn--dark:hover { background: #25252a; }
+.btn--ghost { background: transparent; border-color: var(--line); }
+.btn--ghost:hover { background: var(--bg-soft); }
+
+/* ── Language toggle ─────────────────────────────────────────────────────── */
+.lang {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: none;
+  border: 0;
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  color: var(--muted);
+  cursor: pointer;
+  letter-spacing: 0.04em;
+}
+.lang:hover { color: var(--ink); }
+.lang svg { width: 16px; height: 16px; }
+.lang .lang-current { font-weight: 700; color: var(--ink); }
+
+/* ── Footer ──────────────────────────────────────────────────────────────── */
+.site-footer {
+  border-top: 1px solid var(--line);
+  padding: 1.4rem var(--pad);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+.site-footer .credit {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+.site-footer .credit img { height: 26px; width: auto; opacity: 0.8; }
+
+/* ── Generic media boxes (video / steps) ─────────────────────────────────── */
+.box-dark {
+  background: var(--dark);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  overflow: hidden;
+  border-radius: 4px;
+}
+.box-dark img { width: 100%; height: 100%; object-fit: cover; }
+
+/* ── Reveal-on-scroll ────────────────────────────────────────────────────── */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.js .reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* ── Mobile nav ──────────────────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  /* Declutter: drop section links on mobile (the hero buttons cover nav);
+     keep the brand + language toggle. */
+  .topbar nav a { display: none; }
+  .topbar .brand .brand-name { font-size: 1rem; }
+}
