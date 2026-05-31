@@ -112,7 +112,7 @@
       border: 1px solid var(--line);
       border-radius: 4px;
       overflow: hidden;
-      aspect-ratio: 4 / 3;
+      height: clamp(320px, 52vh, 580px);
       background: var(--bg-soft);
     }
     .preview img { width: 100%; height: 100%; object-fit: cover; }
@@ -162,7 +162,7 @@
     .note { color: var(--muted); font-size: 0.8rem; font-style: italic; text-align: center; margin-top: 0.4rem; }
 
     @media (min-width: 860px) {
-      .config { grid-template-columns: 1.1fr 1fr; align-items: start; }
+      .config { grid-template-columns: 1fr 1.1fr; align-items: start; }
       .controls-grid { grid-template-columns: 1fr 1fr; }
     }
   </style>
@@ -187,18 +187,7 @@
   </header>
 
   <main class="config wrap">
-    <!-- Stage — live stained-glass preview, rendered by the WASM pipeline -->
-    <div class="stage">
-      <canvas id="stage-canvas" class="stage-canvas" hidden></canvas>
-      <span class="label" id="stage-label">KONFIGURATOR</span>
-      <a class="render-link" href="../rendering/" data-en="See my render" data-pl="Zobacz mój render">
-        See my render
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M5 12h14M13 6l6 6-6 6" /></svg>
-      </a>
-    </div>
-
-    <!-- Picture / Pattern panel -->
+    <!-- Picture / Pattern panel (left) -->
     <div class="panel">
       <div class="tabs" role="tablist">
         <button class="tab" role="tab" aria-selected="true" data-tab="picture"
@@ -229,6 +218,7 @@
       <!-- PATTERN -->
       <div class="pane" id="pane-pattern">
         <div class="controls-grid">
+          <!-- Number of colours, with the resulting palette directly beneath -->
           <div>
             <div class="ctrl-label" data-en="Number of colours" data-pl="Liczba kolorów">Number of colours</div>
             <div class="stepper">
@@ -236,25 +226,20 @@
               <output id="col-count">2</output>
               <button id="col-plus" aria-label="more colours">+</button>
             </div>
-          </div>
-          <div>
-            <div class="ctrl-label" data-en="Pattern size" data-pl="Wielkość wzoru">Pattern size</div>
-            <input id="pat-size" type="range" min="1" max="10" value="5" aria-label="pattern size" />
-          </div>
-          <div>
-            <div class="ctrl-label" data-en="Frame thickness" data-pl="Grubość ramki">Frame thickness</div>
-            <input id="frame-thick" type="range" min="0.4" max="5" value="1.2" step="0.1" aria-label="frame thickness" />
-          </div>
-          <div>
-            <div class="ctrl-label" data-en="Transparency" data-pl="Przezroczystość">Transparency</div>
-            <input id="glass-trans" type="range" min="0.1" max="0.85" value="0.45" step="0.05" aria-label="transparency" />
-          </div>
-
-          <div>
-            <div class="ctrl-label" data-en="Palette" data-pl="Paleta">Palette</div>
+            <div class="ctrl-label" style="margin-top: 1.4rem" data-en="Palette" data-pl="Paleta">Palette</div>
             <div class="swatches" id="swatches"></div>
             <p class="swatches-hint" data-en="Click a colour to override · right-click to reset"
               data-pl="Kliknij, aby zmienić · prawy przycisk resetuje">Click a colour to override · right-click to reset</p>
+          </div>
+
+          <div>
+            <div class="ctrl-label" data-en="Pattern size" data-pl="Wielkość wzoru">Pattern size</div>
+            <input id="pat-size" type="range" min="0.2" max="20" value="5" step="0.1" aria-label="pattern size" />
+          </div>
+
+          <div>
+            <div class="ctrl-label" data-en="Frame thickness" data-pl="Grubość ramki">Frame thickness</div>
+            <input id="frame-thick" type="range" min="0" max="5" value="1.2" step="0.1" aria-label="frame thickness" />
           </div>
 
           <div>
@@ -264,10 +249,16 @@
               <canvas class="swatch-pattern" id="pat-thumb" width="120" height="120"></canvas>
               <button class="arrow" id="pat-next" aria-label="next pattern">›</button>
             </div>
-            <p class="note" id="pat-name">diamond</p>
+            <p class="note" id="pat-name">Diamond</p>
           </div>
         </div>
       </div>
+    </div>
+
+    <!-- Stage — live stained-glass preview, rendered by the WASM pipeline (right) -->
+    <div class="stage">
+      <canvas id="stage-canvas" class="stage-canvas" hidden></canvas>
+      <span class="label" id="stage-label">KONFIGURATOR</span>
     </div>
   </main>
 
@@ -289,10 +280,17 @@
     import init, { compute_palette, render_preview, render_glb } from '/vendor/sg-wasm/sg_wasm.js';
 
     const PATTERNS = ['diamond', 'hexagonal', 'triangle', 'rectangle', 'brick'];
+    const PATTERN_NAMES = {
+      diamond:   { en: 'Diamond',   pl: 'Romb' },
+      hexagonal: { en: 'Hexagon',   pl: 'Sześciokąt' },
+      triangle:  { en: 'Triangle',  pl: 'Trójkąt' },
+      rectangle: { en: 'Rectangle', pl: 'Prostokąt' },
+      brick:     { en: 'Brick',     pl: 'Cegła' },
+    };
     const PANEL_MAJOR = 300, OUT_MAJOR = 900;   // longer panel dim (model units) / preview dim (px)
     // panel + preview dims follow the source image's aspect ratio (set per image)
     let PANEL_W = 300, PANEL_H = 300, OUT_W = 640, OUT_H = 640;
-    const state = { pattern: 0, colors: 6, size: 5, frame: 1.2, alpha: 0.55 };  // frame = lead_gap, alpha = glass opacity
+    const state = { pattern: 0, colors: 6, size: 5, frame: 1.2 };  // frame = lead_gap (glass transparency is set on the render view)
     const SHAPE_PAL = new Uint8Array([220, 220, 226]);  // single colour -> bare pattern thumbnail
 
     const stage = document.querySelector('.stage');
@@ -422,12 +420,14 @@
       const pal = effectivePalette();
       const rgba = render_preview(
         curImg.data, curImg.w, curImg.h, 4, pat,
-        PANEL_W, PANEL_H, tileSize(), state.frame, state.alpha, pal, OUT_W, OUT_H);
+        PANEL_W, PANEL_H, tileSize(), state.frame, 1.0, pal, OUT_W, OUT_H);  // 2D preview is fully opaque
       paint(canvas, ctx, rgba, OUT_W, OUT_H);
-      // small pattern thumbnail — just the bare tessellation shape (single colour, opaque), not the piece
+      // small pattern thumbnail — a zoomed FRAGMENT (~3 cells) of the bare
+      // tessellation so the shape is easy to read, regardless of tile size
+      const frag = tileSize() * 3;
       const t = render_preview(
         curImg.data, curImg.w, curImg.h, 4, pat,
-        PANEL_MAJOR, PANEL_MAJOR, tileSize(), state.frame, 1.0, SHAPE_PAL, thumb.width, thumb.height);
+        frag, frag, tileSize(), state.frame, 1.0, SHAPE_PAL, thumb.width, thumb.height);
       paint(thumb, tctx, t, thumb.width, thumb.height);
       canvas.hidden = false;
       stage.classList.add('rendered');
@@ -435,7 +435,7 @@
       // stash config so "See my render" can rebuild the 3D GLB on the renderer
       try {
         sessionStorage.setItem('sg-design', JSON.stringify({
-          pattern: pat, tile: tileSize(), frame: state.frame, alpha: state.alpha,
+          pattern: pat, tile: tileSize(), frame: state.frame,
           palette: Array.from(pal), img: designImgUrl,
         }));
       } catch (e) { /* quota / private mode */ }
@@ -460,21 +460,24 @@
       state.frame = +e.target.value;
       debouncedRegen();
     });
-    document.getElementById('glass-trans').addEventListener('input', (e) => {
-      state.alpha = 1 - +e.target.value;   // slider = transparency, alpha = opacity
-      debouncedRegen();
-    });
 
     // pattern picker
     const patName = document.getElementById('pat-name');
+    // set the localized name + data-en/data-pl so site.js keeps it in sync on toggle
+    function setPatName() {
+      const n = PATTERN_NAMES[PATTERNS[state.pattern]];
+      patName.setAttribute('data-en', n.en);
+      patName.setAttribute('data-pl', n.pl);
+      patName.textContent = (document.documentElement.lang === 'pl') ? n.pl : n.en;
+    }
     const cyclePattern = (d) => {
       state.pattern = (state.pattern + d + PATTERNS.length) % PATTERNS.length;
-      patName.textContent = PATTERNS[state.pattern];
+      setPatName();
       regenerate();
     };
     document.getElementById('pat-prev').addEventListener('click', () => cyclePattern(-1));
     document.getElementById('pat-next').addEventListener('click', () => cyclePattern(1));
-    patName.textContent = PATTERNS[state.pattern];
+    setPatName();
 
     // palette swatches (live, reflect the picked image's quantized colours)
     // (kept as a passive readout; regenerate refreshes it)

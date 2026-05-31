@@ -19,20 +19,45 @@
   <link rel="stylesheet" href="assets/site.css" />
 
   <style>
+    /* ── Full-page scroll snap: exactly one section per screen ──────────── */
+    html {
+      scroll-snap-type: y mandatory;
+      scroll-padding-top: 0;
+    }
+
+    .snap {
+      min-height: 100vh;
+      min-height: 100svh;
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-block: 4.5rem 2rem;
+      /* clear the sticky topbar, stay tidy */
+      overflow: hidden;
+      /* never let content bleed into the next panel */
+    }
+
     /* ── Home-specific layout ──────────────────────────────────────────── */
     .hero {
       text-align: center;
-      padding-block: clamp(2.5rem, 7vw, 5rem) clamp(2rem, 6vw, 4rem);
+      padding-block: 4.5rem 2rem;
+    }
+
+    /* Wider content column so image rows + video read larger */
+    .wrap {
+      max-width: 1320px;
     }
 
     .hero .star {
-      width: clamp(120px, 22vw, 190px);
-      margin: 0 auto 1.4rem;
+      width: clamp(160px, 24vmin, 290px);
+      margin: 0 auto clamp(1rem, 3vh, 2rem);
     }
 
     .hero h1 {
       font-family: var(--display);
-      font-size: clamp(2.6rem, 9vw, 5.5rem);
+      font-size: clamp(3.2rem, 11vw, 7.5rem);
       letter-spacing: 0.03em;
       line-height: 1;
     }
@@ -41,16 +66,18 @@
       font-family: var(--serif);
       font-style: italic;
       font-weight: 500;
-      font-size: clamp(1.1rem, 3vw, 1.7rem);
-      margin-top: 1rem;
+      font-size: clamp(1.35rem, 3.6vw, 2.4rem);
+      margin-top: clamp(0.8rem, 2vh, 1.5rem);
       color: var(--ink);
     }
 
     .hero .desc {
-      max-width: 46ch;
-      margin: 1.6rem auto 0;
+      max-width: 54ch;
+      margin: clamp(1.4rem, 3vh, 2.4rem) auto 0;
       color: var(--muted);
       font-weight: 300;
+      font-size: clamp(1.05rem, 1.5vw, 1.35rem);
+      line-height: 1.7;
     }
 
     /* Polish: render the description as the authored four lines. */
@@ -60,11 +87,16 @@
     }
 
     .hero .cta {
-      margin-top: 2.2rem;
+      margin-top: clamp(1.6rem, 3.5vh, 2.6rem);
       display: flex;
-      gap: 0.9rem;
+      gap: 1rem;
       justify-content: center;
       flex-wrap: wrap;
+    }
+
+    .cta .btn {
+      font-size: 0.9rem;
+      padding: 0.95rem 2.3rem;
     }
 
     /* Why / video */
@@ -77,38 +109,49 @@
 
     .why .video {
       aspect-ratio: 16 / 9;
+      padding: 0;
+    }
+
+    .why .video video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
     .why h2 {
       font-family: var(--serif);
       font-style: italic;
-      font-size: 1.5rem;
-      margin-bottom: 0.6rem;
+      font-size: clamp(1.8rem, 2.8vw, 2.6rem);
+      margin-bottom: 1rem;
     }
 
     .why p {
       color: var(--muted);
       font-weight: 300;
+      font-size: clamp(1.05rem, 1.4vw, 1.3rem);
+      line-height: 1.7;
     }
 
     /* How it works */
     .how h2 {
       font-family: var(--serif);
       font-style: italic;
-      font-size: 1.6rem;
+      font-size: clamp(1.9rem, 3.2vw, 2.9rem);
     }
 
     .how .sub {
       color: var(--muted);
       font-weight: 300;
-      margin-top: 0.3rem;
-      margin-bottom: 2rem;
+      font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+      margin-top: 0.4rem;
+      margin-bottom: clamp(1.6rem, 3.5vh, 2.6rem);
     }
 
     .steps {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 1.5rem;
+      gap: 1.75rem;
       align-items: stretch;
     }
 
@@ -124,17 +167,18 @@
     .step .label {
       text-transform: uppercase;
       letter-spacing: 0.12em;
-      font-size: 0.75rem;
+      font-size: 0.88rem;
       font-weight: 700;
       color: var(--muted);
+      margin-top: 0.9rem;
     }
 
     /* Examples */
     .examples h2 {
       font-family: var(--serif);
       font-style: italic;
-      font-size: 1.6rem;
-      margin-bottom: 1.6rem;
+      font-size: clamp(1.9rem, 3.2vw, 2.9rem);
+      margin-bottom: clamp(1.4rem, 3vh, 2.4rem);
     }
 
     .gallery {
@@ -154,7 +198,8 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      aspect-ratio: 3 / 4;
+      aspect-ratio: 3 / 4.6;
+      /* ~15% taller than 3/4 */
     }
 
     /* Make my art CTA */
@@ -166,15 +211,30 @@
 
     .make h2 {
       font-family: var(--display);
-      font-size: clamp(2rem, 6vw, 3.2rem);
+      font-size: clamp(2.6rem, 7vw, 4.5rem);
       letter-spacing: 0.02em;
     }
 
     .make p {
       color: var(--muted);
       font-weight: 300;
-      max-width: 40ch;
-      margin: 0.8rem auto 1.8rem;
+      max-width: 44ch;
+      font-size: clamp(1.05rem, 1.5vw, 1.35rem);
+      margin: 1rem auto 2rem;
+    }
+
+    /* Keep media inside one viewport so panels never overflow */
+    .why .video {
+      max-height: 78svh;
+    }
+
+    .step .thumb {
+      max-height: 64svh;
+    }
+
+    .gallery figure {
+      max-height: 83svh;
+      /* +15% headroom so the taller images aren't capped */
     }
 
     @media (min-width: 720px) {
@@ -189,6 +249,39 @@
 
       .gallery {
         grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    /* Mobile: the image rows become a horizontal swipe so the panel stays
+       one screen tall instead of stacking three tall images vertically. */
+    @media (max-width: 719px) {
+
+      .steps,
+      .gallery {
+        display: flex;
+        gap: 1rem;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 0.6rem;
+      }
+
+      .steps>.step {
+        flex: 0 0 70%;
+        scroll-snap-align: center;
+      }
+
+      .gallery>figure {
+        flex: 0 0 70%;
+        scroll-snap-align: center;
+      }
+
+      .step .thumb {
+        max-height: 52svh;
+      }
+
+      .gallery figure {
+        max-height: 64svh;
       }
     }
   </style>
@@ -216,7 +309,7 @@
 
   <main>
     <!-- Hero ────────────────────────────────────────────────────────────── -->
-    <section class="hero wrap">
+    <section class="hero wrap snap">
       <img class="star" src="assets/logo-star.svg" alt="Stained glass star logo" />
       <h1 data-en="STAINED GLASS" data-pl="WITRAŻ">STAINED&nbsp;GLASS</h1>
       <p class="tagline" data-en="Pick your colours. Pick your pattern. Let the light do the rest."
@@ -240,9 +333,12 @@ Bez umiejętności rzemieślniczych. Bez fortuny.">
     </section>
 
     <!-- Why / video ───────────────────────────────────────────────────────── -->
-    <section class="wrap reveal">
+    <section class="wrap reveal snap">
       <div class="why">
-        <div class="box-dark video" data-en="Video" data-pl="Wideo">Video</div>
+        <div class="box-dark video">
+          <video src="assets/video1.mp4" autoplay muted loop playsinline preload="metadata"
+            aria-label="Stained glass in motion"></video>
+        </div>
         <div>
           <h2 data-en="Why do it?" data-pl="Dlaczego warto?">Why do it?</h2>
           <p data-en="Stained glass used to be the language of cathedrals and grand estates. We're bringing it back — to your home, your studio, your space. Design your own piece, choose your colours and pattern, and we'll print it."
@@ -255,7 +351,7 @@ Bez umiejętności rzemieślniczych. Bez fortuny.">
     </section>
 
     <!-- How it works ──────────────────────────────────────────────────────── -->
-    <section class="how wrap reveal" id="how">
+    <section class="how wrap reveal snap" id="how">
       <h2 data-en="How does it work?" data-pl="Jak to działa?">How does it work?</h2>
       <p class="sub" data-en="Three steps from idea to light on your wall."
         data-pl="Trzy kroki od pomysłu do światła na Twojej ścianie.">
@@ -263,32 +359,32 @@ Bez umiejętności rzemieślniczych. Bez fortuny.">
       </p>
       <div class="steps">
         <div class="step">
-          <div class="box-dark thumb"><img src="assets/seahorse.jpg" alt="Your photo" /></div>
+          <div class="box-dark thumb"><img src="assets/how/seahorse.jpg" alt="Your photo" /></div>
           <div class="label" data-en="Your photo" data-pl="Twoje zdjęcie">Your photo</div>
         </div>
         <div class="step">
-          <div class="box-dark thumb"><img src="assets/example-seahorse.jpg" alt="Divided into colours" /></div>
+          <div class="box-dark thumb"><img src="assets/how/example-seahorse.jpg" alt="Divided into colours" /></div>
           <div class="label" data-en="Divided into colours" data-pl="Podział na kolory">Divided into colours</div>
         </div>
         <div class="step">
-          <div class="box-dark thumb"><img src="assets/example-lilies.jpg" alt="Visualisation" /></div>
+          <div class="box-dark thumb"><img src="assets/how/rendered-seahorse.jpg" alt="Visualisation" /></div>
           <div class="label" data-en="Visualisation" data-pl="Wizualizacja">Visualisation</div>
         </div>
       </div>
     </section>
 
     <!-- Examples ──────────────────────────────────────────────────────────── -->
-    <section class="examples wrap reveal" id="examples">
+    <section class="examples wrap reveal snap" id="examples">
       <h2 data-en="Examples" data-pl="Przykłady">Examples</h2>
       <div class="gallery">
-        <figure><img src="assets/example-giraffe.png" alt="Giraffe stained-glass piece" /></figure>
-        <figure><img src="assets/example-lilies.jpg" alt="Water lilies stained-glass piece" /></figure>
-        <figure><img src="assets/example-seahorse.jpg" alt="Seahorse stained-glass piece" /></figure>
+        <figure><img src="assets/examples/example-sunflowers.jpg" alt="Sunflowers stained-glass piece" /></figure>
+        <figure><img src="assets/examples/example-giraffe.png" alt="Giraffe stained-glass piece" /></figure>
+        <figure><img src="assets/examples/example-medusa.jpg" alt="Medusa stained-glass piece" /></figure>
       </div>
     </section>
 
     <!-- Make my art CTA ───────────────────────────────────────────────────── -->
-    <section class="make reveal">
+    <section class="make reveal snap">
       <div class="wrap">
         <h2 data-en="Make my art" data-pl="Stwórz swoje dzieło">Make your own art</h2>
         <p data-en="Upload an image, choose your palette and pattern, then see it rendered as light."
@@ -306,6 +402,65 @@ Bez umiejętności rzemieślniczych. Bez fortuny.">
   </main>
 
   <script src="assets/site.js" defer></script>
+
+  <!-- One light gesture (wheel tick / key / short swipe) jumps a whole section -->
+  <script>
+    (function () {
+      const sections = Array.from(document.querySelectorAll('.snap'));
+      if (sections.length < 2) return;
+
+      const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const LOCK_MS = 750;
+      let locked = false;
+
+      function currentIndex() {
+        const mid = window.scrollY + window.innerHeight / 2;
+        let best = 0, bestDist = Infinity;
+        sections.forEach((s, i) => {
+          const d = Math.abs(s.offsetTop + s.offsetHeight / 2 - mid);
+          if (d < bestDist) { bestDist = d; best = i; }
+        });
+        return best;
+      }
+
+      function go(target) {
+        target = Math.max(0, Math.min(sections.length - 1, target));
+        locked = true;
+        sections[target].scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' });
+        setTimeout(() => { locked = false; }, LOCK_MS);
+      }
+
+      // Wheel / trackpad — a tiny vertical delta advances one panel.
+      window.addEventListener('wheel', (e) => {
+        if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) return; // let horizontal rows scroll
+        e.preventDefault();                                  // no partial native scroll
+        if (locked || Math.abs(e.deltaY) < 2) return;
+        go(currentIndex() + (e.deltaY > 0 ? 1 : -1));
+      }, { passive: false });
+
+      // Keyboard
+      window.addEventListener('keydown', (e) => {
+        if (locked) return;
+        const k = e.key;
+        if (k === 'ArrowDown' || k === 'PageDown' || k === ' ') { e.preventDefault(); go(currentIndex() + 1); }
+        else if (k === 'ArrowUp' || k === 'PageUp') { e.preventDefault(); go(currentIndex() - 1); }
+        else if (k === 'Home') { e.preventDefault(); go(0); }
+        else if (k === 'End') { e.preventDefault(); go(sections.length - 1); }
+      });
+
+      // Touch — a short vertical swipe is enough.
+      let ty = null, tx = null;
+      window.addEventListener('touchstart', (e) => { ty = e.touches[0].clientY; tx = e.touches[0].clientX; }, { passive: true });
+      window.addEventListener('touchend', (e) => {
+        if (ty === null || locked) return;
+        const dy = ty - e.changedTouches[0].clientY;
+        const dx = tx - e.changedTouches[0].clientX;
+        ty = null;
+        if (Math.abs(dx) > Math.abs(dy) || Math.abs(dy) < 24) return; // ignore horizontal / tiny
+        go(currentIndex() + (dy > 0 ? 1 : -1));
+      }, { passive: true });
+    })();
+  </script>
 </body>
 
 </html>

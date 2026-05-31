@@ -68,15 +68,16 @@
     .lang .lang-current { font-weight: 700; color: #161616; }
 
     main {
-      max-width: 1100px;
+      max-width: 100%;
       margin: 0 auto;
-      padding: 1.5rem 1.25rem 4rem;
+      padding: 1rem 1.25rem 1.25rem;
     }
 
     .viewer {
       position: relative;
-      width: 100%;
-      aspect-ratio: 16 / 10;
+      width: 90vw;
+      height: 90vh;
+      margin: 0 auto;
       background:
         repeating-conic-gradient(#16161b 0% 25%, #1d1d24 0% 50%) 50% / 22px 22px;
       border: 1px solid var(--line);
@@ -237,10 +238,32 @@
       h1 {
         font-size: 2rem;
       }
+    }
 
-      .viewer {
-        aspect-ratio: 16 / 9;
+    /* ── Mobile: bigger scene, compact controls that don't bury it ──────────── */
+    @media (max-width: 640px) {
+      main { padding: 0.5rem 0.5rem 1rem; }
+      .viewer { width: 100%; height: 74vh; border-radius: 10px; }
+      /* controls become a compact 2-column bar across the top, not a tall stack */
+      .controls {
+        top: 0.45rem; left: 0.45rem; right: 0.45rem;
+        min-width: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.45rem 0.8rem;
+        padding: 0.6rem 0.7rem;
+        font-size: 0.62rem;
       }
+      .controls .row { grid-column: 1 / -1; } /* Animate spans the full width */
+      .toolbar { margin-top: 0.8rem; }
+      .btn { padding: 0.8rem 1.8rem; } /* easier tap target */
+
+      /* Header: keep it on one line so the language toggle isn't clipped */
+      .topbar { padding: 0.6rem 0.7rem; gap: 0.6rem; }
+      .brand img { width: 24px; height: 24px; }
+      .brand .brand-name { font-size: 0.9rem; white-space: nowrap; }
+      .topbar nav { gap: 0.75rem; }
+      .topbar nav a { font-size: 0.7rem; letter-spacing: 0.03em; }
     }
 
     footer.site-footer {
@@ -301,11 +324,20 @@
       <div class="backend-tag" id="backend-tag"></div>
 
       <div class="controls" id="controls" hidden>
-        <label>Sun azimuth
+        <label>Light azimuth
           <input id="sun-az" type="range" min="-70" max="70" value="0" step="1" />
         </label>
-        <label>Sun elevation
+        <label>Light elevation
           <input id="sun-el" type="range" min="12" max="82" value="40" step="1" />
+        </label>
+        <label>Light distance
+          <input id="sun-dist" type="range" min="0.25" max="4.5" value="2.2" step="0.05" />
+        </label>
+        <label>Light intensity
+          <input id="light-intensity" type="range" min="0.2" max="3" value="1" step="0.05" />
+        </label>
+        <label>Glass transparency
+          <input id="glass-trans" type="range" min="0" max="0.9" value="0.45" step="0.05" />
         </label>
         <label class="row">
           <input id="sun-animate" type="checkbox" /> Animate
@@ -348,7 +380,10 @@
     const controlsPanel = document.getElementById('controls');
     const sunAzEl = document.getElementById('sun-az');
     const sunElEl = document.getElementById('sun-el');
+    const sunDistEl = document.getElementById('sun-dist');
+    const lightIntensityEl = document.getElementById('light-intensity');
     const sunAnimateEl = document.getElementById('sun-animate');
+    const glassTransEl = document.getElementById('glass-trans');
 
     function setStatus(title, detail) {
       statusEl.classList.remove('hidden', 'error');
@@ -378,7 +413,16 @@
 
     // The "sun" (a cookie spotlight) and its rig, repositionable at runtime.
     let theSun = null, theSunMesh = null;
-    let sunCenter = null, sunRadius = 0, sunTargetZ = 0;
+    let sunCenter = null, sunRadius = 0;
+    // Kept so the cone / cookie fov / shadow frustum can be recomputed when the
+    // Sun-distance slider changes the orbit radius.
+    let sunBaseDist = 0, sunPanelHalfDiag = 0, sunFloorSize = 0;
+    const BASE_SUN = 7.0;           // spotlight intensity at the slider's default
+    let lightIntensity = 1;         // user multiplier from the Light-intensity slider
+
+    // Glass display materials, so transparency (opacity + transmitted light) is adjustable live.
+    let glassMats = [];
+    let transparency = 1 - GLASS_ALPHA;   // matches the render-view slider default
 
     // Floor + wall, kept so they can be baked into the glTF export.
     let stageFloor = null, stageWall = null;
@@ -461,6 +505,7 @@
       const pattern = design.pattern || 'diamond';
       const tile = design.tile || 16;
       const frame = design.frame ?? 1.2;
+      const alpha = design.alpha ?? GLASS_ALPHA;
       const img = await imageToRGBA(design.img || DEFAULT_IMG);
 
       // panel dims follow the image aspect (matches the configurator)
@@ -474,7 +519,7 @@
         : compute_palette(img.data, img.w, img.h, 4, 8, 42);
 
       const glb = render_glb(img.data, img.w, img.h, 4, pattern,
-        panelW, panelH, tile, frame, GLASS_DEPTH, FRAME_HEIGHT, GLASS_ALPHA, palette);
+        panelW, panelH, tile, frame, GLASS_DEPTH, FRAME_HEIGHT, alpha, palette);
 
       const gltf = await new GLTFLoader().parseAsync(glb.buffer, '');
       buildModelFromGLB(gltf.scene);
@@ -486,6 +531,7 @@
       gltfScene.updateMatrixWorld(true);
       const group = new THREE.Group();
       let triCount = 0;
+      glassMats = [];
       gltfScene.traverse((o) => {
         if (!o.isMesh) return;
         const geom = o.geometry.clone();
@@ -495,6 +541,7 @@
         const hex = src.color ? src.color.getHex(THREE.SRGBColorSpace) : 0xcccccc;
         const opacity = (src.transparent && src.opacity != null) ? src.opacity : 1.0;
         const disp = makeDisplayMaterial(hex, opacity, src.roughness ?? 0.4, src.metalness ?? 0.0);
+        if (opacity < 1) glassMats.push(disp);   // translucent glass -> adjustable live
         const mesh = new THREE.Mesh(geom, disp);
         // plain material kept for glTF export (TSL node materials don't serialize)
         mesh.userData.exportMat = new THREE.MeshStandardMaterial({
@@ -510,7 +557,8 @@
       // Set the glass into a wall with a hole, standing on a floor.
       const stage = buildEnvironment(group);
       scene.add(stage);
-      if (glassCapture) captureGlassPanel();
+      applyTransparency(transparency);          // glass opacity + transmitted-light intensity
+      if (glassCapture) captureGlassPanel();    // cookie reflects current glass
 
       downloadBtn.disabled = false;
       controlsPanel.removeAttribute('hidden');
@@ -522,11 +570,11 @@
     // Dim ambient/fill only — the shadow-casting "sun" (added in buildEnvironment)
     // is the key light, so the cast shadows stay dark and legible.
     function setupLights() {
-      scene.add(new THREE.HemisphereLight(0xbfc4cc, 0x14141a, 0.06));
-      const fill = new THREE.DirectionalLight(0xaab0c0, 0.08);
+      scene.add(new THREE.HemisphereLight(0xbfc4cc, 0x14141a, 0.12));
+      const fill = new THREE.DirectionalLight(0xaab0c0, 0.1);
       fill.position.set(0, 1, 2); // faint front fill so the wall isn't pure black
       scene.add(fill);
-      scene.add(new THREE.AmbientLight(0xffffff, 0.02));
+      scene.add(new THREE.AmbientLight(0xffffff, 0.04));
     }
 
     // Glass colour + a subtle same-hue fresnel rim for a backlit stained-glass read.
@@ -644,30 +692,41 @@
       stage.add(back, back.target);
 
       // ── Sun as a SpotLight whose cookie is the stained-glass panel ──────────
-      // Placed behind the wall and aimed at the front floor. The wall (which
-      // casts shadow) masks the cone to the opening, and the cookie tints the
-      // light with the glass colours → a coloured "stained-glass" light patch.
+      // Placed behind the wall and aimed at the front floor. The cookie (a render
+      // of just the glass) tints the light; everywhere outside the panel the cookie
+      // is transparent, so the cone only emits where glass actually is.
+      //
+      // For the projection to be geometrically correct, the cookie must be captured
+      // FROM THE SUN'S viewpoint and projected back along the SAME axis: the spotlight
+      // aims through the opening centre, and the capture camera sits at the sun looking
+      // at the same centre with a fov equal to the cone. Both follow the sun in
+      // updateSun(), which re-renders the cookie. (A fixed head-on capture would skew
+      // the cells across the floor as soon as the sun moved off-axis.)
+      //
+      // The sun orbits far back so its rays read as near-parallel sunlight; the cone
+      // angle shrinks to match, keeping the cookie/floor projection panel-sized. The
+      // Sun-distance slider scales sunBaseDist; setSunDistance() recomputes the cone,
+      // cookie fov and shadow frustum from the resulting radius.
+      sunBaseDist = wallThk + depth + width * 2.2 + height * 1.2; // one "distance unit"
+      sunPanelHalfDiag = Math.hypot(width / 2, height / 2);
+      sunFloorSize = floorSize;
+
       const glassRT = new THREE.RenderTarget(1024, 1024, { depthBuffer: true, samples: 4 });
       glassRT.texture.colorSpace = THREE.SRGBColorSpace;
-      const capCam = new THREE.OrthographicCamera(
-        -width / 2, width / 2, height / 2, -height / 2, 0.01, depth * 6 + 1);
-      capCam.position.set(0, glassCenterY, depth * 2 + 0.5); // in front, looking at the panel
-      capCam.lookAt(0, glassCenterY, 0);
+      // Perspective capture matching the spotlight cone; fov/near/far + pose set by
+      // setSunDistance()/updateSun(). Transparent margins mean the cone only emits
+      // where glass is.
+      const capCam = new THREE.PerspectiveCamera(30, 1, 1, 10);
       capCam.layers.set(GLASS_LAYER);
       glassCapture = { cam: capCam, rt: glassRT };
 
       const sun = new THREE.SpotLight(0xffffff, 7.0);
-      sun.position.set(0, glassCenterY + height * 0.15, -(wallThk + depth + width * 0.6));
-      sun.target.position.set(0, 0, width * 1.4); // through the opening onto the front floor
-      sun.angle = 0.6;
-      sun.penumbra = 0.35;
+      sun.penumbra = 0.22;
       sun.decay = 0;       // no distance falloff — easier to tune at scene scale
       sun.distance = 0;
       sun.map = glassRT.texture;   // the cookie: only applied because castShadow = true
       sun.castShadow = true;
       sun.shadow.mapSize.set(2048, 2048);
-      sun.shadow.camera.near = Math.max(depth, 0.1);
-      sun.shadow.camera.far = sun.position.distanceTo(sun.target.position) + floorSize;
       sun.shadow.bias = -0.0004;
       sun.shadow.focus = 1;
       stage.add(sun, sun.target);
@@ -684,36 +743,84 @@
       theSun = sun;
       theSunMesh = sunMesh;
       sunCenter = new THREE.Vector3(0, glassCenterY, 0);
-      sunRadius = wallThk + depth + width * 2.2 + height * 1.2;
-      sunTargetZ = width * 1.4;
-      sun.shadow.camera.far = sunRadius * 1.6 + floorSize;
-      updateSun(THREE.MathUtils.degToRad(+sunAzEl.value), THREE.MathUtils.degToRad(+sunElEl.value));
+      setSunDistance(+sunDistEl.value); // sets sunRadius, cone, frusta, then positions + captures
 
       stage.updateMatrixWorld(true);
       return stage;
     }
 
+    // Set how far the sun orbits the opening (factor × sunBaseDist). Closer → wider
+    // cone, farther → narrower; the cone, cookie fov and shadow frustum are all
+    // recomputed from the new radius so the projection stays panel-sized and correct.
+    function setSunDistance(factor) {
+      if (!theSun) return;
+      sunRadius = sunBaseDist * factor;
+      // Bound the panel + margin; clamp so a very close light can't push the spotlight
+      // angle past π/2 or the capture fov past 180° (both would be degenerate).
+      const coneAngle = Math.min(Math.atan(sunPanelHalfDiag / sunRadius) * 1.15, 1.4);
+      theSun.angle = coneAngle;
+      const cam = glassCapture.cam;
+      cam.fov = 2 * coneAngle * 180 / Math.PI;
+      cam.near = sunRadius * 0.5;
+      cam.far = sunRadius * 1.5;
+      cam.updateProjectionMatrix();
+      theSun.shadow.camera.near = sunRadius * 0.5;
+      theSun.shadow.camera.far = sunRadius * 1.6 + sunFloorSize;
+      theSun.shadow.camera.updateProjectionMatrix();
+      updateSunFromUI(); // reposition sun + capture camera at the new radius, re-render cookie
+    }
+
     // Place the sun on a sphere around the window opening from azimuth/elevation
-    // (radians). The cookie spotlight and the visible disc both follow, so the
-    // coloured light patch sweeps across the floor.
+    // (radians). The spotlight aims THROUGH the opening centre, and the cookie
+    // capture camera is moved to the sun looking at the same centre, then the cookie
+    // is re-rendered — so the coloured cells project correctly for any sun angle.
     function updateSun(az, el) {
       if (!theSun) return;
       const ce = Math.cos(el), se = Math.sin(el);
       const dir = new THREE.Vector3(Math.sin(az) * ce, se, -Math.cos(az) * ce); // behind wall (−z)
       theSun.position.copy(sunCenter).addScaledVector(dir, sunRadius);
-      theSun.target.position.set(0, 0, sunTargetZ);
+      theSun.target.position.copy(sunCenter); // cone axis = sun → opening → floor beyond
       theSun.target.updateMatrixWorld();
       theSunMesh.position.copy(sunCenter).addScaledVector(dir, sunRadius * 1.2);
+      // Capture the glass from the sun's viewpoint along the same axis.
+      if (glassCapture) {
+        const cam = glassCapture.cam;
+        cam.position.copy(theSun.position);
+        cam.up.set(0, 1, 0);
+        cam.lookAt(sunCenter);
+        captureGlassPanel();
+      }
     }
 
     function updateSunFromUI() {
       updateSun(THREE.MathUtils.degToRad(+sunAzEl.value), THREE.MathUtils.degToRad(+sunElEl.value));
     }
 
+    // Live glass transparency: t in [0,1]. More transparent -> glass surface more see-through
+    // AND more light transmits, so the coloured light cast on the floor gets brighter.
+    function applyTransparency(t) {
+      transparency = THREE.MathUtils.clamp(t, 0, 1);
+      const opacity = THREE.MathUtils.clamp(1 - transparency, 0.08, 1);
+      for (const m of glassMats) {
+        m.opacity = opacity;
+        m.transparent = true;
+        m.needsUpdate = true;
+      }
+      updateSunIntensity();
+    }
+
+    // Spotlight brightness = user multiplier × transmitted-light factor (from transparency).
+    function updateSunIntensity() {
+      if (theSun) theSun.intensity = BASE_SUN * lightIntensity * (0.45 + 1.5 * transparency);
+    }
+
     function wireSunControls() {
       sunAzEl.addEventListener('input', updateSunFromUI);
       sunElEl.addEventListener('input', updateSunFromUI);
-      // While animating, the sliders are driven by the loop; disable manual drag.
+      sunDistEl.addEventListener('input', () => setSunDistance(+sunDistEl.value));
+      lightIntensityEl.addEventListener('input', (e) => { lightIntensity = +e.target.value; updateSunIntensity(); });
+      glassTransEl.addEventListener('input', (e) => applyTransparency(+e.target.value));
+      // While animating, the az/el sliders are driven by the loop; disable manual drag.
       sunAnimateEl.addEventListener('change', () => {
         sunAzEl.disabled = sunElEl.disabled = sunAnimateEl.checked;
       });
@@ -735,23 +842,26 @@
       scene.background = prevBg;
     }
 
-    // Frame the camera to a front-on view of the whole stage.
+    // Frame a slightly raised 3/4 view of the glass panel that also shows the floor
+    // and the coloured light cast in front of it (rather than a tight front-on crop).
     function frameStage(stage) {
       controls.autoRotate = false;
-      const box = new THREE.Box3().setFromObject(stage);
+      scene.updateMatrixWorld(true);
+      const box = new THREE.Box3().setFromObject(modelGroup || stage);
       const size = box.getSize(new THREE.Vector3());
       const center = box.getCenter(new THREE.Vector3());
       const maxDim = Math.max(size.x, size.y);
 
       const fov = camera.fov * (Math.PI / 180);
-      const dist = (maxDim / 2) / Math.tan(fov / 2) * 1.2;
+      const dist = (maxDim / 2) / Math.tan(fov / 2) * 2.3; // pull back so floor + cast show
 
-      camera.position.set(center.x, center.y, center.z + dist);
+      // raised and slightly off-axis, tilted down toward the floor projection
+      camera.position.set(center.x + maxDim * 0.15, center.y + maxDim * 0.55, center.z + dist);
       camera.near = Math.max(dist / 1000, 0.01);
-      camera.far = dist * 1000;
+      camera.far = dist * 1000 + 100000; // keep the far floor / light disc in view
       camera.updateProjectionMatrix();
 
-      controls.target.set(center.x, center.y, 0);
+      controls.target.set(center.x, center.y - maxDim * 0.2, center.z + maxDim * 0.5);
       controls.update();
     }
 
