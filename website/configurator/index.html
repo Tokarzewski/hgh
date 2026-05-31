@@ -4,203 +4,512 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HGH — Configurator</title>
-  <link rel="icon" type="image/svg+xml" href="../assets/hopper.svg" />
+  <title>Stained Glass — Configurator</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/logo-mark.svg" />
+  <script>document.documentElement.classList.add('js');</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Playfair+Display:ital,wght@1,500;1,600&family=Lato:wght@300;400;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/site.css" />
+
   <style>
-    :root {
-      --bg: #0f0f12;
-      --panel: #1a1a20;
-      --line: #2a2a33;
-      --text: #e8e8ec;
-      --muted: #9a9aa6;
-      --accent: #70846a;
+    /* ── Configurator layout ───────────────────────────────────────────── */
+    .config {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+      padding-block: 1rem 1rem;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    /* Tighter footer on the configurator to free up vertical space */
+    .site-footer { padding-block: 0.6rem; font-size: 0.75rem; }
+    .site-footer .credit img { height: 18px; }
 
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.5;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    header {
-      padding: 2rem 1.25rem 1.5rem;
-      border-bottom: 1px solid var(--line);
-      position: sticky;
-      top: 0;
-      background: rgba(15, 15, 18, 0.85);
-      backdrop-filter: blur(8px);
-      z-index: 10;
-      text-align: center;
-    }
-
-    .badge {
-      display: inline-block;
-      font-size: 0.7rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--accent);
-      border: 1px solid var(--accent);
-      border-radius: 999px;
-      padding: 0.2rem 0.7rem;
-      margin-bottom: 0.75rem;
-    }
-
-    h1 {
-      font-size: 1.6rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-    }
-
-    header p {
-      color: var(--muted);
-      font-size: 0.95rem;
-      margin-top: 0.35rem;
-    }
-
-    main {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 1.5rem 1.25rem 4rem;
-    }
-
-    .viewer {
+    /* The KONFIGURATOR stage (placeholder, with diagonal + render link) */
+    .stage {
       position: relative;
-      width: 100%;
-      aspect-ratio: 16 / 10;
-      background:
-        repeating-conic-gradient(#16161b 0% 25%, #1d1d24 0% 50%) 50% / 22px 22px;
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      overflow: hidden;
-    }
-
-    .viewer iframe {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
-      display: block;
-    }
-
-    .placeholder {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      padding: 1.5rem;
-      text-align: center;
-      color: var(--muted);
-    }
-
-    .placeholder strong {
-      color: var(--text);
-      font-size: 1.05rem;
-    }
-
-    .placeholder code {
-      background: #23232b;
+      min-height: clamp(380px, 74vh, 860px);
       border: 1px solid var(--line);
       border-radius: 6px;
-      padding: 0.15rem 0.45rem;
-      font-size: 0.8rem;
-      color: var(--text);
+      background:
+        linear-gradient(135deg, transparent calc(50% - 0.6px),
+          var(--line) calc(50% - 0.6px), var(--line) calc(50% + 0.6px),
+          transparent calc(50% + 0.6px));
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-
-    @media (min-width: 640px) {
-      h1 {
-        font-size: 2rem;
-      }
-
-      .viewer {
-        aspect-ratio: 16 / 9;
-      }
+    .stage .label {
+      font-family: var(--display);
+      font-size: clamp(1.4rem, 4vw, 2.1rem);
+      color: var(--ink);
+      letter-spacing: 0.02em;
     }
-
-    footer {
-      text-align: center;
-      color: var(--muted);
-      font-size: 0.8rem;
-      padding: 2rem 1rem;
-      border-top: 1px solid var(--line);
-    }
-
-    footer a {
-      color: var(--accent);
+    .stage .render-link {
+      position: absolute;
+      right: 1rem;
+      bottom: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
       text-decoration: none;
+      color: var(--muted);
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      transition: color 0.15s ease, gap 0.15s ease;
+    }
+    .stage .render-link:hover { color: var(--ink); gap: 0.8rem; }
+    .stage .render-link svg { width: 22px; height: 22px; }
+    .stage-canvas { width: 100%; height: 100%; object-fit: contain; display: block; border-radius: 6px; }
+    .stage.rendered .label { display: none; }
+    .stage.busy::after {
+      content: ""; position: absolute; inset: 0; border-radius: 6px;
+      background: rgba(0,0,0,0.04); pointer-events: none;
+    }
+
+    /* Panel */
+    .panel { border: 1px solid var(--line); border-radius: 6px; overflow-y: auto; }
+    .pane { max-height: calc(74vh - 120px); overflow-y: auto; }
+    .tabs { display: flex; }
+    .tab {
+      flex: 1;
+      background: var(--panel);
+      border: 0;
+      border-bottom: 1px solid var(--line);
+      padding: 0.9rem 1rem;
+      font-family: var(--display);
+      font-size: 1rem;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+      cursor: pointer;
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+    .tab + .tab { border-left: 1px solid var(--line); }
+    .tab[aria-selected="true"] { background: var(--bg); color: var(--ink); }
+
+    .pane { padding: 1.5rem; display: none; }
+    .pane[data-active] { display: block; }
+
+    /* PICTURE pane */
+    .pic-row { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+    .samples { display: flex; gap: 0.6rem; overflow-x: auto; padding-bottom: 0.5rem; }
+    .samples::-webkit-scrollbar { height: 4px; }
+    .samples::-webkit-scrollbar-track { background: transparent; }
+    .samples::-webkit-scrollbar-thumb { background: var(--line); border-radius: 2px; }
+    .samples button {
+      width: 42px; height: 42px;
+      border-radius: 50%;
+      border: 1px solid var(--line);
+      overflow: hidden; padding: 0; cursor: pointer; background: var(--bg-soft);
+    }
+    .samples img { width: 100%; height: 100%; object-fit: cover; }
+    .preview {
+      margin-top: 1.3rem;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      overflow: hidden;
+      height: clamp(320px, 52vh, 580px);
+      background: var(--bg-soft);
+    }
+    .preview img { width: 100%; height: 100%; object-fit: cover; }
+
+    /* PATTERN pane */
+    .controls-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.6rem;
+    }
+    .ctrl-label {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--muted);
+      margin-bottom: 0.6rem;
+    }
+    .stepper { display: inline-flex; align-items: center; border: 1px solid var(--line); border-radius: 999px; }
+    .stepper button {
+      width: 40px; height: 40px; border: 0; background: none; font-size: 1.2rem;
+      cursor: pointer; color: var(--ink);
+    }
+    .stepper output { min-width: 2.2rem; text-align: center; font-weight: 700; }
+    input[type="range"] { width: 100%; accent-color: var(--ink); }
+
+    .swatches { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.6rem; max-width: 230px; }
+    .swatches button { aspect-ratio: 1 / 1; border-radius: 6px; border: 1px solid rgba(0,0,0,0.12); cursor: pointer; }
+    .swatches .swatch {
+      aspect-ratio: 1 / 1; border-radius: 6px; border: 1px solid rgba(0,0,0,0.12);
+      cursor: pointer; position: relative; display: block; transition: transform 0.1s ease;
+    }
+    .swatches .swatch:hover { transform: scale(1.06); }
+    .swatches .swatch.overridden { box-shadow: 0 0 0 2px var(--ink); }
+    .swatches .swatch input[type="color"] { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
+    .swatches-hint { font-size: 0.68rem; color: var(--muted); margin-top: 0.5rem; }
+
+    .pattern-pick { display: flex; align-items: center; justify-content: center; gap: 1rem; }
+    .pattern-pick .arrow {
+      border: 1px solid var(--line); background: var(--bg); border-radius: 50%;
+      width: 38px; height: 38px; cursor: pointer; font-size: 1rem; color: var(--ink);
+    }
+    .pattern-pick .swatch-pattern {
+      width: 130px; height: 130px; border: 1px solid var(--line); border-radius: 6px; padding: 0.6rem;
+      background: var(--bg);
+    }
+    .note { color: var(--muted); font-size: 0.8rem; font-style: italic; text-align: center; margin-top: 0.4rem; }
+
+    @media (min-width: 860px) {
+      .config { grid-template-columns: 1fr 1.1fr; align-items: start; }
+      .controls-grid { grid-template-columns: 1fr 1fr; }
     }
   </style>
 </head>
 
 <body>
-  <header>
-    <span class="badge">Configurator</span>
-    <h1>HGH</h1>
-    <p>Speckle model viewer</p>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="Stained Glass — home">
+      <img src="../assets/logo-mark.svg" alt="" />
+      <span class="brand-name" data-en="STAINED GLASS" data-pl="WITRAŻ">STAINED&nbsp;GLASS</span>
+    </a>
+    <nav>
+      <a href="/" data-en="← Home" data-pl="← Strona główna">← Home</a>
+      <a href="../rendering/" data-en="Renderer" data-pl="Render">Renderer</a>
+      <button class="lang" data-lang-toggle aria-label="Switch language">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <circle cx="12" cy="12" r="9" /><path d="M3 12h18M12 3c2.5 2.5 2.5 15.5 0 18M12 3c-2.5 2.5-2.5 15.5 0 18" />
+        </svg>
+        <span class="lang-current">EN</span>
+      </button>
+    </nav>
   </header>
 
-  <main>
-    <div class="viewer" id="viewer">
-      <!-- Speckle iframe is injected here by the script below -->
-      <div class="placeholder" id="placeholder">
-        <strong>No Speckle model configured yet</strong>
-        <span>Set <code>PROJECT_ID</code> and <code>MODEL_ID</code> in the page script.</span>
-        <span>Get them in Speckle: open your model → <em>Share → Embed</em>.</span>
+  <main class="config wrap">
+    <!-- Picture / Pattern panel (left) -->
+    <div class="panel">
+      <div class="tabs" role="tablist">
+        <button class="tab" role="tab" aria-selected="true" data-tab="picture"
+          data-en="PICTURE" data-pl="OBRAZEK">PICTURE</button>
+        <button class="tab" role="tab" aria-selected="false" data-tab="pattern"
+          data-en="PATTERN" data-pl="WZÓR">PATTERN</button>
       </div>
+
+      <!-- PICTURE -->
+      <div class="pane" id="pane-picture" data-active>
+        <div class="pic-row">
+          <button class="btn" id="upload-btn" data-en="Upload image" data-pl="Wgraj zdjęcie">Upload image</button>
+          <input id="upload-input" type="file" accept="image/*" hidden />
+          <div class="samples" aria-label="Sample images">
+            <button><img src="../assets/image%20library/peacock.jpg" alt="Peacock" /></button>
+            <button><img src="../assets/image%20library/sunflowers.jpg" alt="Sunflowers" /></button>
+            <button><img src="../assets/image%20library/owl.jpg" alt="Owl" /></button>
+            <button><img src="../assets/image%20library/seahorse.jpg" alt="Seahorse" /></button>
+            <button><img src="../assets/image%20library/lilies.jpg" alt="Lilies" /></button>
+            <button><img src="../assets/image%20library/medusa.jpg" alt="Medusa" /></button>
+            <button><img src="../assets/image%20library/oldtown.jpg" alt="Old town" /></button>
+            <button><img src="../assets/image%20library/giraffe.jpg" alt="Giraffe" /></button>
+          </div>
+        </div>
+        <div class="preview"><img id="preview-img" src="../assets/image%20library/peacock.jpg" alt="Selected image preview" /></div>
+      </div>
+
+      <!-- PATTERN -->
+      <div class="pane" id="pane-pattern">
+        <div class="controls-grid">
+          <!-- Number of colours, with the resulting palette directly beneath -->
+          <div>
+            <div class="ctrl-label" data-en="Number of colours" data-pl="Liczba kolorów">Number of colours</div>
+            <div class="stepper">
+              <button id="col-minus" aria-label="fewer colours">−</button>
+              <output id="col-count">2</output>
+              <button id="col-plus" aria-label="more colours">+</button>
+            </div>
+            <div class="ctrl-label" style="margin-top: 1.4rem" data-en="Palette" data-pl="Paleta">Palette</div>
+            <div class="swatches" id="swatches"></div>
+            <p class="swatches-hint" data-en="Click a colour to override · right-click to reset"
+              data-pl="Kliknij, aby zmienić · prawy przycisk resetuje">Click a colour to override · right-click to reset</p>
+          </div>
+
+          <div>
+            <div class="ctrl-label" data-en="Pattern size" data-pl="Wielkość wzoru">Pattern size</div>
+            <input id="pat-size" type="range" min="0.2" max="20" value="5" step="0.1" aria-label="pattern size" />
+          </div>
+
+          <div>
+            <div class="ctrl-label" data-en="Frame thickness" data-pl="Grubość ramki">Frame thickness</div>
+            <input id="frame-thick" type="range" min="0" max="5" value="1.2" step="0.1" aria-label="frame thickness" />
+          </div>
+
+          <div>
+            <div class="ctrl-label" data-en="Pattern" data-pl="Wzór">Pattern</div>
+            <div class="pattern-pick">
+              <button class="arrow" id="pat-prev" aria-label="previous pattern">‹</button>
+              <canvas class="swatch-pattern" id="pat-thumb" width="120" height="120"></canvas>
+              <button class="arrow" id="pat-next" aria-label="next pattern">›</button>
+            </div>
+            <p class="note" id="pat-name">Diamond</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stage — live stained-glass preview, rendered by the WASM pipeline (right) -->
+    <div class="stage">
+      <canvas id="stage-canvas" class="stage-canvas" hidden></canvas>
+      <span class="label" id="stage-label">KONFIGURATOR</span>
     </div>
   </main>
 
-  <footer>
-    <a href="../index.html">← Back to asset board</a> · HGH staging page, subject to change
-  </footer>
+  <script src="../assets/site.js" defer></script>
 
+  <!-- Tab switching (no module needed) -->
   <script>
-    // ── Speckle embed config ────────────────────────────────────────────────
-    // Fill these in from your Speckle model URL:
-    //   https://app.speckle.systems/projects/<PROJECT_ID>/models/<MODEL_ID>
-    // Or use Share → Embed in the Speckle web app and paste the IDs here.
-    const SPECKLE_SERVER = "https://app.speckle.systems";
-    const PROJECT_ID = "566e6518c0";
-    const MODEL_ID = "df97a50075";
+    document.querySelectorAll('.tab').forEach((tab) => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.tab').forEach((t) => t.setAttribute('aria-selected', t === tab));
+        document.querySelectorAll('.pane').forEach((p) => p.removeAttribute('data-active'));
+        document.getElementById('pane-' + tab.dataset.tab).setAttribute('data-active', '');
+      });
+    });
+  </script>
 
-    // Embed options: transparent background, hide controls UI as desired.
-    const EMBED_OPTIONS = {
-      isEnabled: true,
-      isTransparent: true,
-      hideControls: false,
-      hideSelectionInfo: false,
-      noScroll: false
+  <!-- Live stained-glass preview, driven by the Rust/WASM pipeline -->
+  <script type="module">
+    import init, { compute_palette, render_preview, render_glb } from '/vendor/sg-wasm/sg_wasm.js';
+
+    const PATTERNS = ['diamond', 'hexagonal', 'triangle', 'rectangle', 'brick'];
+    const PATTERN_NAMES = {
+      diamond:   { en: 'Diamond',   pl: 'Romb' },
+      hexagonal: { en: 'Hexagon',   pl: 'Sześciokąt' },
+      triangle:  { en: 'Triangle',  pl: 'Trójkąt' },
+      rectangle: { en: 'Rectangle', pl: 'Prostokąt' },
+      brick:     { en: 'Brick',     pl: 'Cegła' },
     };
+    const PANEL_MAJOR = 300, OUT_MAJOR = 900;   // longer panel dim (model units) / preview dim (px)
+    // panel + preview dims follow the source image's aspect ratio (set per image)
+    let PANEL_W = 300, PANEL_H = 300, OUT_W = 640, OUT_H = 640;
+    const state = { pattern: 0, colors: 6, size: 5, frame: 1.2 };  // frame = lead_gap (glass transparency is set on the render view)
+    const SHAPE_PAL = new Uint8Array([220, 220, 226]);  // single colour -> bare pattern thumbnail
 
-    (function mountSpeckle() {
-      if (!PROJECT_ID || !MODEL_ID) return; // keep placeholder visible
+    const stage = document.querySelector('.stage');
+    const stageLabel = document.getElementById('stage-label');
+    const canvas = document.getElementById('stage-canvas');
+    const ctx = canvas.getContext('2d');
+    canvas.width = OUT_W; canvas.height = OUT_H;
+    const thumb = document.getElementById('pat-thumb');
+    const tctx = thumb.getContext('2d');
 
-      const opts = encodeURIComponent(JSON.stringify(EMBED_OPTIONS));
-      const src =
-        `${SPECKLE_SERVER}/projects/${PROJECT_ID}/models/${MODEL_ID}#embed=${opts}`;
+    let wasmReady = false;
+    let curImg = null;          // { data: Uint8Array(RGBA), w, h }
+    let palette = [];           // computed colours: [[r,g,b], ...]
+    let overrides = {};         // index -> [r,g,b] user overrides
 
-      const iframe = document.createElement("iframe");
-      iframe.src = src;
-      iframe.title = "HGH Speckle model";
-      iframe.allow = "fullscreen; xr-spatial-tracking";
-      iframe.setAttribute("allowfullscreen", "");
+    const swatchesEl = document.getElementById('swatches');
+    const hex = (c) => '#' + c.map((v) => v.toString(16).padStart(2, '0')).join('');
+    const fromHex = (h) => [1, 3, 5].map((i) => parseInt(h.slice(i, i + 2), 16));
 
-      const viewer = document.getElementById("viewer");
-      const placeholder = document.getElementById("placeholder");
-      if (placeholder) placeholder.remove();
-      viewer.appendChild(iframe);
-    })();
+    // effective palette = computed colours with user overrides applied -> flat Uint8Array
+    function effectivePalette() {
+      const flat = [];
+      palette.forEach((c, i) => { const e = overrides[i] || c; flat.push(e[0], e[1], e[2]); });
+      return new Uint8Array(flat);
+    }
+
+    // recompute palette from the image (depends only on image + colour count) and draw swatches
+    function refreshPalette() {
+      if (!wasmReady || !curImg) return;
+      const flat = compute_palette(curImg.data, curImg.w, curImg.h, 4, state.colors, 42);
+      palette = [];
+      for (let i = 0; i < flat.length; i += 3) palette.push([flat[i], flat[i + 1], flat[i + 2]]);
+      overrides = {};
+      renderSwatches();
+    }
+
+    function renderSwatches() {
+      swatchesEl.innerHTML = '';
+      palette.forEach((c, i) => {
+        const eff = overrides[i] || c;
+        const lab = document.createElement('label');
+        lab.className = 'swatch';
+        lab.title = 'Click to override colour';
+        lab.style.background = hex(eff);
+        if (overrides[i]) lab.classList.add('overridden');
+        const inp = document.createElement('input');
+        inp.type = 'color';
+        inp.value = hex(eff);
+        inp.addEventListener('input', (e) => {
+          overrides[i] = fromHex(e.target.value);
+          lab.style.background = e.target.value;
+          lab.classList.add('overridden');
+          regenerate();
+        });
+        // right-click resets a single override
+        lab.addEventListener('contextmenu', (e) => {
+          e.preventDefault();
+          delete overrides[i];
+          renderSwatches();
+          regenerate();
+        });
+        lab.appendChild(inp);
+        swatchesEl.appendChild(lab);
+      });
+    }
+
+    // tile_size from the 1..10 "pattern size" slider (bigger slider = bigger cells)
+    const tileSize = () => 6 + state.size * 2.2;
+
+    function decodeToRGBA(imgEl) {
+      const c = document.createElement('canvas');
+      c.width = imgEl.naturalWidth; c.height = imgEl.naturalHeight;
+      const cx = c.getContext('2d', { willReadFrequently: true });
+      cx.drawImage(imgEl, 0, 0);
+      const d = cx.getImageData(0, 0, c.width, c.height);
+      return { data: new Uint8Array(d.data.buffer), w: c.width, h: c.height };
+    }
+
+    // panel + preview canvas take the image's aspect ratio (no stretching)
+    function setDimsFromImage(w, h) {
+      const ar = w / h;
+      if (ar >= 1) { // landscape
+        PANEL_W = PANEL_MAJOR; PANEL_H = PANEL_MAJOR / ar;
+        OUT_W = OUT_MAJOR; OUT_H = Math.round(OUT_MAJOR / ar);
+      } else {       // portrait
+        PANEL_H = PANEL_MAJOR; PANEL_W = PANEL_MAJOR * ar;
+        OUT_H = OUT_MAJOR; OUT_W = Math.round(OUT_MAJOR * ar);
+      }
+      canvas.width = OUT_W; canvas.height = OUT_H;
+    }
+
+    // a downscaled data-URL of the current image, so the renderer page can rebuild
+    // the 3D model even for uploads (blob: URLs don't survive navigation)
+    let designImgUrl = '';
+    function makeDesignUrl() {
+      const maxd = 640, s = Math.min(1, maxd / Math.max(curImg.w, curImg.h));
+      const w = Math.round(curImg.w * s), h = Math.round(curImg.h * s);
+      const full = document.createElement('canvas'); full.width = curImg.w; full.height = curImg.h;
+      full.getContext('2d').putImageData(new ImageData(new Uint8ClampedArray(curImg.data), curImg.w, curImg.h), 0, 0);
+      const out = document.createElement('canvas'); out.width = w; out.height = h;
+      out.getContext('2d').drawImage(full, 0, 0, w, h);
+      return out.toDataURL('image/jpeg', 0.85);
+    }
+
+    function loadImage(src) {
+      const im = new Image();
+      im.crossOrigin = 'anonymous';
+      im.onload = () => {
+        curImg = decodeToRGBA(im);
+        designImgUrl = makeDesignUrl();
+        setDimsFromImage(curImg.w, curImg.h);
+        refreshPalette();
+        regenerate();
+      };
+      im.onerror = () => console.warn('image failed to load:', src);
+      im.src = src;
+    }
+
+    function paint(canvasEl, context, rgba, w, h) {
+      context.putImageData(new ImageData(new Uint8ClampedArray(rgba), w, h), 0, 0);
+    }
+
+    function regenerate() {
+      if (!wasmReady || !curImg || !palette.length) return;
+      stage.classList.add('busy');
+      const pat = PATTERNS[state.pattern];
+      const pal = effectivePalette();
+      const rgba = render_preview(
+        curImg.data, curImg.w, curImg.h, 4, pat,
+        PANEL_W, PANEL_H, tileSize(), state.frame, 1.0, pal, OUT_W, OUT_H);  // 2D preview is fully opaque
+      paint(canvas, ctx, rgba, OUT_W, OUT_H);
+      // small pattern thumbnail — a zoomed FRAGMENT (~3 cells) of the bare
+      // tessellation so the shape is easy to read, regardless of tile size
+      const frag = tileSize() * 3;
+      const t = render_preview(
+        curImg.data, curImg.w, curImg.h, 4, pat,
+        frag, frag, tileSize(), state.frame, 1.0, SHAPE_PAL, thumb.width, thumb.height);
+      paint(thumb, tctx, t, thumb.width, thumb.height);
+      canvas.hidden = false;
+      stage.classList.add('rendered');
+      stage.classList.remove('busy');
+      // stash config so "See my render" can rebuild the 3D GLB on the renderer
+      try {
+        sessionStorage.setItem('sg-design', JSON.stringify({
+          pattern: pat, tile: tileSize(), frame: state.frame,
+          palette: Array.from(pal), img: designImgUrl,
+        }));
+      } catch (e) { /* quota / private mode */ }
+    }
+
+    // ── controls ──────────────────────────────────────────────────────────
+    // colour stepper
+    const colOut = document.getElementById('col-count');
+    colOut.textContent = state.colors;
+    const setColors = (v) => { state.colors = Math.max(2, Math.min(8, v)); colOut.textContent = state.colors; refreshPalette(); regenerate(); };
+    document.getElementById('col-minus').addEventListener('click', () => setColors(state.colors - 1));
+    document.getElementById('col-plus').addEventListener('click', () => setColors(state.colors + 1));
+
+    // pattern size + frame thickness (debounced while dragging)
+    let dragTimer = 0;
+    const debouncedRegen = () => { clearTimeout(dragTimer); dragTimer = setTimeout(regenerate, 60); };
+    document.getElementById('pat-size').addEventListener('input', (e) => {
+      state.size = +e.target.value;
+      debouncedRegen();
+    });
+    document.getElementById('frame-thick').addEventListener('input', (e) => {
+      state.frame = +e.target.value;
+      debouncedRegen();
+    });
+
+    // pattern picker
+    const patName = document.getElementById('pat-name');
+    // set the localized name + data-en/data-pl so site.js keeps it in sync on toggle
+    function setPatName() {
+      const n = PATTERN_NAMES[PATTERNS[state.pattern]];
+      patName.setAttribute('data-en', n.en);
+      patName.setAttribute('data-pl', n.pl);
+      patName.textContent = (document.documentElement.lang === 'pl') ? n.pl : n.en;
+    }
+    const cyclePattern = (d) => {
+      state.pattern = (state.pattern + d + PATTERNS.length) % PATTERNS.length;
+      setPatName();
+      regenerate();
+    };
+    document.getElementById('pat-prev').addEventListener('click', () => cyclePattern(-1));
+    document.getElementById('pat-next').addEventListener('click', () => cyclePattern(1));
+    setPatName();
+
+    // palette swatches (live, reflect the picked image's quantized colours)
+    // (kept as a passive readout; regenerate refreshes it)
+
+    // image: samples + upload
+    const previewImg = document.getElementById('preview-img');
+    document.querySelectorAll('.samples button').forEach((b) => {
+      b.addEventListener('click', () => {
+        const src = b.querySelector('img').src;
+        previewImg.src = src;
+        loadImage(src);
+      });
+    });
+    document.getElementById('upload-btn').addEventListener('click', () =>
+      document.getElementById('upload-input').click());
+    document.getElementById('upload-input').addEventListener('change', (e) => {
+      const f = e.target.files && e.target.files[0];
+      if (!f) return;
+      const url = URL.createObjectURL(f);
+      previewImg.src = url;
+      loadImage(url);
+    });
+
+    // ── boot ──────────────────────────────────────────────────────────────
+    init().then(() => {
+      wasmReady = true;
+      stageLabel.textContent = '';
+      loadImage(previewImg.src);   // first render with the default sample
+    }).catch((err) => {
+      console.error('WASM init failed:', err);
+      stageLabel.textContent = 'preview unavailable';
+    });
   </script>
 </body>
 

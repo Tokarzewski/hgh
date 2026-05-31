@@ -1,0 +1,4 @@
+/target
+/test/*.rgba
+/test/*.glb
+Cargo.lock

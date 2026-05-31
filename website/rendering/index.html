@@ -4,8 +4,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HGH — Rendering</title>
-  <link rel="icon" type="image/svg+xml" href="../assets/hopper.svg" />
+  <title>Stained Glass — Renderer</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/logo-mark.svg" />
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lato:wght@300;400;700&display=swap"
+    rel="stylesheet" />
   <style>
     :root {
       --bg: #0f0f12;
@@ -23,58 +29,55 @@
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
+      font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #ffffff;
+      color: #161616;
       line-height: 1.5;
       -webkit-font-smoothing: antialiased;
     }
 
-    header {
-      padding: 2rem 1.25rem 1.5rem;
-      border-bottom: 1px solid var(--line);
+    /* Light top bar (shared design language; tokens kept dark for the viewer) */
+    .topbar {
       position: sticky;
       top: 0;
-      background: rgba(15, 15, 18, 0.85);
-      backdrop-filter: blur(8px);
-      z-index: 10;
-      text-align: center;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.7rem 1.25rem;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #e4e4e0;
     }
-
-    .badge {
-      display: inline-block;
-      font-size: 0.7rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--accent);
-      border: 1px solid var(--accent);
-      border-radius: 999px;
-      padding: 0.2rem 0.7rem;
-      margin-bottom: 0.75rem;
+    .brand { display: inline-flex; align-items: center; gap: 0.6rem; text-decoration: none; color: #161616; }
+    .brand img { width: 30px; height: 30px; display: block; }
+    .brand .brand-name { font-family: "Abril Fatface", Georgia, serif; font-size: 1.15rem; letter-spacing: 0.04em; }
+    .topbar nav { display: flex; align-items: center; gap: 1.4rem; }
+    .topbar nav a {
+      text-decoration: none; color: #6f6f6f; font-size: 0.82rem;
+      letter-spacing: 0.06em; text-transform: uppercase;
     }
-
-    h1 {
-      font-size: 1.6rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
+    .topbar nav a:hover { color: #161616; }
+    .lang {
+      display: inline-flex; align-items: center; gap: 0.4rem; background: none; border: 0;
+      font-family: inherit; font-size: 0.82rem; color: #6f6f6f; cursor: pointer; letter-spacing: 0.04em;
     }
-
-    header p {
-      color: var(--muted);
-      font-size: 0.95rem;
-      margin-top: 0.35rem;
-    }
+    .lang:hover { color: #161616; }
+    .lang svg { width: 16px; height: 16px; }
+    .lang .lang-current { font-weight: 700; color: #161616; }
 
     main {
-      max-width: 1100px;
+      max-width: 100%;
       margin: 0 auto;
-      padding: 1.5rem 1.25rem 4rem;
+      padding: 1rem 1.25rem 1.25rem;
     }
 
     .viewer {
       position: relative;
-      width: 100%;
-      aspect-ratio: 16 / 10;
+      width: 90vw;
+      height: 90vh;
+      margin: 0 auto;
       background:
         repeating-conic-gradient(#16161b 0% 25%, #1d1d24 0% 50%) 50% / 22px 22px;
       border: 1px solid var(--line);
@@ -94,6 +97,7 @@
     .status {
       position: absolute;
       inset: 0;
+      z-index: 8; /* above the WebGPU canvas (appended later) and the controls */
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -119,13 +123,10 @@
       color: #d77;
     }
 
-    .spinner {
-      width: 28px;
-      height: 28px;
-      border: 3px solid var(--line);
-      border-top-color: var(--accent);
-      border-radius: 50%;
-      animation: spin 0.8s linear infinite;
+    .loading-gif {
+      width: 92px;
+      height: auto;
+      display: block;
     }
 
     @keyframes spin {
@@ -155,6 +156,52 @@
       opacity: 1;
     }
 
+    /* Sun controls overlay */
+    .controls {
+      position: absolute;
+      top: 0.7rem;
+      left: 0.7rem;
+      z-index: 5;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+      min-width: 175px;
+      padding: 0.75rem 0.85rem;
+      background: rgba(15, 15, 18, 0.72);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      backdrop-filter: blur(6px);
+      font-size: 0.7rem;
+      color: var(--muted);
+    }
+
+    .controls label {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .controls input[type="range"] {
+      width: 100%;
+      accent-color: var(--accent);
+    }
+
+    .controls .row {
+      flex-direction: row;
+      align-items: center;
+      gap: 0.45rem;
+      text-transform: none;
+      letter-spacing: 0;
+      color: var(--text);
+      cursor: pointer;
+    }
+
+    .controls .row input {
+      accent-color: var(--accent);
+    }
+
     .toolbar {
       display: flex;
       justify-content: center;
@@ -163,25 +210,27 @@
 
     .btn {
       display: inline-block;
-      font-size: 0.85rem;
-      font-weight: 600;
-      letter-spacing: 0.02em;
-      color: var(--bg);
-      background: var(--accent);
-      border: 1px solid var(--accent);
+      font-family: "Lato", sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #fff;
+      background: #0e0e10;
+      border: 1px solid #0e0e10;
       border-radius: 999px;
-      padding: 0.55rem 1.25rem;
+      padding: 0.7rem 1.6rem;
       cursor: pointer;
       transition: background 0.15s ease, transform 0.15s ease;
     }
 
     .btn:hover:not(:disabled) {
-      transform: translateY(-2px);
-      background: #82966f;
+      transform: translateY(-1px);
+      background: #25252a;
     }
 
     .btn:disabled {
-      opacity: 0.4;
+      opacity: 0.35;
       cursor: default;
     }
 
@@ -189,65 +238,120 @@
       h1 {
         font-size: 2rem;
       }
+    }
 
-      .viewer {
-        aspect-ratio: 16 / 9;
+    /* ── Mobile: bigger scene, compact controls that don't bury it ──────────── */
+    @media (max-width: 640px) {
+      main { padding: 0.5rem 0.5rem 1rem; }
+      .viewer { width: 100%; height: 74vh; border-radius: 10px; }
+      /* controls become a compact 2-column bar across the top, not a tall stack */
+      .controls {
+        top: 0.45rem; left: 0.45rem; right: 0.45rem;
+        min-width: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.45rem 0.8rem;
+        padding: 0.6rem 0.7rem;
+        font-size: 0.62rem;
       }
+      .controls .row { grid-column: 1 / -1; } /* Animate spans the full width */
+      .toolbar { margin-top: 0.8rem; }
+      .btn { padding: 0.8rem 1.8rem; } /* easier tap target */
+
+      /* Header: keep it on one line so the language toggle isn't clipped */
+      .topbar { padding: 0.6rem 0.7rem; gap: 0.6rem; }
+      .brand img { width: 24px; height: 24px; }
+      .brand .brand-name { font-size: 0.9rem; white-space: nowrap; }
+      .topbar nav { gap: 0.75rem; }
+      .topbar nav a { font-size: 0.7rem; letter-spacing: 0.03em; }
     }
 
-    footer {
-      text-align: center;
-      color: var(--muted);
-      font-size: 0.8rem;
-      padding: 2rem 1rem;
-      border-top: 1px solid var(--line);
+    footer.site-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      color: #6f6f6f;
+      font-size: 0.85rem;
+      padding: 1.4rem 1.25rem;
+      border-top: 1px solid #e4e4e0;
     }
-
-    footer a {
-      color: var(--accent);
-      text-decoration: none;
-    }
+    footer.site-footer .credit { display: inline-flex; align-items: center; gap: 0.7rem; }
+    footer.site-footer .credit img { height: 26px; width: auto; opacity: 0.8; display: block; }
   </style>
 
-  <!-- ESM-via-CDN: three WebGPU build (self-contained) + Speckle objectloader (deps resolved by esm.sh) -->
+  <!-- Self-hosted, minified three.js (0.184) — local files load fast and offline.
+       three.webgpu.min.js is 637 KB vs 2.06 MB unminified. The stained-glass
+       geometry is generated locally by the Rust/WASM pipeline (/vendor/sg-wasm). -->
   <script type="importmap">
   {
     "imports": {
-      "three": "https://cdn.jsdelivr.net/npm/three@0.184.0/build/three.webgpu.js",
-      "three/webgpu": "https://cdn.jsdelivr.net/npm/three@0.184.0/build/three.webgpu.js",
-      "three/tsl": "https://cdn.jsdelivr.net/npm/three@0.184.0/build/three.tsl.js",
-      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.184.0/examples/jsm/",
-      "@speckle/objectloader": "https://esm.sh/@speckle/objectloader@2.28.0"
+      "three": "/vendor/three/three.webgpu.min.js",
+      "three/webgpu": "/vendor/three/three.webgpu.min.js",
+      "three/tsl": "/vendor/three/three.tsl.min.js",
+      "three/addons/": "/vendor/three/addons/"
     }
   }
   </script>
 </head>
 
 <body>
-  <header>
-    <span class="badge">Rendering</span>
-    <h1>HGH</h1>
-    <p>WebGPU + TSL renderer · live from Speckle</p>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="Stained Glass — home">
+      <img src="../assets/logo-mark.svg" alt="" />
+      <span class="brand-name" data-en="STAINED GLASS" data-pl="WITRAŻ">STAINED&nbsp;GLASS</span>
+    </a>
+    <nav>
+      <a href="../configurator/" data-en="← Configurator" data-pl="← Konfigurator">← Configurator</a>
+      <a href="/" data-en="Home" data-pl="Strona główna">Home</a>
+      <button class="lang" data-lang-toggle aria-label="Switch language">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <circle cx="12" cy="12" r="9" /><path d="M3 12h18M12 3c2.5 2.5 2.5 15.5 0 18M12 3c-2.5 2.5-2.5 15.5 0 18" />
+        </svg>
+        <span class="lang-current">EN</span>
+      </button>
+    </nav>
   </header>
 
   <main>
     <div class="viewer" id="viewer">
       <div class="status" id="status">
-        <div class="spinner"></div>
+        <img class="loading-gif" src="../assets/loading.gif" alt="" />
         <strong>Initializing WebGPU…</strong>
         <span id="status-detail">Loading Three.js</span>
       </div>
       <div class="backend-tag" id="backend-tag"></div>
+
+      <div class="controls" id="controls" hidden>
+        <label>Light azimuth
+          <input id="sun-az" type="range" min="-70" max="70" value="0" step="1" />
+        </label>
+        <label>Light elevation
+          <input id="sun-el" type="range" min="12" max="82" value="40" step="1" />
+        </label>
+        <label>Light distance
+          <input id="sun-dist" type="range" min="0.25" max="4.5" value="2.2" step="0.05" />
+        </label>
+        <label>Light intensity
+          <input id="light-intensity" type="range" min="0.2" max="3" value="1" step="0.05" />
+        </label>
+        <label>Glass transparency
+          <input id="glass-trans" type="range" min="0" max="0.9" value="0.45" step="0.05" />
+        </label>
+        <label class="row">
+          <input id="sun-animate" type="checkbox" /> Animate
+        </label>
+      </div>
     </div>
 
     <div class="toolbar">
-      <button class="btn" id="download-btn" disabled>Download .glb</button>
+      <button class="btn" id="download-btn" disabled
+        data-en="Download .glb" data-pl="Pobierz .glb">Download .glb</button>
     </div>
   </main>
 
-  <footer>
-    <a href="../index.html">← Back to asset board</a> · HGH staging page, subject to change
-  </footer>
+  <script src="../assets/site.js" defer></script>
 
   <script type="module">
     import * as THREE from 'three/webgpu';
@@ -257,16 +361,15 @@
     } from 'three/tsl';
     import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
     import { GLTFExporter } from 'three/addons/exporters/GLTFExporter.js';
-    import ObjectLoader from '@speckle/objectloader';
+    import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+    import initWasm, { compute_palette, render_glb } from '/vendor/sg-wasm/sg_wasm.js';
 
-    // ── Speckle source ──────────────────────────────────────────────────────
-    // Public project — no token needed. We resolve the LATEST version's root
-    // object at runtime so the page always shows the newest push.
-    const SPECKLE_SERVER = 'https://app.speckle.systems';
-    const PROJECT_ID = '566e6518c0';
-    const MODEL_ID = 'df97a50075';
-    // Fallback root object (latest known) if the GraphQL lookup fails.
-    const FALLBACK_OBJECT_ID = '64a2e33e9abd62ab363d573cdc894ff3';
+    // ── Model source: the stained-glass design from the configurator ──────────
+    // The configurator stores the chosen design in sessionStorage('sg-design');
+    // we rebuild the 3D GLB here with the Rust/WASM pipeline. No Speckle, no network.
+    const PANEL_MAJOR = 300;                                  // longer panel dim (model units)
+    const DEFAULT_IMG = '../assets/image%20library/peacock.jpg';
+    const GLASS_DEPTH = 4.0, FRAME_HEIGHT = 8.0, GLASS_ALPHA = 0.55;
 
     // ── DOM helpers ───────────────────────────────────────────────────────────
     const viewer = document.getElementById('viewer');
@@ -274,6 +377,13 @@
     const statusDetail = document.getElementById('status-detail');
     const backendTag = document.getElementById('backend-tag');
     const downloadBtn = document.getElementById('download-btn');
+    const controlsPanel = document.getElementById('controls');
+    const sunAzEl = document.getElementById('sun-az');
+    const sunElEl = document.getElementById('sun-el');
+    const sunDistEl = document.getElementById('sun-dist');
+    const lightIntensityEl = document.getElementById('light-intensity');
+    const sunAnimateEl = document.getElementById('sun-animate');
+    const glassTransEl = document.getElementById('glass-trans');
 
     function setStatus(title, detail) {
       statusEl.classList.remove('hidden', 'error');
@@ -286,7 +396,8 @@
     function setError(title, detail) {
       statusEl.classList.remove('hidden');
       statusEl.classList.add('error');
-      statusEl.querySelector('.spinner').style.display = 'none';
+      const g = statusEl.querySelector('.loading-gif');
+      if (g) g.style.display = 'none';
       statusEl.querySelector('strong').textContent = title;
       statusDetail.textContent = detail || '';
     }
@@ -295,10 +406,39 @@
     let modelGroup = null;        // the loaded geometry, for export
     let modelName = 'hgh-model';  // used as the download filename
 
+    // One-time render of the glass panel into a texture, used as a coloured
+    // spotlight cookie so the window casts coloured light onto the floor.
+    let glassCapture = null; // { cam, rt }
+    const GLASS_LAYER = 2;
+
+    // The "sun" (a cookie spotlight) and its rig, repositionable at runtime.
+    let theSun = null, theSunMesh = null;
+    let sunCenter = null, sunRadius = 0;
+    // Kept so the cone / cookie fov / shadow frustum can be recomputed when the
+    // Sun-distance slider changes the orbit radius.
+    let sunBaseDist = 0, sunPanelHalfDiag = 0, sunFloorSize = 0;
+    const BASE_SUN = 7.0;           // spotlight intensity at the slider's default
+    let lightIntensity = 1;         // user multiplier from the Light-intensity slider
+
+    // Glass display materials, so transparency (opacity + transmitted light) is adjustable live.
+    let glassMats = [];
+    let transparency = 1 - GLASS_ALPHA;   // matches the render-view slider default
+
+    // Floor + wall, kept so they can be baked into the glTF export.
+    let stageFloor = null, stageWall = null;
+
+    let placeholder = null; // reserved (animation mixer hook); unused with WASM models
+    let clock = null;
+
     async function main() {
+      // Load the WASM pipeline in parallel with renderer init.
+      const wasmPromise = initWasm();
+
       // ── Renderer (WebGPU, automatic WebGL2 fallback) ───────────────────────
       renderer = new THREE.WebGPURenderer({ antialias: true });
       renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      renderer.shadowMap.enabled = true;
+      renderer.shadowMap.type = THREE.PCFSoftShadowMap;
       sizeRendererToViewer();
       viewer.appendChild(renderer.domElement);
       await renderer.init();
@@ -321,158 +461,408 @@
       controls.autoRotateSpeed = 0.6;
 
       setupLights();
+      clock = new THREE.Clock();
 
       window.addEventListener('resize', onResize);
       downloadBtn.addEventListener('click', downloadGLB);
+      wireSunControls();
       renderer.setAnimationLoop(animate);
 
-      // ── Load the model ─────────────────────────────────────────────────────
+      // ── Build the stained-glass model from the configurator's design ───────
       try {
-        await loadSpeckleModel();
+        await wasmPromise;
+        await loadFromConfigurator();
       } catch (err) {
         console.error(err);
-        setError('Could not load model', String(err?.message || err));
+        setError('Could not build model', String(err?.message || err));
       }
     }
 
-    function setupLights() {
-      scene.add(new THREE.HemisphereLight(0xbfc4cc, 0x14141a, 1.0));
-      const key = new THREE.DirectionalLight(0xffffff, 2.2);
-      key.position.set(1, 2, 1.5);
-      scene.add(key);
-      const fill = new THREE.DirectionalLight(0xaab0c0, 0.6);
-      fill.position.set(-1.5, 0.5, -1);
-      scene.add(fill);
-      scene.add(new THREE.AmbientLight(0xffffff, 0.15));
+    // Decode an image URL to RGBA pixels (browser-native).
+    function imageToRGBA(src) {
+      return new Promise((resolve, reject) => {
+        const im = new Image();
+        im.crossOrigin = 'anonymous';
+        im.onload = () => {
+          const c = document.createElement('canvas');
+          c.width = im.naturalWidth; c.height = im.naturalHeight;
+          const cx = c.getContext('2d', { willReadFrequently: true });
+          cx.drawImage(im, 0, 0);
+          const d = cx.getImageData(0, 0, c.width, c.height);
+          resolve({ data: new Uint8Array(d.data.buffer), w: c.width, h: c.height });
+        };
+        im.onerror = () => reject(new Error('image load failed: ' + src));
+        im.src = src;
+      });
     }
 
-    // ── Custom TSL material: height gradient + sage fresnel rim (on-brand) ────
-    function createModelMaterial() {
+    // Read the configurator design (or sensible defaults), rebuild the GLB, show it.
+    async function loadFromConfigurator() {
+      setStatus('Building model…', 'Generating stained glass');
+      let design = {};
+      try { design = JSON.parse(sessionStorage.getItem('sg-design') || '{}'); } catch {}
+
+      const pattern = design.pattern || 'diamond';
+      const tile = design.tile || 16;
+      const frame = design.frame ?? 1.2;
+      const alpha = design.alpha ?? GLASS_ALPHA;
+      const img = await imageToRGBA(design.img || DEFAULT_IMG);
+
+      // panel dims follow the image aspect (matches the configurator)
+      const ar = img.w / img.h;
+      const panelW = ar >= 1 ? PANEL_MAJOR : PANEL_MAJOR * ar;
+      const panelH = ar >= 1 ? PANEL_MAJOR / ar : PANEL_MAJOR;
+
+      // palette: use the configurator's (incl. overrides), else compute one
+      let palette = design.palette && design.palette.length
+        ? Uint8Array.from(design.palette)
+        : compute_palette(img.data, img.w, img.h, 4, 8, 42);
+
+      const glb = render_glb(img.data, img.w, img.h, 4, pattern,
+        panelW, panelH, tile, frame, GLASS_DEPTH, FRAME_HEIGHT, alpha, palette);
+
+      const gltf = await new GLTFLoader().parseAsync(glb.buffer, '');
+      buildModelFromGLB(gltf.scene);
+    }
+
+    // Bake a loaded GLB scene into the staged WebGPU environment with backlit glass.
+    function buildModelFromGLB(gltfScene) {
+      setStatus('Building geometry…', '');
+      gltfScene.updateMatrixWorld(true);
+      const group = new THREE.Group();
+      let triCount = 0;
+      glassMats = [];
+      gltfScene.traverse((o) => {
+        if (!o.isMesh) return;
+        const geom = o.geometry.clone();
+        geom.applyMatrix4(o.matrixWorld);   // bake node transform into vertices
+        triCount += (geom.getIndex()?.count || geom.attributes.position.count) / 3;
+        const src = o.material;
+        const hex = src.color ? src.color.getHex(THREE.SRGBColorSpace) : 0xcccccc;
+        const opacity = (src.transparent && src.opacity != null) ? src.opacity : 1.0;
+        const disp = makeDisplayMaterial(hex, opacity, src.roughness ?? 0.4, src.metalness ?? 0.0);
+        if (opacity < 1) glassMats.push(disp);   // translucent glass -> adjustable live
+        const mesh = new THREE.Mesh(geom, disp);
+        // plain material kept for glTF export (TSL node materials don't serialize)
+        mesh.userData.exportMat = new THREE.MeshStandardMaterial({
+          color: new THREE.Color().setHex(hex, THREE.SRGBColorSpace),
+          roughness: src.roughness ?? 0.4, metalness: src.metalness ?? 0.0,
+          side: THREE.DoubleSide, transparent: opacity < 1, opacity
+        });
+        group.add(mesh);
+      });
+      if (!group.children.length) throw new Error('Generated model has no geometry.');
+      modelGroup = group;
+
+      // Set the glass into a wall with a hole, standing on a floor.
+      const stage = buildEnvironment(group);
+      scene.add(stage);
+      applyTransparency(transparency);          // glass opacity + transmitted-light intensity
+      if (glassCapture) captureGlassPanel();    // cookie reflects current glass
+
+      downloadBtn.disabled = false;
+      controlsPanel.removeAttribute('hidden');
+      frameStage(stage);
+      hideStatus();
+      console.log(`Built ${group.children.length} meshes, ~${Math.round(triCount)} triangles`);
+    }
+
+    // Dim ambient/fill only — the shadow-casting "sun" (added in buildEnvironment)
+    // is the key light, so the cast shadows stay dark and legible.
+    function setupLights() {
+      scene.add(new THREE.HemisphereLight(0xbfc4cc, 0x14141a, 0.12));
+      const fill = new THREE.DirectionalLight(0xaab0c0, 0.1);
+      fill.position.set(0, 1, 2); // faint front fill so the wall isn't pure black
+      scene.add(fill);
+      scene.add(new THREE.AmbientLight(0xffffff, 0.04));
+    }
+
+    // Glass colour + a subtle same-hue fresnel rim for a backlit stained-glass read.
+    function makeDisplayMaterial(hex, opacity, roughness, metalness) {
       const mat = new THREE.MeshStandardNodeMaterial();
-      mat.side = THREE.DoubleSide; // IFC mesh winding is inconsistent
+      mat.side = THREE.DoubleSide; // mesh winding from CAD is inconsistent
 
-      const up = normalWorld.y.mul(0.5).add(0.5);        // 0 = down-facing, 1 = up-facing
-      const low = color(0x44444c);
-      const high = color(0xc2c2cc);
-      mat.colorNode = mix(low, high, up.pow(1.5));
-      mat.roughnessNode = float(0.62);
-      mat.metalnessNode = float(0.0);
-
-      // Fresnel rim in the brand accent green
+      const base = color(hex);
       const viewDir = cameraPosition.sub(positionWorld).normalize();
       const fresnel = float(1.0).sub(normalWorld.dot(viewDir).saturate()).pow(3.0);
-      mat.emissiveNode = color(0x70846a).mul(fresnel).mul(0.7);
-
+      mat.colorNode = base;
+      // Glow in the glass's own colour (+ brighter rim) so it reads as backlit stained glass.
+      mat.emissiveNode = base.mul(0.5).add(base.mul(fresnel).mul(0.6));
+      mat.roughnessNode = float(roughness);
+      mat.metalnessNode = float(metalness);
+      if (opacity < 1) { mat.transparent = true; mat.opacity = opacity; }
       return mat;
     }
 
-    async function loadSpeckleModel() {
-      setStatus('Loading model…', 'Resolving latest version');
-      const objectId = await resolveLatestObjectId();
+    // Build the scene around the loaded glass: reorient it to stand upright,
+    // set it into a hole in a wall, and stand the wall on a floor.
+    function buildEnvironment(model) {
+      const stage = new THREE.Group();
 
-      const loader = new ObjectLoader({
-        serverUrl: SPECKLE_SERVER,
-        streamId: PROJECT_ID,
-        objectId,
-        options: { enableCaching: true, excludeProps: [] }
+      // Measure the raw model and recentre it at the origin.
+      let box = new THREE.Box3().setFromObject(model);
+      const size0 = box.getSize(new THREE.Vector3());
+      const center0 = box.getCenter(new THREE.Vector3());
+      model.position.sub(center0);
+
+      // Tag the glass meshes onto a dedicated layer so we can render just the
+      // panel into the spotlight-cookie texture (keeps layer 0 for normal view).
+      model.traverse((o) => { if (o.isMesh) o.layers.enable(GLASS_LAYER); });
+
+      // Rotate so the thinnest axis (the glass normal) faces +Z (toward camera).
+      const pivot = new THREE.Group();
+      pivot.add(model);
+      const thin = [['x', size0.x], ['y', size0.y], ['z', size0.z]]
+        .sort((a, b) => a[1] - b[1])[0][0];
+      if (thin === 'x') pivot.rotation.y = Math.PI / 2;
+      else if (thin === 'y') pivot.rotation.x = Math.PI / 2;
+      stage.add(pivot);
+      stage.updateMatrixWorld(true);
+
+      // Re-measure after reorientation; size.z is now the glass thickness.
+      box = new THREE.Box3().setFromObject(pivot);
+      const size = box.getSize(new THREE.Vector3());
+      const center = box.getCenter(new THREE.Vector3());
+      const width = size.x, height = size.y, depth = size.z;
+      const sill = height * 0.3;
+
+      // Sit the glass on a sill above the floor, centred on x/z.
+      pivot.position.x -= center.x;
+      pivot.position.z -= center.z;
+      pivot.position.y += sill - box.min.y;
+      const glassCenterY = sill + height / 2;
+
+      // ── Floor ───────────────────────────────────────────────────────────────
+      const floorMat = new THREE.MeshStandardNodeMaterial();
+      floorMat.colorNode = color(0x111114);
+      floorMat.roughnessNode = float(0.92);
+      floorMat.metalnessNode = float(0.0);
+      const floorSize = Math.max(width, height) * 8;
+      const floor = new THREE.Mesh(new THREE.PlaneGeometry(floorSize, floorSize), floorMat);
+      floor.rotation.x = -Math.PI / 2;
+      floor.receiveShadow = true;
+      stage.add(floor);
+      stageFloor = floor;
+
+      // ── Wall with a rectangular hole the size of the glass ────────────────────
+      const sideMargin = width * 1.3, topMargin = height * 0.3;
+      const wallW = width + 2 * sideMargin;
+      const wallH = sill + height + topMargin;
+      const wallThk = Math.max(depth * 1.6, width * 0.05);
+      const holeW = width * 1.02, holeH = height * 1.02; // slight overlap so glass tucks in
+
+      const shape = new THREE.Shape();
+      shape.moveTo(-wallW / 2, 0);
+      shape.lineTo(wallW / 2, 0);
+      shape.lineTo(wallW / 2, wallH);
+      shape.lineTo(-wallW / 2, wallH);
+      shape.lineTo(-wallW / 2, 0);
+      const hole = new THREE.Path();
+      hole.moveTo(-holeW / 2, glassCenterY - holeH / 2);
+      hole.lineTo(holeW / 2, glassCenterY - holeH / 2);
+      hole.lineTo(holeW / 2, glassCenterY + holeH / 2);
+      hole.lineTo(-holeW / 2, glassCenterY + holeH / 2);
+      hole.lineTo(-holeW / 2, glassCenterY - holeH / 2);
+      shape.holes.push(hole);
+
+      const wallMat = new THREE.MeshStandardNodeMaterial();
+      wallMat.colorNode = color(0x3a3a40);
+      wallMat.roughnessNode = float(0.85);
+      wallMat.metalnessNode = float(0.0);
+      wallMat.side = THREE.DoubleSide;
+      const wall = new THREE.Mesh(
+        new THREE.ExtrudeGeometry(shape, { depth: wallThk, bevelEnabled: false }), wallMat);
+      wall.position.z = -wallThk / 2; // straddle the glass plane at z = 0
+      wall.castShadow = true;
+      wall.receiveShadow = true;
+      stage.add(wall);
+      stageWall = wall;
+
+      // ── Backlight: a warm glow plane behind the opening + a back light ────────
+      const glowMat = new THREE.MeshBasicNodeMaterial();
+      glowMat.colorNode = color(0xfff1d4);
+      const glow = new THREE.Mesh(
+        new THREE.PlaneGeometry(holeW * 1.15, holeH * 1.15), glowMat);
+      glow.position.set(0, glassCenterY, -wallThk - depth);
+      stage.add(glow);
+
+      const back = new THREE.DirectionalLight(0xfff1d4, 2.0);
+      back.position.set(0, glassCenterY, -wallThk - depth * 4);
+      back.target.position.set(0, glassCenterY, 0);
+      stage.add(back, back.target);
+
+      // ── Sun as a SpotLight whose cookie is the stained-glass panel ──────────
+      // Placed behind the wall and aimed at the front floor. The cookie (a render
+      // of just the glass) tints the light; everywhere outside the panel the cookie
+      // is transparent, so the cone only emits where glass actually is.
+      //
+      // For the projection to be geometrically correct, the cookie must be captured
+      // FROM THE SUN'S viewpoint and projected back along the SAME axis: the spotlight
+      // aims through the opening centre, and the capture camera sits at the sun looking
+      // at the same centre with a fov equal to the cone. Both follow the sun in
+      // updateSun(), which re-renders the cookie. (A fixed head-on capture would skew
+      // the cells across the floor as soon as the sun moved off-axis.)
+      //
+      // The sun orbits far back so its rays read as near-parallel sunlight; the cone
+      // angle shrinks to match, keeping the cookie/floor projection panel-sized. The
+      // Sun-distance slider scales sunBaseDist; setSunDistance() recomputes the cone,
+      // cookie fov and shadow frustum from the resulting radius.
+      sunBaseDist = wallThk + depth + width * 2.2 + height * 1.2; // one "distance unit"
+      sunPanelHalfDiag = Math.hypot(width / 2, height / 2);
+      sunFloorSize = floorSize;
+
+      const glassRT = new THREE.RenderTarget(1024, 1024, { depthBuffer: true, samples: 4 });
+      glassRT.texture.colorSpace = THREE.SRGBColorSpace;
+      // Perspective capture matching the spotlight cone; fov/near/far + pose set by
+      // setSunDistance()/updateSun(). Transparent margins mean the cone only emits
+      // where glass is.
+      const capCam = new THREE.PerspectiveCamera(30, 1, 1, 10);
+      capCam.layers.set(GLASS_LAYER);
+      glassCapture = { cam: capCam, rt: glassRT };
+
+      const sun = new THREE.SpotLight(0xffffff, 7.0);
+      sun.penumbra = 0.22;
+      sun.decay = 0;       // no distance falloff — easier to tune at scene scale
+      sun.distance = 0;
+      sun.map = glassRT.texture;   // the cookie: only applied because castShadow = true
+      sun.castShadow = true;
+      sun.shadow.mapSize.set(2048, 2048);
+      sun.shadow.bias = -0.0004;
+      sun.shadow.focus = 1;
+      stage.add(sun, sun.target);
+
+      // Visible sun disc up in the sky behind the wall, along the spotlight axis.
+      const sunMat = new THREE.MeshBasicNodeMaterial();
+      sunMat.colorNode = color(0xfff2cc);
+      const sunMesh = new THREE.Mesh(
+        new THREE.SphereGeometry(Math.max(width, height) * 0.12, 24, 16), sunMat);
+      stage.add(sunMesh);
+
+      // Rig for runtime repositioning: the sun orbits a sphere centred on the
+      // window opening; updateSun(az, el) places it (and the disc) on that sphere.
+      theSun = sun;
+      theSunMesh = sunMesh;
+      sunCenter = new THREE.Vector3(0, glassCenterY, 0);
+      setSunDistance(+sunDistEl.value); // sets sunRadius, cone, frusta, then positions + captures
+
+      stage.updateMatrixWorld(true);
+      return stage;
+    }
+
+    // Set how far the sun orbits the opening (factor × sunBaseDist). Closer → wider
+    // cone, farther → narrower; the cone, cookie fov and shadow frustum are all
+    // recomputed from the new radius so the projection stays panel-sized and correct.
+    function setSunDistance(factor) {
+      if (!theSun) return;
+      sunRadius = sunBaseDist * factor;
+      // Bound the panel + margin; clamp so a very close light can't push the spotlight
+      // angle past π/2 or the capture fov past 180° (both would be degenerate).
+      const coneAngle = Math.min(Math.atan(sunPanelHalfDiag / sunRadius) * 1.15, 1.4);
+      theSun.angle = coneAngle;
+      const cam = glassCapture.cam;
+      cam.fov = 2 * coneAngle * 180 / Math.PI;
+      cam.near = sunRadius * 0.5;
+      cam.far = sunRadius * 1.5;
+      cam.updateProjectionMatrix();
+      theSun.shadow.camera.near = sunRadius * 0.5;
+      theSun.shadow.camera.far = sunRadius * 1.6 + sunFloorSize;
+      theSun.shadow.camera.updateProjectionMatrix();
+      updateSunFromUI(); // reposition sun + capture camera at the new radius, re-render cookie
+    }
+
+    // Place the sun on a sphere around the window opening from azimuth/elevation
+    // (radians). The spotlight aims THROUGH the opening centre, and the cookie
+    // capture camera is moved to the sun looking at the same centre, then the cookie
+    // is re-rendered — so the coloured cells project correctly for any sun angle.
+    function updateSun(az, el) {
+      if (!theSun) return;
+      const ce = Math.cos(el), se = Math.sin(el);
+      const dir = new THREE.Vector3(Math.sin(az) * ce, se, -Math.cos(az) * ce); // behind wall (−z)
+      theSun.position.copy(sunCenter).addScaledVector(dir, sunRadius);
+      theSun.target.position.copy(sunCenter); // cone axis = sun → opening → floor beyond
+      theSun.target.updateMatrixWorld();
+      theSunMesh.position.copy(sunCenter).addScaledVector(dir, sunRadius * 1.2);
+      // Capture the glass from the sun's viewpoint along the same axis.
+      if (glassCapture) {
+        const cam = glassCapture.cam;
+        cam.position.copy(theSun.position);
+        cam.up.set(0, 1, 0);
+        cam.lookAt(sunCenter);
+        captureGlassPanel();
+      }
+    }
+
+    function updateSunFromUI() {
+      updateSun(THREE.MathUtils.degToRad(+sunAzEl.value), THREE.MathUtils.degToRad(+sunElEl.value));
+    }
+
+    // Live glass transparency: t in [0,1]. More transparent -> glass surface more see-through
+    // AND more light transmits, so the coloured light cast on the floor gets brighter.
+    function applyTransparency(t) {
+      transparency = THREE.MathUtils.clamp(t, 0, 1);
+      const opacity = THREE.MathUtils.clamp(1 - transparency, 0.08, 1);
+      for (const m of glassMats) {
+        m.opacity = opacity;
+        m.transparent = true;
+        m.needsUpdate = true;
+      }
+      updateSunIntensity();
+    }
+
+    // Spotlight brightness = user multiplier × transmitted-light factor (from transparency).
+    function updateSunIntensity() {
+      if (theSun) theSun.intensity = BASE_SUN * lightIntensity * (0.45 + 1.5 * transparency);
+    }
+
+    function wireSunControls() {
+      sunAzEl.addEventListener('input', updateSunFromUI);
+      sunElEl.addEventListener('input', updateSunFromUI);
+      sunDistEl.addEventListener('input', () => setSunDistance(+sunDistEl.value));
+      lightIntensityEl.addEventListener('input', (e) => { lightIntensity = +e.target.value; updateSunIntensity(); });
+      glassTransEl.addEventListener('input', (e) => applyTransparency(+e.target.value));
+      // While animating, the az/el sliders are driven by the loop; disable manual drag.
+      sunAnimateEl.addEventListener('change', () => {
+        sunAzEl.disabled = sunElEl.disabled = sunAnimateEl.checked;
       });
-
-      setStatus('Loading model…', 'Streaming geometry from Speckle');
-      const root = await loader.getAndConstructObject((e) => {
-        const pct = e.total ? Math.round((e.current / e.total) * 100) : 0;
-        setStatus('Loading model…', `${e.stage}: ${pct}%`);
-      });
-
-      setStatus('Building geometry…', '');
-      const meshes = [];
-      collectMeshes(root, meshes, new Set());
-      if (meshes.length === 0) throw new Error('No mesh geometry found in this model.');
-
-      const material = createModelMaterial();
-      const group = new THREE.Group();
-      let triCount = 0;
-      for (const m of meshes) {
-        const geom = speckleMeshToGeometry(m);
-        triCount += (geom.getIndex()?.count || 0) / 3;
-        group.add(new THREE.Mesh(geom, material));
-      }
-
-      // Speckle/Rhino is Z-up; Three.js is Y-up.
-      group.rotation.x = -Math.PI / 2;
-      scene.add(group);
-      modelGroup = group;
-      downloadBtn.disabled = false;
-
-      frameObject(group);
-      hideStatus();
-      console.log(`Loaded ${meshes.length} meshes, ~${Math.round(triCount)} triangles`);
     }
 
-    // Resolve the newest version's root object via Speckle GraphQL.
-    async function resolveLatestObjectId() {
-      try {
-        const query = `query($p:String!,$m:String!){ project(id:$p){ model(id:$m){ name versions(limit:1){ items{ referencedObject } } } } }`;
-        const res = await fetch(`${SPECKLE_SERVER}/graphql`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ query, variables: { p: PROJECT_ID, m: MODEL_ID } })
-        });
-        const json = await res.json();
-        const model = json?.data?.project?.model;
-        if (model?.name) modelName = model.name.replace(/[^\w.-]+/g, '_');
-        return model?.versions?.items?.[0]?.referencedObject || FALLBACK_OBJECT_ID;
-      } catch {
-        return FALLBACK_OBJECT_ID;
-      }
+    // Render only the glass panel (GLASS_LAYER) into the cookie texture, on a
+    // transparent background so the lead lines / gaps carry no light.
+    function captureGlassPanel() {
+      const { cam, rt } = glassCapture;
+      const prevBg = scene.background;
+      const prevRT = renderer.getRenderTarget();
+      scene.background = null;
+      renderer.setClearColor(0x000000, 0);
+      renderer.setRenderTarget(rt);
+      renderer.clear();
+      renderer.render(scene, cam);
+      renderer.setRenderTarget(prevRT);
+      renderer.setClearColor(0x000000, 1);
+      scene.background = prevBg;
     }
 
-    // Recursively gather every Speckle Mesh in the constructed object tree.
-    function collectMeshes(node, out, seen) {
-      if (!node || typeof node !== 'object') return;
-      if (seen.has(node)) return;
-      seen.add(node);
+    // Frame a slightly raised 3/4 view of the glass panel that also shows the floor
+    // and the coloured light cast in front of it (rather than a tight front-on crop).
+    function frameStage(stage) {
+      controls.autoRotate = false;
+      scene.updateMatrixWorld(true);
+      const box = new THREE.Box3().setFromObject(modelGroup || stage);
+      const size = box.getSize(new THREE.Vector3());
+      const center = box.getCenter(new THREE.Vector3());
+      const maxDim = Math.max(size.x, size.y);
 
-      if (Array.isArray(node)) {
-        for (const item of node) collectMeshes(item, out, seen);
-        return;
-      }
+      const fov = camera.fov * (Math.PI / 180);
+      const dist = (maxDim / 2) / Math.tan(fov / 2) * 2.3; // pull back so floor + cast show
 
-      const t = node.speckle_type;
-      if (typeof t === 'string' && t.toLowerCase().includes('mesh') &&
-          Array.isArray(node.vertices) && Array.isArray(node.faces)) {
-        out.push(node);
-      }
+      // raised and slightly off-axis, tilted down toward the floor projection
+      camera.position.set(center.x + maxDim * 0.15, center.y + maxDim * 0.55, center.z + dist);
+      camera.near = Math.max(dist / 1000, 0.01);
+      camera.far = dist * 1000 + 100000; // keep the far floor / light disc in view
+      camera.updateProjectionMatrix();
 
-      for (const key in node) {
-        if (key === 'speckle_type') continue;
-        collectMeshes(node[key], out, seen);
-      }
-    }
-
-    // Convert a Speckle Mesh (flat vertices + encoded faces) to BufferGeometry.
-    function speckleMeshToGeometry(mesh) {
-      const verts = mesh.vertices;
-      const faces = mesh.faces;
-      const positions = new Float32Array(verts);
-
-      const indices = [];
-      let i = 0;
-      while (i < faces.length) {
-        let n = faces[i++];
-        if (n < 3) n += 3; // legacy encoding: 0 → triangle, 1 → quad
-        if (i + n > faces.length) break;
-        // Fan-triangulate the polygon.
-        for (let k = 1; k < n - 1; k++) {
-          indices.push(faces[i], faces[i + k], faces[i + k + 1]);
-        }
-        i += n;
-      }
-
-      const geom = new THREE.BufferGeometry();
-      geom.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-      geom.setIndex(indices); // auto-selects Uint16/Uint32
-      geom.computeVertexNormals();
-      return geom;
+      controls.target.set(center.x, center.y - maxDim * 0.2, center.z + maxDim * 0.5);
+      controls.update();
     }
 
     // Frame the camera + orbit target around the loaded geometry.
@@ -496,6 +886,57 @@
       controls.update();
     }
 
+    // Bake a live (node-material) mesh into the export group as a clone with a
+    // plain, glTF-serializable material and its full world transform.
+    function bakeMesh(exportGroup, src, mat, name) {
+      if (!src) return;
+      src.updateWorldMatrix(true, false);
+      const m = new THREE.Mesh(src.geometry, mat); // geometry shared, not mutated
+      src.matrixWorld.decompose(m.position, m.quaternion, m.scale);
+      m.name = name;
+      exportGroup.add(m);
+    }
+
+    // Add an animated "Sun" node to the export group and return an AnimationClip
+    // that orbits it along the same azimuth/elevation sweep used at runtime.
+    function buildSunExport(exportGroup) {
+      if (!sunCenter) return null;
+
+      const modelSize = new THREE.Box3().setFromObject(modelGroup).getSize(new THREE.Vector3());
+      const discR = Math.max(modelSize.x, modelSize.y, modelSize.z) * 0.12 || sunRadius * 0.05;
+
+      const sunGroup = new THREE.Group();
+      sunGroup.name = 'SunRig';
+      const discMat = new THREE.MeshStandardMaterial({
+        color: 0xfff2cc, emissive: 0xfff2cc, emissiveIntensity: 1.0, roughness: 1.0
+      });
+      sunGroup.add(new THREE.Mesh(new THREE.SphereGeometry(discR, 24, 16), discMat));
+      const sunPL = new THREE.PointLight(0xfff4e0, 5.0, 0, 0); // exported via KHR_lights_punctual
+      sunGroup.add(sunPL);
+      exportGroup.add(sunGroup);
+
+      // Sample one seamless loop of the sweep into position keyframes.
+      const D = 12, N = 64;                  // 12-second loop, 64 samples
+      const times = [], values = [];
+      const sunOf = (az, el) => {
+        const ce = Math.cos(el), se = Math.sin(el);
+        const dir = new THREE.Vector3(Math.sin(az) * ce, se, -Math.cos(az) * ce);
+        return sunCenter.clone().addScaledVector(dir, sunRadius * 1.2);
+      };
+      for (let i = 0; i <= N; i++) {
+        const u = i / N;
+        const az = Math.sin(2 * Math.PI * u) * (Math.PI / 3);            // ±60°
+        const el = THREE.MathUtils.degToRad(46 + Math.sin(2 * Math.PI * 2 * u) * 26);
+        const p = sunOf(az, el);
+        times.push(u * D);
+        values.push(p.x, p.y, p.z);
+      }
+      sunGroup.position.fromArray(values, 0); // place at first keyframe
+
+      const track = new THREE.VectorKeyframeTrack('SunRig.position', times, values);
+      return new THREE.AnimationClip('SunSweep', D, [track]);
+    }
+
     // ── Export the loaded geometry as a binary glTF (.glb) ────────────────────
     async function downloadGLB() {
       if (!modelGroup) return;
@@ -503,19 +944,44 @@
       downloadBtn.disabled = true;
       downloadBtn.textContent = 'Exporting…';
       try {
-        // Export a clean copy with a plain material (TSL node materials don't
-        // serialize to glTF). Geometry is shared — the live scene is untouched.
+        // Export a clean copy with plain materials (TSL node materials don't
+        // serialize to glTF) — reuse the per-Speckle-material export materials
+        // so colours survive. Geometry is shared; the live scene is untouched.
+        // Bake each mesh's full WORLD transform (reorientation pivot + centering
+        // + sill lift from buildEnvironment) so the .glb matches what's on screen.
+        scene.updateMatrixWorld(true);
         const exportGroup = new THREE.Group();
-        exportGroup.rotation.copy(modelGroup.rotation);
-        const exportMat = new THREE.MeshStandardMaterial({
+        const fallbackExport = new THREE.MeshStandardMaterial({
           color: 0x9a9aa6, roughness: 0.7, metalness: 0.0, side: THREE.DoubleSide
         });
         modelGroup.traverse((o) => {
-          if (o.isMesh) exportGroup.add(new THREE.Mesh(o.geometry, exportMat));
+          if (!o.isMesh) return;
+          const mat = o.userData.exportMat || fallbackExport;
+          const m = new THREE.Mesh(o.geometry, mat); // geometry shared, not mutated
+          o.matrixWorld.decompose(m.position, m.quaternion, m.scale);
+          exportGroup.add(m);
         });
 
+        // Bake the wall + floor (plain materials — their TSL node materials
+        // don't serialize) so the .glb is the full staged composition.
+        bakeMesh(exportGroup, stageFloor, new THREE.MeshStandardMaterial({
+          color: 0x111114, roughness: 0.92, metalness: 0.0
+        }), 'Floor');
+        bakeMesh(exportGroup, stageWall, new THREE.MeshStandardMaterial({
+          color: 0x3a3a40, roughness: 0.85, metalness: 0.0, side: THREE.DoubleSide
+        }), 'Wall');
+
+        // Bake the sun sweep into a glTF animation: an animated "Sun" node
+        // (glowing disc + punctual light) keyframed along the same orbit the
+        // live scene uses. (The coloured-light *projection* is a runtime
+        // spotlight cookie and has no glTF equivalent, so it isn't exported.)
+        const clip = buildSunExport(exportGroup);
+
         const exporter = new GLTFExporter();
-        const glb = await exporter.parseAsync(exportGroup, { binary: true });
+        const glb = await exporter.parseAsync(exportGroup, {
+          binary: true,
+          animations: clip ? [clip] : []
+        });
         const blob = new Blob([glb], { type: 'model/gltf-binary' });
         triggerDownload(blob, `${modelName}.glb`);
       } catch (err) {
@@ -554,6 +1020,16 @@
     }
 
     function animate() {
+      const dt = clock ? clock.getDelta() : 0;
+      if (placeholder?.mixer) placeholder.mixer.update(dt);
+      if (theSun && sunAnimateEl.checked) {
+        const t = performance.now() * 0.00012;
+        const az = Math.sin(t) * (Math.PI / 3);                 // sweep ±60°
+        const el = THREE.MathUtils.degToRad(46 + Math.sin(t * 0.6) * 26); // 20°–72°
+        sunAzEl.value = THREE.MathUtils.radToDeg(az).toFixed(0);
+        sunElEl.value = THREE.MathUtils.radToDeg(el).toFixed(0);
+        updateSun(az, el);
+      }
       controls.update();
       renderer.render(scene, camera);
     }
