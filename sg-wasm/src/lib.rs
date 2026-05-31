@@ -142,10 +142,10 @@ pub fn render_glb(
     let mut groups: Vec<Group> = Vec::new();
     for (k, m) in glass {
         let c = pal[k];
-        groups.push(Group { mesh: m, color: [c[0], c[1], c[2], alpha], metallic: 0.0, roughness: 0.12 });
+        groups.push(Group { mesh: m, color: [c[0], c[1], c[2], alpha], metallic: 0.0, roughness: 0.02 });
     }
     if !lead.is_empty() {
-        groups.push(Group { mesh: lead, color: [28, 28, 32, 255], metallic: 0.55, roughness: 0.45 });
+        groups.push(Group { mesh: lead, color: [20, 20, 24, 255], metallic: 0.8, roughness: 0.2 });
     }
     write_glb(&groups)
 }
