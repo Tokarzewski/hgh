@@ -71,6 +71,33 @@
       background: rgba(0,0,0,0.04); pointer-events: none;
     }
 
+    /* Big RENDER call-to-action — the primary action on mobile, where the
+       topbar "Renderer" nav link is hidden. Sticks to the bottom of the
+       viewport on small screens so it is always reachable. */
+    .render-cta {
+      width: 100%;
+      font-size: 1.05rem;
+      padding: 1.15rem 2rem;
+      gap: 0.7rem;
+      position: sticky;
+      bottom: 0.85rem;
+      z-index: 30;
+      box-shadow: 0 6px 22px rgba(0, 0, 0, 0.28);
+    }
+    .render-cta svg { width: 22px; height: 22px; flex: 0 0 auto; }
+    @media (min-width: 860px) {
+      .render-cta {
+        grid-column: 2;
+        justify-self: end;
+        width: auto;
+        font-size: 0.85rem;
+        padding: 0.9rem 2.2rem;
+        position: static;
+        box-shadow: none;
+      }
+      .render-cta svg { width: 18px; height: 18px; }
+    }
+
     /* Panel */
     .panel { border: 1px solid var(--line); border-radius: 6px; overflow: hidden; display: flex; flex-direction: column; }
     .tabs { display: flex; }
@@ -269,6 +296,14 @@
       <canvas id="stage-canvas" class="stage-canvas" hidden></canvas>
       <span class="label" id="stage-label">KONFIGURATOR</span>
     </div>
+
+    <!-- Large render button (primary action on mobile, where the topbar link is hidden) -->
+    <a class="btn btn--dark render-cta" href="../rendering/">
+      <span data-en="Render" data-pl="Renderuj">Render</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+        <path d="M4 12h15M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </a>
   </main>
 
   <script src="../assets/site.js" defer></script>
