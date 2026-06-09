@@ -49,16 +49,17 @@ export function count_tiles(pattern, panel_w, panel_h, tile_size) {
  * @param {number} frame_height
  * @param {number} glass_alpha
  * @param {Uint8Array} palette
+ * @param {boolean} merge_cells
  * @returns {Uint8Array}
  */
-export function render_glb(pixels, img_w, img_h, channels, pattern, panel_w, panel_h, tile_size, lead_gap, glass_depth, frame_height, glass_alpha, palette) {
+export function render_glb(pixels, img_w, img_h, channels, pattern, panel_w, panel_h, tile_size, lead_gap, glass_depth, frame_height, glass_alpha, palette, merge_cells) {
     const ptr0 = passArray8ToWasm0(pixels, wasm.__wbindgen_malloc);
     const len0 = WASM_VECTOR_LEN;
     const ptr1 = passStringToWasm0(pattern, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
     const len1 = WASM_VECTOR_LEN;
     const ptr2 = passArray8ToWasm0(palette, wasm.__wbindgen_malloc);
     const len2 = WASM_VECTOR_LEN;
-    const ret = wasm.render_glb(ptr0, len0, img_w, img_h, channels, ptr1, len1, panel_w, panel_h, tile_size, lead_gap, glass_depth, frame_height, glass_alpha, ptr2, len2);
+    const ret = wasm.render_glb(ptr0, len0, img_w, img_h, channels, ptr1, len1, panel_w, panel_h, tile_size, lead_gap, glass_depth, frame_height, glass_alpha, ptr2, len2, merge_cells);
     var v4 = getArrayU8FromWasm0(ret[0], ret[1]).slice();
     wasm.__wbindgen_free(ret[0], ret[1] * 1, 1);
     return v4;
@@ -79,16 +80,17 @@ export function render_glb(pixels, img_w, img_h, channels, pattern, panel_w, pan
  * @param {Uint8Array} palette
  * @param {number} out_w
  * @param {number} out_h
+ * @param {boolean} merge_cells
  * @returns {Uint8Array}
  */
-export function render_preview(pixels, img_w, img_h, channels, pattern, panel_w, panel_h, tile_size, lead_gap, glass_alpha, palette, out_w, out_h) {
+export function render_preview(pixels, img_w, img_h, channels, pattern, panel_w, panel_h, tile_size, lead_gap, glass_alpha, palette, out_w, out_h, merge_cells) {
     const ptr0 = passArray8ToWasm0(pixels, wasm.__wbindgen_malloc);
     const len0 = WASM_VECTOR_LEN;
     const ptr1 = passStringToWasm0(pattern, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
     const len1 = WASM_VECTOR_LEN;
     const ptr2 = passArray8ToWasm0(palette, wasm.__wbindgen_malloc);
     const len2 = WASM_VECTOR_LEN;
-    const ret = wasm.render_preview(ptr0, len0, img_w, img_h, channels, ptr1, len1, panel_w, panel_h, tile_size, lead_gap, glass_alpha, ptr2, len2, out_w, out_h);
+    const ret = wasm.render_preview(ptr0, len0, img_w, img_h, channels, ptr1, len1, panel_w, panel_h, tile_size, lead_gap, glass_alpha, ptr2, len2, out_w, out_h, merge_cells);
     var v4 = getArrayU8FromWasm0(ret[0], ret[1]).slice();
     wasm.__wbindgen_free(ret[0], ret[1] * 1, 1);
     return v4;
