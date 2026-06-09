@@ -514,6 +514,7 @@
       const tile = design.tile || 16;
       const frame = design.frame ?? 1.2;
       const alpha = design.alpha ?? GLASS_ALPHA;
+      const merge = design.merge ?? true;   // fuse same-colour cells (issue #9)
       const img = await imageToRGBA(design.img || DEFAULT_IMG);
 
       // panel dims follow the image aspect (matches the configurator)
@@ -527,7 +528,7 @@
         : compute_palette(img.data, img.w, img.h, 4, 8, 42);
 
       const glb = render_glb(img.data, img.w, img.h, 4, pattern,
-        panelW, panelH, tile, frame, GLASS_DEPTH, FRAME_HEIGHT, alpha, palette);
+        panelW, panelH, tile, frame, GLASS_DEPTH, FRAME_HEIGHT, alpha, palette, merge);
 
       const gltf = await new GLTFLoader().parseAsync(glb.buffer, '');
       buildModelFromGLB(gltf.scene);

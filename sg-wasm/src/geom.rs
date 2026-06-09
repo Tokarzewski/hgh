@@ -82,8 +82,16 @@ fn line_isect(p1: Pt, d1: Pt, p2: Pt, d2: Pt) -> Option<Pt> {
 /// Inward edge-offset inset of a convex polygon by `g`. Returns None if it collapses.
 pub fn inset_convex(poly: &[Pt], g: f64) -> Option<Poly> {
     let p = ensure_ccw(poly);
+    let gaps = vec![g; p.len()];
+    inset_convex_var(&p, &gaps)
+}
+
+/// Per-edge inward inset of a convex CCW polygon: `gaps[i]` offsets edge
+/// `p[i] -> p[i+1]`. A gap of 0 leaves that edge in place (used to "merge"
+/// neighbouring cells by dropping the lead between them).
+pub fn inset_convex_var(p: &[Pt], gaps: &[f64]) -> Option<Poly> {
     let n = p.len();
-    if n < 3 {
+    if n < 3 || gaps.len() != n {
         return None;
     }
     let mut lines: Vec<(Pt, Pt)> = Vec::with_capacity(n);
@@ -97,7 +105,7 @@ pub fn inset_convex(poly: &[Pt], g: f64) -> Option<Poly> {
         }
         let d = [dx / len, dy / len];
         let nrm = [-d[1], d[0]]; // inward for CCW
-        let pt = [a[0] + g * nrm[0], a[1] + g * nrm[1]];
+        let pt = [a[0] + gaps[i] * nrm[0], a[1] + gaps[i] * nrm[1]];
         lines.push((pt, d));
     }
     let mut out = Vec::with_capacity(n);
@@ -110,6 +118,19 @@ pub fn inset_convex(poly: &[Pt], g: f64) -> Option<Poly> {
         return None;
     }
     Some(out)
+}
+
+/// Point-in-convex-CCW-polygon test (boundary counts as inside).
+pub fn contains_convex(p: &[Pt], q: Pt) -> bool {
+    let n = p.len();
+    for i in 0..n {
+        let a = p[i];
+        let b = p[(i + 1) % n];
+        if (b[0] - a[0]) * (q[1] - a[1]) - (b[1] - a[1]) * (q[0] - a[0]) < -1e-9 {
+            return false;
+        }
+    }
+    n >= 3
 }
 
 // ---------------- hatch generators (all return convex cells) ----------------

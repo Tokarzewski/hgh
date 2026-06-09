@@ -34,8 +34,10 @@ impl Mesh {
         self.tri(a, c, d);
     }
 
-    /// Extrude a convex CCW polygon (XY) into a prism spanning z in [z0, z1].
-    pub fn extrude(&mut self, poly: &[Pt], z0: f64, z1: f64) {
+    /// Extrude a convex CCW polygon (XY) into a prism spanning z in [z0, z1],
+    /// omitting the side wall of edge `i` where `skip[i]` is true (interior
+    /// walls between merged same-colour cells). Pass `&[]` to keep all walls.
+    pub fn extrude_skip(&mut self, poly: &[Pt], z0: f64, z1: f64, skip: &[bool]) {
         let n = poly.len();
         if n < 3 {
             return;
@@ -51,6 +53,9 @@ impl Mesh {
         }
         // sides
         for i in 0..n {
+            if skip.get(i).copied().unwrap_or(false) {
+                continue;
+            }
             let j = (i + 1) % n;
             self.quad(p3(i, z0), p3(j, z0), p3(j, z1), p3(i, z1));
         }
@@ -58,7 +63,9 @@ impl Mesh {
 
     /// Extrude a frame (annulus) between outer and inner rings (same vertex count, both CCW).
     /// Leaves the inner hole open so backlight passes through the glass that fills it.
-    pub fn annulus(&mut self, outer: &[Pt], inner: &[Pt], z0: f64, z1: f64) {
+    /// Strips of edge `i` are omitted where `skip[i]` is true (zero-width lead
+    /// on merged edges -> the quads would be degenerate). Pass `&[]` to keep all.
+    pub fn annulus_skip(&mut self, outer: &[Pt], inner: &[Pt], z0: f64, z1: f64, skip: &[bool]) {
         let n = outer.len();
         if n < 3 || inner.len() != n {
             return;
@@ -66,6 +73,9 @@ impl Mesh {
         let o = |i: usize, z: f64| [outer[i][0], outer[i][1], z];
         let ii = |i: usize, z: f64| [inner[i][0], inner[i][1], z];
         for i in 0..n {
+            if skip.get(i).copied().unwrap_or(false) {
+                continue;
+            }
             let j = (i + 1) % n;
             // top strip (faces +Z)
             self.quad(o(i, z1), o(j, z1), ii(j, z1), ii(i, z1));

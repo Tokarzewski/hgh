@@ -195,6 +195,13 @@
     }
     .note { color: var(--muted); font-size: 0.8rem; font-style: italic; text-align: center; margin-top: 0.4rem; }
 
+    /* Cell-merging toggle */
+    .merge-toggle {
+      display: flex; align-items: center; gap: 0.55rem;
+      margin-top: 1.1rem; font-size: 0.85rem; color: var(--ink); cursor: pointer;
+    }
+    .merge-toggle input { width: 17px; height: 17px; accent-color: var(--ink); cursor: pointer; }
+
     @media (min-width: 860px) {
       .config { grid-template-columns: 1fr 1.1fr; align-items: stretch; }
       .controls-grid { grid-template-columns: 1fr 1fr; }
@@ -276,6 +283,10 @@
           <div>
             <div class="ctrl-label" data-en="Frame thickness" data-pl="Grubość ramki">Frame thickness</div>
             <input id="frame-thick" type="range" min="0" max="5" value="1.2" step="0.1" aria-label="frame thickness" />
+            <label class="merge-toggle">
+              <input id="merge-cells" type="checkbox" checked />
+              <span data-en="Merge same-colour cells" data-pl="Łącz komórki o tym samym kolorze">Merge same-colour cells</span>
+            </label>
           </div>
 
           <div>
@@ -334,7 +345,7 @@
     const PANEL_MAJOR = 300, OUT_MAJOR = 900;   // longer panel dim (model units) / preview dim (px)
     // panel + preview dims follow the source image's aspect ratio (set per image)
     let PANEL_W = 300, PANEL_H = 300, OUT_W = 640, OUT_H = 640;
-    const state = { pattern: 0, colors: 6, size: 5, frame: 1.2 };  // frame = lead_gap (glass transparency is set on the render view)
+    const state = { pattern: 0, colors: 6, size: 5, frame: 1.2, merge: true };  // frame = lead_gap (glass transparency is set on the render view)
     const SHAPE_PAL = new Uint8Array([220, 220, 226]);  // single colour -> bare pattern thumbnail
 
     const stage = document.querySelector('.stage');
@@ -464,14 +475,15 @@
       const pal = effectivePalette();
       const rgba = render_preview(
         curImg.data, curImg.w, curImg.h, 4, pat,
-        PANEL_W, PANEL_H, tileSize(), state.frame, 1.0, pal, OUT_W, OUT_H);  // 2D preview is fully opaque
+        PANEL_W, PANEL_H, tileSize(), state.frame, 1.0, pal, OUT_W, OUT_H, state.merge);  // 2D preview is fully opaque
       paint(canvas, ctx, rgba, OUT_W, OUT_H);
       // small pattern thumbnail — a zoomed FRAGMENT (~3 cells) of the bare
       // tessellation so the shape is easy to read, regardless of tile size
+      // (never merged: its single-colour palette would fuse it into one blob)
       const frag = tileSize() * 3;
       const t = render_preview(
         curImg.data, curImg.w, curImg.h, 4, pat,
-        frag, frag, tileSize(), state.frame, 1.0, SHAPE_PAL, thumb.width, thumb.height);
+        frag, frag, tileSize(), state.frame, 1.0, SHAPE_PAL, thumb.width, thumb.height, false);
       paint(thumb, tctx, t, thumb.width, thumb.height);
       canvas.hidden = false;
       stage.classList.add('rendered');
@@ -479,7 +491,7 @@
       // stash config so "See my render" can rebuild the 3D GLB on the renderer
       try {
         sessionStorage.setItem('sg-design', JSON.stringify({
-          pattern: pat, tile: tileSize(), frame: state.frame,
+          pattern: pat, tile: tileSize(), frame: state.frame, merge: state.merge,
           palette: Array.from(pal), img: designImgUrl,
         }));
       } catch (e) { /* quota / private mode */ }
@@ -503,6 +515,12 @@
     document.getElementById('frame-thick').addEventListener('input', (e) => {
       state.frame = +e.target.value;
       debouncedRegen();
+    });
+
+    // cell merging (issue #9): fuse neighbouring same-colour cells
+    document.getElementById('merge-cells').addEventListener('change', (e) => {
+      state.merge = e.target.checked;
+      regenerate();
     });
 
     // pattern picker
