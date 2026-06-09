@@ -13,6 +13,14 @@
     href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lato:wght@300;400;700&display=swap"
     rel="stylesheet" />
   <style>
+    /* Ż with a horizontal bar instead of a dot (see assets/site.css) */
+    @font-face {
+      font-family: "Witraz Zbar";
+      src: url("../assets/fonts/witraz-zbar.woff2") format("woff2");
+      font-display: swap;
+      unicode-range: U+017B;
+    }
+
     :root {
       --bg: #0f0f12;
       --panel: #1a1a20;
@@ -52,7 +60,7 @@
     }
     .brand { display: inline-flex; align-items: center; gap: 0.6rem; text-decoration: none; color: #161616; }
     .brand img { width: 30px; height: 30px; display: block; }
-    .brand .brand-name { font-family: "Abril Fatface", Georgia, serif; font-size: 1.15rem; letter-spacing: 0.04em; }
+    .brand .brand-name { font-family: "Witraz Zbar", "Abril Fatface", Georgia, serif; font-size: 1.15rem; letter-spacing: 0.04em; }
     .topbar nav { display: flex; align-items: center; gap: 1.4rem; }
     .topbar nav a {
       text-decoration: none; color: #6f6f6f; font-size: 0.82rem;
