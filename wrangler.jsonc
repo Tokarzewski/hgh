@@ -8,5 +8,11 @@
   },
   "routes": [
     { "pattern": "hgh.modeltok.com", "custom_domain": true }
-  ]
+  ],
+  // Local `wrangler dev` ports from this repo's block (21100-21119) in
+  // dev-setup/agents/ports.toml, so it can run alongside other repos.
+  "dev": {
+    "port": 21101,
+    "inspector_port": 21102
+  }
 }
