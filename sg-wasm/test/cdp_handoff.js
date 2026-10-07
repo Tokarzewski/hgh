@@ -1,7 +1,7 @@
 // Drive headless Edge over CDP to verify the configurator -> renderer handoff
 // in a SINGLE browsing session (sessionStorage persists across the same-origin nav).
 const fs = require('fs');
-const PORT = process.argv[2] || '38090';
+const PORT = process.argv[2] || '21103';
 const OUT = process.argv[3] || 'handoff.png';
 const CDP = process.env.CDP_PORT || '9222';
 const BASE = `http://localhost:${PORT}`;

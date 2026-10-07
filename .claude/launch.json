@@ -4,8 +4,8 @@
     {
       "name": "hgh-website",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8787", "--directory", "website"],
-      "port": 8787
+      "runtimeArgs": ["-m", "http.server", "21100", "--directory", "website"],
+      "port": 21100
     }
   ]
 }
